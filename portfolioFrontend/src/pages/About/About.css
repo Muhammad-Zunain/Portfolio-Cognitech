@@ -1,0 +1,294 @@
+
+.f-about-header {
+    width: 100%;
+    background: linear-gradient(90deg, #00229E 0%, #6E1299 47.92%, #FE0094 100%);
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 3rem;
+    margin: 2rem 0;
+}
+
+.f-about-header h2 {
+    text-transform: capitalize;
+}
+
+
+.about-wrapper {
+  background-color: #1e143b;
+  border-radius: 8px;
+  margin-top: 2rem;
+  padding: 0 0 8rem 0;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 4rem;
+}
+
+.brain-cogni-logo {
+  padding-top: 4rem;
+}
+
+.brain-cogni-logo img {
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  right: 5px;
+  top: 5%;
+}
+
+.brain-cogni-logo::after {
+  content: "";
+  display: block;
+  width: 160px;
+  height: 160px;
+  transform: rotate(45deg);
+  background-color: rgba(241, 7, 215, 0.1);
+  position: absolute;
+  right: -6%;
+  top: 3%;
+  z-index: 1;
+}
+
+.about-cogi-vision {
+  padding: 0 6rem;
+}
+
+.about-cogi-vision p {
+  margin-top: 2rem;
+  padding-right: 3rem;
+}
+
+.about-cogi-head h2 {
+  font-size: 4rem;
+}
+
+.text-outline-aboutCogni {
+  -webkit-text-stroke: 2px #f107d7;
+  color: transparent;
+}
+
+.about-cognitech-main {
+  margin-top: 6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 5rem;
+  background: linear-gradient(90deg, #b251df 10%, #e94ec0 100%);
+  padding: 6rem;
+}
+
+.about__contact__box {
+  margin-top: 8rem;
+  padding: 6rem 4rem 6rem 4rem;
+  background-color: #b251df;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about__contact__box .about__box1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.about__contact__box h2 {
+  font-size: 3.5rem;
+  width: 70%;
+  font-weight: 500;
+}
+
+.cont-left {
+  width: 28%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.cont-left p {
+  color: #fff;
+  line-height: 0;
+  letter-spacing: 3px;
+}
+
+.cont-left h2 {
+  width: 100%;
+  text-align: center;
+  font-weight: 500;
+  line-height: 45px;
+}
+
+.cont-left i {
+  background: transparent;
+  padding: 0 0;
+  font-size: 4rem;
+  height: auto;
+  color: #fff;
+}
+
+@media (max-width:1024px){
+  .brain-cogni-logo::after{
+    top: 2%;
+    right: -9%;
+  }
+  .brain-cogni-logo img{
+    top: 3.6%;
+  }
+}
+
+@media (max-width: 768px){
+  .f-about-header {
+    padding: 15px;
+    row-gap: 1rem;
+  }
+  .f-about-header h2 {
+    font-size: 4.0rem;
+  }
+
+  .f-about-header p {
+    text-align: center;
+  }
+  .brain-cogni-logo::after{
+    right: -12%;
+  }
+  .brain-cogni-logo img {
+    top: 4.8%;
+  }
+  .about__contact__box h2{
+    font-size: 3.2rem;
+    line-height: 45px;
+  }
+}
+
+@media (max-width: 450px) {
+    .f-about-header {
+        height: 30vh;
+        display: flex;
+        row-gap: 0rem;
+    }
+    .f-about-header h2{
+        font-size: 3rem;
+    }
+    .f-about-header p{
+        font-size:1.1rem ;
+        text-align: center;
+        padding: 1rem;
+    }
+  .brain-cogni-logo::after {
+    width: 120px;
+    height: 120px;
+    right: -18%;
+    top: 2%;
+  }
+
+  .brain-cogni-logo img {
+    width: 50px;
+    height: 50px;
+    right: 0px;
+    top: 85px;
+  }
+
+  .about-cogi-vision {
+    padding: 0 2rem;
+  }
+
+  .about-cogi-head h2 {
+    font-size: 3.4rem;
+    line-height: 51px;
+  }
+
+  .about-cogi-vision h3 {
+    font-size: 2.2rem;
+  }
+
+  .about-cogi-vision p {
+    margin-top: 1rem;
+    padding-right: 0.5rem;
+    font-size: 1.3rem;
+    line-height: 25px;
+  }
+
+  .about-cognitech-main {
+    margin-top: 4rem;
+    padding: 2.5rem;
+  }
+
+  .quention__box {
+    margin-top: 3rem;
+    flex-direction: column;
+  }
+
+  .question__content {
+    width: 100%;
+  }
+
+  .about__contact__box {
+    margin-top: 8rem;
+    padding: 3rem 0rem 3rem 2rem;
+    width: 100%;
+  }
+
+  .about__contact__box .about__box1 {
+    flex-direction: column;
+  }
+
+  .about__contact__box h2 {
+    width: 100%;
+    line-height: 40px;
+    font-size: 2.5rem;
+  }
+
+  .cont-left {
+    margin-top: 1rem;
+    width: 100% !important;
+    row-gap: 1rem;
+  }
+
+  .cont-left i {
+    font-size: 3rem;
+  }
+
+  .cont-left p {
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 410px) {
+  .brain-cogni-logo::after {
+    width: 110px;
+    height: 110px;
+    right: -16%;
+  }
+  .brain-cogni-logo img {
+    width: 56px;
+    height: 55px;
+    top: 83px;
+  }
+  .about-cogi-head h2 {
+    font-size: 3rem;
+    line-height: 40px;
+  }
+}
+
+
+@media(max-width:320px){
+  .about-item .about-line {
+    width: 70px;
+}
+  .brain-cogni-logo::after {
+    width: 100px;
+    height: 100px;
+    right: -17%;
+}
+.brain-cogni-logo img {
+  width: 45px;
+  height: 45px;
+  top: 86px;
+}
+
+}

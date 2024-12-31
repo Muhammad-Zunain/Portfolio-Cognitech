@@ -1,0 +1,371 @@
+.f-contact-header {
+  width: 100%;
+  background: linear-gradient(90deg, #00229e 0%, #6e1299 47.92%, #fe0094 100%);
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 3rem;
+  margin: 2rem 0;
+}
+
+.f-contact-header h2 {
+  text-transform: capitalize;
+}
+
+.main_contact_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1e143b;
+  border-radius: 8px;
+  margin-top: 2.5rem;
+  padding: 8rem 6rem 8rem 6rem;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 6rem;
+}
+
+.contact__cognitech {
+  display: flex;
+  flex-direction: column;
+  row-gap: 3rem;
+  justify-content: center;
+  align-items: flex-start;
+  z-index: 99;
+}
+
+.main_contact_wrapper::before {
+  content: "";
+  display: block;
+  width: 200px;
+  height: 200px;
+  transform: rotate(45deg);
+  background-color: rgba(241, 7, 215, 0.3);
+  position: absolute;
+  left: -8%;
+  top: 10%;
+  z-index: 1;
+}
+
+.main_contact_wrapper::after {
+  content: "";
+  display: block;
+  width: 300px;
+  height: 300px;
+  transform: rotate(45deg);
+  background-color: rgba(241, 7, 215, 0.1);
+  position: absolute;
+  right: -13.5%;
+  top: 20%;
+  z-index: 1;
+}
+
+.main_contact_wrapper .contact_style_left {
+  width: 200px;
+  height: 200px;
+  transform: rotate(45deg);
+  background-color: rgba(241, 7, 215, 0.1);
+  position: absolute;
+  left: -8%;
+  top: 30%;
+  z-index: 1;
+}
+
+.contact__cognitech::before {
+  content: "";
+  display: block;
+  position: absolute;
+  padding: 1.5rem;
+  left: 7%;
+  top: 15%;
+  width: 20px;
+  height: 20px;
+  border: 8px solid #f603e0;
+  z-index: 1;
+  animation: moveUpDownCogleft 2s ease-in-out infinite;
+}
+
+@keyframes moveUpDownCogleft {
+  0% {
+    top: 15%;
+  }
+
+  50% {
+    top: 25%;
+  }
+
+  100% {
+    top: 15%;
+  }
+}
+
+.contact__cognitech::after {
+  content: "";
+  display: block;
+  position: absolute;
+  padding: 1.5rem;
+  right: 7%;
+  bottom: 15%;
+  width: 20px;
+  height: 20px;
+  border: 8px solid #fff;
+  z-index: 1;
+  animation: moveUpDownCogBottom 2s ease-in-out infinite;
+}
+
+@keyframes moveUpDownCogBottom {
+  0% {
+    bottom: 15%;
+  }
+
+  50% {
+    bottom: 25%;
+  }
+
+  100% {
+    bottom: 15%;
+  }
+}
+
+.main_contact_wrapper .contact_style_right {
+  width: 250px;
+  height: 250px;
+  transform: rotate(45deg);
+  background-color: rgba(241, 7, 215, 0.3);
+  position: absolute;
+  right: -10%;
+  top: 50%;
+  z-index: 1;
+}
+
+.contact__cognitech h3 {
+  color: #f107d7;
+  font-size: 3.5rem;
+}
+
+.contact__cognitech input[type="text"],
+.contact__cognitech input[type="email"],
+.contact__cognitech input[type="tel"],
+.contact__cognitech textarea {
+  padding: 1rem;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  border: 2px solid #fff;
+  background: rgba(0, 0, 0, 0.025);
+  color: #fff;
+  outline: none;
+  box-shadow: none;
+  transition: all 0.4s ease-in-out;
+}
+
+.contact__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  column-gap: 3rem;
+  width: 100%;
+}
+
+.contact__info input {
+  width: 30%;
+  height: 50px;
+}
+
+.contact__cognitech textarea {
+  height: 220px;
+  width: 100%;
+}
+
+.contact__cognitech input[type="text"]:focus:invalid,
+.contact__cognitech input[type="email"]:focus:invalid,
+.contact__rentaly input[type="tel"]:focus:invalid,
+.contact__cognitech textarea:focus:invalid {
+  border: 2px solid rgba(254, 0, 148, 0.3);
+}
+
+.contact__cognitech input[type="text"]:focus:valid,
+.contact__cognitech input[type="email"]:focus:valid,
+.contact__cognitech input[type="tel"]:focus:valid,
+.contact__cognitech textarea:focus:valid {
+  border: 2px solid rgba(254, 0, 148, 0.3);
+  background: rgba(254, 0, 148, 0.1);
+  box-shadow: 0px 2px 15px rgba(254, 0, 148, 0.3);
+}
+
+@media (max-width: 1024px){
+  .main_contact_wrapper {
+    padding: 8rem 10rem 8rem 10rem;
+  }
+  .contact__cognitech::before{
+    left: 4%;
+  }
+  .contact__cognitech::after{
+    right: 4%;
+  }
+  .main_contact_wrapper::after{
+    right: -17.5%;
+  }
+  .main_contact_wrapper .contact_style_right {
+    right: -14%;
+  }
+  .main_contact_wrapper::before,
+  .main_contact_wrapper .contact_style_left {    
+    left: -12%;
+  }
+}
+
+@media (max-width: 768px) {
+  .main_contact_wrapper{
+    display: block;
+  }
+  .f-contact-header {
+    padding: 15px;
+    row-gap: 1rem;
+  }
+
+  .f-contact-header h2 {
+    font-size: 4.0rem;
+  }
+
+  .f-contact-header p {
+    text-align: center;
+  }
+  .main_contact_wrapper::before {
+    width: 170px;
+    height: 170px;
+    left: -16%;
+    top: 6%;
+  }
+  .main_contact_wrapper .contact_style_left {
+    width: 170px;
+    height: 170px;
+    left: -16%;
+    top: 25%;
+  }
+  .main_contact_wrapper::after {
+    
+    width: 250px;
+    height: 250px;
+   
+    right: -23.5%;
+    top: 22%;
+}
+.main_contact_wrapper .contact_style_right {
+  width: 200px;
+  height: 200px;
+  
+  right: -16%;
+  top: 48%;
+}
+.contact__cognitech::before,
+.contact__cognitech::after{
+  display: none;
+}
+.contact__info{
+  flex-direction: column;
+  row-gap: 2.5rem;
+}
+.contact__info input{
+  width: 100%;
+
+}
+.contact__cognitech h3{
+  font-size: 3rem;
+}
+}
+
+@media (max-width: 450px) {
+  .main_contact_wrapper {
+    padding: 4rem 2rem 4rem 2rem;
+  }
+
+  .contact__cognitech h3 {
+    font-size: 2.2rem;
+    line-height: 30px;
+  }
+
+  .main_contact_wrapper::before {
+    width: 150px;
+    height: 150px;
+    left: -22%;
+    top: 7%;
+  }
+
+  .main_contact_wrapper .contact_style_left {
+    width: 150px;
+    height: 150px;
+    left: -22%;
+    top: 25%;
+  }
+
+  .contact__info {
+    flex-direction: column;
+    row-gap: 2rem;
+  }
+  .f-contact-header h2 {
+    font-size: 3rem;
+    line-height: 20px;
+  }
+
+
+  .main_contact_wrapper::after {
+    width: 150px;
+    height: 150px;
+    right: -22.5%;
+    top: 22%;
+  }
+
+  .main_contact_wrapper .contact_style_right {
+    width: 150px;
+    height: 150px;
+    right: -22%;
+    top: 37%;
+  }
+
+  .contact__cognitech {
+    row-gap: 2rem;
+  }
+
+  .contact__cognitech input[type="text"],
+  .contact__cognitech input[type="email"],
+  .contact__cognitech input[type="tel"],
+  .contact__cognitech textarea {
+    width: 100%;
+    font-size: 1.5rem;
+  }
+  .contact__cognitech::before,
+  .contact__cognitech::after {
+    display: none;
+  }
+}
+
+@media (max-width:320px){
+  .main_contact_wrapper::before, 
+  .main_contact_wrapper .contact_style_left {
+    width: 120px;
+    height: 120px;
+    left: -25%;
+  }
+  .main_contact_wrapper::after {
+    width: 120px;
+    height: 120px;
+    right: -22.5%;
+  }
+  .main_contact_wrapper .contact_style_right {
+    width: 120px;
+    height: 120px;
+    right: -24%;
+  }
+  .f-contact-header h2 {
+    font-size: 2.7rem;
+    line-height: 20px;
+  }
+
+  .f-contact-header p {
+    text-align: center;
+  }
+}

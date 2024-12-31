@@ -1,0 +1,433 @@
+
+/* ------------------ Home Wrapper ------------------ > */
+
+.home-wrapper {
+  background-color: #1e143b;
+  border-radius: 8px;
+  margin-top: 2rem;
+  padding-bottom: 10rem;
+}
+
+/* <----------------------------------- Hero Section -----------------------------------> */
+.hero-container {
+    padding-top: 8rem;
+  padding-left: 8rem;
+
+  height: 85vh;
+}
+
+.main-title-hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.title-line-m {
+  height: 7px;
+  background-color: #fe0094;
+  display: block;
+  position: absolute;
+  margin-top: 1rem;
+  width: 0;
+  animation: titleLineForward 1s forwards, titleLineReverse 1s 1s forwards;
+}
+
+.title-line {
+  height: 3.3rem;
+  background: linear-gradient(90deg, #00229e 0%, #6e1299 47.92%, #fe0094 100%);
+  display: block;
+  width: 0;
+  position: absolute;
+  margin-top: 3rem;
+  animation: drawLine 3s forwards;
+  animation-delay: 2s;
+}
+
+.hero-title {
+  margin-top: 0.2rem;
+  position: absolute;
+  left: 0.8%;
+  top: 0%;
+  white-space: nowrap;
+  overflow: hidden;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 500;
+  width: 0;
+  animation: revealText 3s forwards;
+  animation-delay: 3s;
+}
+
+.main-body {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin-bottom: 4rem;
+}
+
+.main-body-header h1 {
+  white-space: nowrap;
+  overflow: hidden;
+  /* opacity: 0; */
+  animation: typeText 4s steps(30, end) forwards;
+  margin-bottom: 1rem;
+  width: 0; /* Start with 0 width for typing animation */
+}
+
+.main-body-header h1 span {
+  color: #6e1299;
+}
+
+.main-body-header h1:nth-child(1) {
+  animation-delay: 5s;
+}
+
+.main-body-header h1:nth-child(2) {
+  animation-delay: 7s;
+}
+
+.main-body-header h1:nth-child(3) {
+  animation-delay: 9s;
+}
+
+.main-body-content {
+  color: #fff;
+  margin-top: 2rem;
+  width: 65%;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 2s forwards;
+  animation-delay: 10s;
+}
+
+.hero-button {
+  animation: fadeIn 2s forwards;
+  animation-delay: 11s;
+  opacity: 0;
+}
+
+/* <------------------ Hero Animations ------------------ */
+@keyframes typeText {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+    /* opacity: 1; */
+  }
+}
+
+@keyframes drawLine {
+  from {
+    width: 0;
+  }
+  to {
+    width: 420px; /* Width to fit the text */
+  }
+}
+
+@keyframes revealText {
+  from {
+    width: 0;
+  }
+  to {
+    width: 900px; /* Width to fit the text */
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes titleLineForward {
+  from {
+    width: 0;
+  }
+  to {
+    width: 300px; /* Adjust width to fit the text */
+  }
+}
+
+@keyframes titleLineReverse {
+  from {
+    width: 300px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+/* .button-container {
+    display: inline-block;
+    position: relative;
+} */
+
+/* .button {
+    display: flex;
+    width: 200px;
+    height: 60px;
+    text-decoration: none;
+    color: #bde8c8;
+    border: 2px solid #bde8c8;
+    font-size: 15px;
+    position: relative;
+    transition: all 0.3s ease;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+} */
+
+/* .button span {
+    transition: all 0.3s ease;
+    font-size: 2.5rem;
+    margin-left: 0.8rem;
+    font-weight: 700;
+}
+
+.button:hover {
+    color: #fff;
+    scale: 1.1;
+}
+
+.button:hover span {
+    transform: translateX(5px);
+}
+
+.button-container::before {
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 60px;
+    top: 28%;
+    left: -8%;
+    background-color: #0d7c66;
+    z-index: -1;
+    transition: all 0.3s ease;
+    opacity: 1;
+}
+
+.button-container:hover::before {
+    scale: 1.09;
+    top: 2%;
+    left: 0.5%;
+    width: 200px;
+    height: 60px;
+    opacity: 1;
+} */
+
+@media (max-width: 1250px) {
+  .hero-container {
+    padding-left: 7rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  @keyframes drawLine {
+    from {
+      width: 0;
+    }
+    to {
+      width: 360px; /* Width to fit the text */
+    }
+  }
+  .hero-container{
+    height: 95vh;
+  }
+  
+}
+
+@media (max-width: 850px) {
+  .hero-container {
+    padding-left: 6rem;
+  }
+}
+
+@media (max-width: 830px) {
+  .hero-container {
+    padding-left: 5.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  @keyframes drawLine {
+    from {
+      width: 0;
+    }
+    to {
+      width: 320px; /* Width to fit the text */
+    }
+  }
+  .hero-container {
+    height: 80vh;
+  }
+}
+
+@media (max-width: 750px) {
+  .hero-container {
+    padding-top: 2rem;
+    padding-left: 5rem;
+  }
+  .main-body-content {
+    width: 90%;
+  }
+}
+
+@media (max-width: 650px) {
+  @keyframes drawLine {
+    from {
+      width: 0;
+    }
+    to {
+      width: 300px; /* Width to fit the text */
+    }
+  }
+  .hero-title {
+    margin-top: 0.4rem;
+    left: 1.5%;
+  }
+  .main-body-content {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-container {
+    padding-top: 3rem;
+    padding-left: 3.5rem;
+  }
+  .title-line {
+    height: 2.5rem;
+  }
+  .hero-title {
+    margin-top: 0.5rem;
+    left: 1.5%;
+  }
+}
+@media (max-width: 560px) {
+  .main-body-header h1 {
+    font-size: 3rem;
+    line-height: 40px;
+  }
+  .hero-container {
+    height: 72vh;
+  }
+}
+
+@media (max-width: 500px) {
+  .hero-container {
+    padding-top: 4rem;
+    padding-left: 2rem;
+  }
+  .main-body-header h1 {
+    font-size: 3rem;
+    line-height: 30px;
+  }
+  .main-body-content {
+    width: 93%;
+  }
+}
+
+@media (max-width: 485px) {
+  .main-body-header h1 {
+    font-size: 2.7rem;
+  }
+
+  .hero-container {
+    height: 75vh;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero-container {
+    padding-left: 1.6rem;
+  }
+  .hero-container {
+    height: 75vh;
+  }
+  .main-body-header h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .hero-container {
+    padding-top: 1rem;
+    padding-left: 1.3rem;
+  }
+  .main-body-header :nth-child(1) br {
+    display: block !important;
+  }
+  .main-body-header h1 {
+    font-size: 2.8rem;
+  }
+  .main-body-header :nth-child(1) :nth-child(1) {
+    margin-bottom: 1rem;
+    display: inline-block;
+  }
+  .hero-title p {
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+  }
+  .title-line {
+    height: 2rem;
+  }
+  .main-body-content {
+    width: 98%;
+  }
+  @keyframes drawLine {
+    from {
+      width: 0;
+    }
+    to {
+      width: 275px; /* Width to fit the text */
+    }
+  }
+}
+
+@media (max-width: 370px) {
+  .hero-container {
+    padding-left: 1rem;
+  }
+  .main-body-header :nth-child(2) br {
+    display: block !important;
+  }
+  .main-body-header :nth-child(2) :nth-child(1) {
+    margin-bottom: 1rem;
+    display: inline-block;
+  }
+  .main-body-content {
+    width: 99%;
+  }
+  .hero-title p {
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+  }
+  @keyframes drawLine {
+    from {
+      width: 0;
+    }
+    to {
+      width: 230px; /* Width to fit the text */
+    }
+  }
+}
+

@@ -1,0 +1,120 @@
+
+.tech-wrapper{
+    background-color: #0c0e2b;
+    padding-top: 6rem;
+}
+.tech-header{
+    text-align: center;
+}
+
+.tech-header h2{
+    color: #FE0094;
+}
+
+.tech-header h2>span{
+    color: #6E1299;
+ }
+ .tech-header h2::after{
+    content: '';
+    display: block;
+    width: 20%;
+    height: 4px;
+    background: linear-gradient(90deg, #00229E 0%, #6E1299 47.92%, #FE0094 100%);
+    margin: 2rem auto;
+ }
+.marquee {
+    padding: 50px 0;
+    /* background: #0c0e2b; */
+    overflow: hidden;
+    position: relative;
+}
+
+.marquee__inner {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    will-change: transform;
+    animation: marquee 20s linear infinite;
+}
+
+.marquee__about__tech {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    /* border: 2px solid magenta; */
+}
+
+.marquee__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    /* border: 2px solid honeydew; */
+}
+
+.marquee__line {
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, #00229E 0%, #6E1299 47.92%, #FE0094 100%);
+    margin: 0 20px;
+}
+
+.tech-logo {
+    filter: grayscale(100%);
+    transition: filter 0.3s ease, transform 0.3s ease;
+    height: 130px;
+    width: auto;
+    cursor: pointer;
+    object-fit: cover;
+}
+
+.tech-logo:hover {
+    filter: grayscale(0%);
+    transform: scale(1.1);
+}
+
+.marquee__about__tech:hover .marquee__inner {
+    animation-play-state: paused;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+
+@media (max-width:768px) {
+    .tech-header h2{
+        font-size: 3.8rem;
+    }
+    .tech-header h2::after {
+        width: 15%;
+        height: 3px;
+    }
+}
+
+@media (max-width:450px) {
+    .tech-header h2 {
+        font-size: 3rem;
+        line-height: 45px;
+    }   
+    .tech-header h2::after {
+        width: 30%;
+        margin: 0.5rem auto;
+    }
+    .tech-logo {
+        height: 90px;
+    }
+    .marquee__line{
+        height: 3px;
+        margin: 0 ;
+    }
+    .marquee {
+        padding: 40px 0;
+    }
+}
