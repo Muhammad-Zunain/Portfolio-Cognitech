@@ -124,7 +124,7 @@
     background-size: cover;
     filter: blur(10px);
     z-index: -1;
-    
+
 }
 
 
@@ -163,8 +163,8 @@
 }
 
 .work-wrapper {
-    margin-top: 12rem;   
-    min-height: 500px; 
+    margin-top: 12rem;
+    min-height: 500px;
 }
 
 .work-wrapper-content {
@@ -177,15 +177,15 @@
     margin-bottom: 1rem;
 }
 
-.project-wrapper{
+.project-wrapper {
     display: flex;
     justify-content: space-around;
     flex-direction: row;
     width: 100%;
-    
+
 }
 
-.work-wrapper-images{
+.work-wrapper-images {
     width: 53%;
     position: relative;
 }
@@ -222,42 +222,42 @@
 }
 
 .work-wrapper {
-    position: relative; 
-  }
+    position: relative;
+}
 
 .swiper-button-prev:after,
-.swiper-button-next:after{
+.swiper-button-next:after {
     font-size: 2.3rem !important;
 }
 
-.swiper-button-prev{
+.swiper-button-prev {
     position: absolute;
     top: 90% !important;
-    left : 82% !important;    
+    left: 82% !important;
 }
 
-.swiper-button-next{
+.swiper-button-next {
     position: absolute;
     top: 90% !important;
     right: 8% !important;
 }
 
-.swiper-button-prev, 
-.swiper-button-next{
-    background: linear-gradient(90deg, #00229E 0%, #6E1299 47.92%, #FE0094 100%) ;
+.swiper-button-prev,
+.swiper-button-next {
+    background: linear-gradient(90deg, #00229E 0%, #6E1299 47.92%, #FE0094 100%);
     color: #fff !important;
     height: 50px !important;
     width: 50px !important;
 }
 
-.inner-swiper-button-prev{
+.inner-swiper-button-prev {
     position: absolute;
     top: 40%;
     z-index: 1;
     left: -3%;
 }
 
-.inner-swiper-button-next{
+.inner-swiper-button-next {
     position: absolute;
     top: 40%;
     z-index: 1;
@@ -267,7 +267,7 @@
 .inner-swiper-button-prev .bx,
 .inner-swiper-button-next .bx {
     font-size: 5rem;
-    color: #fff ;
+    color: #fff;
     cursor: pointer;
 }
 
@@ -305,21 +305,147 @@
     }
 }
 
+
+@media (max-width:1030px) {
+    .project-wrapper {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .work-wrapper-content {
+        width: 100%;
+        padding: 3rem;
+    }
+
+    .work-wrapper-images {
+        width: 90%;
+    }
+
+    .swiper-button-prev {
+        
+        top: 103% !important;
+        left: 66% !important;
+    }
+
+    .swiper-button-next {
+        
+        top: 103% !important;
+        right: 9% !important;
+    }
+
+    .inner-swiper-button-next {
+       
+        right: -5%;
+    }
+
+    .inner-swiper-button-prev {
+       
+        left: -5%;
+    }
+}
+
+
+@media (max-width:768px) {
+    .service-technology-content {
+        margin-left: 0;
+    }
+
+    .service-technology-content p {
+        width: 100% !important;
+        font-size: 1.5rem;
+    }
+
+    .about-service-section {
+        padding: 3rem;
+    }
+
+    .about-service-content h3 {
+        font-size: 3rem !important;
+    }
+
+    .swiper-button-prev {
+        
+        top: 106% !important;
+        left: 56% !important;
+    }
+    .swiper-button-next {
+        
+        top: 106% !important;
+        
+    }
+}
+
+
+@media (max-width:835px) {
+    .service-technology-content {
+        margin-left: 0%;
+    }
+}
+
+@media (max-width:800px) {
+    .about-service-section {
+        flex-direction: column;
+        row-gap: 3rem;
+    }
+
+    .about-service-img {
+        width: 100%;
+        height: 300px;
+    }
+
+    .about-service-content {
+        width: 100%;
+    }
+}
+
+@media (max-width:550px) {
+
+
+    .service-technology-content h1 {
+
+        font-size: 6rem !important;
+    }
+
+    .f-service-header {
+        text-align: center;
+        text-wrap: wrap;
+    }
+}
+
 @media (max-width:450px) {
     .f-service-header {
         height: 30vh;
         display: flex;
         row-gap: 0rem;
     }
-    .f-service-header h2{
+
+    .f-service-header h2 {
         font-size: 3rem;
     }
-    .f-service-header p{
-        font-size:1.1rem ;
+
+    .f-service-header p {
+        font-size: 1.1rem;
         text-align: center;
         padding: 1rem;
     }
-    
+
+    .service-technology-content h1 {
+
+        font-size: 5rem !important;
+    }
+
 }
 
 
+@media (max-width:380px) {
+    .service-technology-content h1 {
+
+        font-size: 3rem !important;
+        line-height: 40px !important;
+    }
+}

@@ -65,7 +65,7 @@ function Service() {
                   nextEl: '.swiper-button-next',
                   prevEl: '.swiper-button-prev',
                 }}
-                style={{ height: '500px' }}
+                // style={{ height: '500px' }}
                 modules={[Navigation]}
                 onSlideChange={() => console.log('slide change')}
               >
