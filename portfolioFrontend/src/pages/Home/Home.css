@@ -1,4 +1,5 @@
 
+
 /* ------------------ Home Wrapper ------------------ > */
 
 .home-wrapper {
@@ -10,247 +11,79 @@
 
 /* <----------------------------------- Hero Section -----------------------------------> */
 .hero-container {
-    padding-top: 8rem;
+  position: relative; 
+  padding-top: 8rem;
   padding-left: 8rem;
-
-  height: 85vh;
+  min-height: 85vh;
+  color: #fff; 
+  z-index: 1; 
+  margin-bottom: 6rem;
 }
 
-.main-title-hero {
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-
-.title-line-m {
-  height: 7px;
-  background-color: #fe0094;
-  display: block;
+.hero-container::before {
+  content: "";
   position: absolute;
-  margin-top: 1rem;
-  width: 0;
-  animation: titleLineForward 1s forwards, titleLineReverse 1s 1s forwards;
-}
-
-.title-line {
-  height: 3.3rem;
-  background: linear-gradient(90deg, #00229e 0%, #6e1299 47.92%, #fe0094 100%);
-  display: block;
-  width: 0;
-  position: absolute;
-  margin-top: 3rem;
-  animation: drawLine 3s forwards;
-  animation-delay: 2s;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../../assets/heroBg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.3; 
+  z-index: -1; 
 }
 
 .hero-title {
-  margin-top: 0.2rem;
-  position: absolute;
-  left: 0.8%;
-  top: 0%;
-  white-space: nowrap;
-  overflow: hidden;
   color: #fff;
   font-size: 2rem;
   font-weight: 500;
-  width: 0;
-  animation: revealText 3s forwards;
-  animation-delay: 3s;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
 }
 
-.main-body {
-  margin-top: 5rem;
+.hero-body {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   margin-bottom: 4rem;
 }
 
+.main-body-content {
+  color: #fff;
+  width: 50%;
+}
+
 .main-body-header h1 {
-  white-space: nowrap;
-  overflow: hidden;
-  /* opacity: 0; */
-  animation: typeText 4s steps(30, end) forwards;
   margin-bottom: 1rem;
-  width: 0; /* Start with 0 width for typing animation */
 }
 
 .main-body-header h1 span {
-  color: #6e1299;
+  color: #FE0094;
 }
 
-.main-body-header h1:nth-child(1) {
-  animation-delay: 5s;
-}
+/* ------------------ Media Querry ------------------ > */
 
-.main-body-header h1:nth-child(2) {
-  animation-delay: 7s;
-}
-
-.main-body-header h1:nth-child(3) {
-  animation-delay: 9s;
-}
-
-.main-body-content {
-  color: #fff;
-  margin-top: 2rem;
-  width: 65%;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 2s forwards;
-  animation-delay: 10s;
-}
-
-.hero-button {
-  animation: fadeIn 2s forwards;
-  animation-delay: 11s;
-  opacity: 0;
-}
-
-/* <------------------ Hero Animations ------------------ */
-@keyframes typeText {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-    /* opacity: 1; */
-  }
-}
-
-@keyframes drawLine {
-  from {
-    width: 0;
-  }
-  to {
-    width: 420px; /* Width to fit the text */
-  }
-}
-
-@keyframes revealText {
-  from {
-    width: 0;
-  }
-  to {
-    width: 900px; /* Width to fit the text */
-  }
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes titleLineForward {
-  from {
-    width: 0;
-  }
-  to {
-    width: 300px; /* Adjust width to fit the text */
-  }
-}
-
-@keyframes titleLineReverse {
-  from {
-    width: 300px;
-  }
-  to {
-    width: 0;
-  }
-}
-
-/* .button-container {
-    display: inline-block;
-    position: relative;
-} */
-
-/* .button {
-    display: flex;
-    width: 200px;
-    height: 60px;
-    text-decoration: none;
-    color: #bde8c8;
-    border: 2px solid #bde8c8;
-    font-size: 15px;
-    position: relative;
-    transition: all 0.3s ease;
-    justify-content: center;
-    align-items: center;
-    outline: none;
-} */
-
-/* .button span {
-    transition: all 0.3s ease;
-    font-size: 2.5rem;
-    margin-left: 0.8rem;
-    font-weight: 700;
-}
-
-.button:hover {
-    color: #fff;
-    scale: 1.1;
-}
-
-.button:hover span {
-    transform: translateX(5px);
-}
-
-.button-container::before {
-    content: '';
-    position: absolute;
-    width: 200px;
-    height: 60px;
-    top: 28%;
-    left: -8%;
-    background-color: #0d7c66;
-    z-index: -1;
-    transition: all 0.3s ease;
-    opacity: 1;
-}
-
-.button-container:hover::before {
-    scale: 1.09;
-    top: 2%;
-    left: 0.5%;
-    width: 200px;
-    height: 60px;
-    opacity: 1;
-} */
-
-@media (max-width: 1250px) {
+@media (max-width: 1440px) {
   .hero-container {
-    padding-left: 7rem;
+    min-height: 95vh;
   }
 }
 
 @media (max-width: 1024px) {
-  @keyframes drawLine {
-    from {
-      width: 0;
-    }
-    to {
-      width: 360px; /* Width to fit the text */
-    }
+  .hero-title{
+    margin-bottom: 1rem;
   }
-  .hero-container{
-    height: 95vh;
+
+  .main-body-header h1{
+    line-height: 70px;
   }
-  
+
+  .main-body-content {
+    width: 70%;
+  }
 }
 
 @media (max-width: 850px) {
@@ -266,26 +99,24 @@
 }
 
 @media (max-width: 768px) {
-  @keyframes drawLine {
-    from {
-      width: 0;
-    }
-    to {
-      width: 320px; /* Width to fit the text */
-    }
-  }
   .hero-container {
-    height: 80vh;
+   min-height: 85vh;
+  }
+  .main-body-header h1{
+    line-height: 50px;
+  }
+
+  .hero-title {
+    font-size: 1.5rem;
   }
 }
 
 @media (max-width: 750px) {
   .hero-container {
-    padding-top: 2rem;
-    padding-left: 5rem;
+    padding-left: 5.5rem;
   }
   .main-body-content {
-    width: 90%;
+    width: 85%;
   }
 }
 
@@ -298,26 +129,16 @@
       width: 300px; /* Width to fit the text */
     }
   }
-  .hero-title {
-    margin-top: 0.4rem;
-    left: 1.5%;
-  }
-  .main-body-content {
-    width: 100%;
-  }
+
 }
 
 @media (max-width: 600px) {
-  .hero-container {
-    padding-top: 3rem;
-    padding-left: 3.5rem;
-  }
   .title-line {
     height: 2.5rem;
+
   }
   .hero-title {
-    margin-top: 0.5rem;
-    left: 1.5%;
+    font-size: 1.3rem;
   }
 }
 @media (max-width: 560px) {
@@ -326,18 +147,27 @@
     line-height: 40px;
   }
   .hero-container {
-    height: 72vh;
+    padding-top: 10rem;
+    height: 60vh;
   }
 }
 
 @media (max-width: 500px) {
   .hero-container {
-    padding-top: 4rem;
-    padding-left: 2rem;
+    padding-left: 4rem;
+  }
+  .hero-title {
+    margin-bottom: 2rem;
+  }
+  .main-body-header{
+    margin-bottom: 1rem;
   }
   .main-body-header h1 {
     font-size: 3rem;
     line-height: 30px;
+  }
+  .hero-body{
+    margin-bottom: 3rem;
   }
   .main-body-content {
     width: 93%;
@@ -355,12 +185,6 @@
 }
 
 @media (max-width: 420px) {
-  .hero-container {
-    padding-left: 1.6rem;
-  }
-  .hero-container {
-    height: 75vh;
-  }
   .main-body-header h1 {
     font-size: 2.5rem;
   }
@@ -368,19 +192,14 @@
 
 @media (max-width: 400px) {
   .hero-container {
-    padding-top: 1rem;
-    padding-left: 1.3rem;
+    min-height: 40vh;
+    padding-top: 4rem;
   }
-  .main-body-header :nth-child(1) br {
-    display: block !important;
-  }
+  
   .main-body-header h1 {
     font-size: 2.8rem;
   }
-  .main-body-header :nth-child(1) :nth-child(1) {
-    margin-bottom: 1rem;
-    display: inline-block;
-  }
+
   .hero-title p {
     font-size: 1rem;
     font-weight: 500;
@@ -390,29 +209,21 @@
     height: 2rem;
   }
   .main-body-content {
-    width: 98%;
-  }
-  @keyframes drawLine {
-    from {
-      width: 0;
-    }
-    to {
-      width: 275px; /* Width to fit the text */
-    }
+    width: 100%;
   }
 }
 
 @media (max-width: 370px) {
   .hero-container {
-    padding-left: 1rem;
+    padding-left: 2rem;
   }
   .main-body-header :nth-child(2) br {
     display: block !important;
   }
-  .main-body-header :nth-child(2) :nth-child(1) {
+  /* .main-body-header :nth-child(2) :nth-child(1) {
     margin-bottom: 1rem;
     display: inline-block;
-  }
+  } */
   .main-body-content {
     width: 99%;
   }
@@ -421,13 +232,6 @@
     font-weight: 500;
     letter-spacing: 0.5px;
   }
-  @keyframes drawLine {
-    from {
-      width: 0;
-    }
-    to {
-      width: 230px; /* Width to fit the text */
-    }
-  }
+
 }
 
