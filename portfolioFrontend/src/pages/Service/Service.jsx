@@ -9,6 +9,58 @@ import "swiper/css/navigation";
 import "./service.css";
 import { projects } from "./serviceData";
 
+import {
+  SiHtml5,
+  SiCss3,
+  SiJavascript,
+  SiReact,
+  SiPython,
+  SiAngular,
+  SiTailwindcss,
+  SiBootstrap,
+  SiFlutter,
+  SiDart,
+  SiFirebase,
+  SiNextdotjs,
+  SiRedux,
+  SiCplusplus,
+  SiMongodb,
+  SiGraphql,
+  SiMysql,
+  SiGit,
+  SiPostgresql,
+  SiPandas,
+  SiNumpy,
+} from "react-icons/si";
+
+import { FaNodeJs, FaHtml5, FaCss3, FaVuejs } from "react-icons/fa";
+
+const skillList = [
+  { icon: <SiHtml5 />, name: "html5" },
+  { icon: <SiCss3 />, name: "css3" },
+  { icon: <SiJavascript />, name: "javascript" },
+  { icon: <SiReact />, name: "react" },
+  { icon: <FaNodeJs />, name: "nodejs" },
+  { icon: <SiPython />, name: "python" },
+  { icon: <SiAngular />, name: "angular" },
+  { icon: <FaVuejs />, name: "vuejs" },
+  { icon: <SiTailwindcss />, name: "tailwind" },
+  { icon: <SiBootstrap />, name: "bootstrap" },
+  { icon: <SiFlutter />, name: "flutter" },
+  { icon: <SiDart />, name: "dart" },
+  { icon: <SiFirebase />, name: "firebase" },
+  { icon: <SiNextdotjs />, name: "nextjs" },
+  { icon: <SiRedux />, name: "redux" },
+  { icon: <SiCplusplus />, name: "cpp" },
+  { icon: <SiMongodb />, name: "mongodb" },
+  { icon: <SiGraphql />, name: "graphql" },
+  { icon: <SiMysql />, name: "mysql" },
+  { icon: <SiGit />, name: "git" },
+  { icon: <SiPostgresql />, name: "postgresql" },
+  { icon: <SiPandas />, name: "pandas" },
+  { icon: <SiNumpy />, name: "numpy" },
+];
+
 function Service() {
   const { serviceName } = useParams();
   const mainSwiperRef = useRef(null);
@@ -153,22 +205,46 @@ function Service() {
 
             <div className="service-wrapper">
               <div class="about-service-wrapper">
-               <div className="about-service-inner-wrapper">
-               <h2>
-                  Ready to Craft <span style={{color: "#6E1299"}}>Front-End</span> Brilliance
-                </h2>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus reprehenderit tempora rem reiciendis necessitatibus libero adipisci ea quisquam placeat quae suscipit vitae, sapiente nisi expedita .
-                </p>
-                <button className=" hero-button">
-                  <span className="top"></span>
-                  <Link to="" className="primary-button">
-                    Connent Now <span> &rarr;</span>
-                  </Link>
-                  <span className="bottom"></span>
-                </button>
-               </div>
+                <div className="about-service-inner-wrapper">
+                  <h2>
+                    Ready to Craft{" "}
+                    <span style={{ color: "#6E1299" }}>Front-End</span>{" "}
+                    Brilliance
+                  </h2>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Accusamus reprehenderit tempora rem reiciendis
+                    necessitatibus libero adipisci ea quisquam placeat quae
+                    suscipit vitae, sapiente nisi expedita .
+                  </p>
+                  <button className=" hero-button">
+                    <span className="top"></span>
+                    <Link to="" className="primary-button">
+                      Connent Now <span> &rarr;</span>
+                    </Link>
+                    <span className="bottom"></span>
+                  </button>
+                </div>
               </div>
+            </div>
+          </div>
+          <div className="logo-container">
+            <h2>
+               Our <span>Technology</span>
+            </h2>
+            <div className="all-logos">
+
+            {skillList.map((skillImage) => {
+              return (
+                <>
+                  <div className={`skill-icon ${skillImage.name}`}>
+                    {skillImage.icon}
+                    {/* <p>{skillImage.name}</p> */}
+                  </div>
+                </>
+              );
+            })}
+
             </div>
           </div>
         </>
