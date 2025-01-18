@@ -9,37 +9,42 @@ const Footer = () => {
   return (
     <div style={{ backgroundColor: "#1e143b" }}>
       <div className="footer-container container">
-        <div className="footer-upper">
-          <div className="footer-upper-1">
-            <h4>Follow Our Social Network</h4>
-            <div className="footer-lower">
-              <Link>
-              <i class="fa-brands fa-facebook-f"></i>
-              </Link>
-              <Link>
-                <i class="fa-brands fa-facebook-messenger"></i>
-              </Link>
-              <Link>
-              <i class="fa-brands fa-linkedin-in"></i>
-              </Link>
-              <Link>
-                <i class="fa-brands fa-twitter"></i>
-              </Link>
-            </div>
-          </div>
+      <div className="footer-upper">
+  <div className="footer-upper-1">
+    <h4>Follow Our Social Network</h4>
+    <div className="footer-lower">
+      <Link>
+        <i className="fa-brands fa-facebook-f"></i>
+      </Link>
+      <Link>
+        <i className="fa-brands fa-facebook-messenger"></i>
+      </Link>
+      <Link>
+        <i className="fa-brands fa-linkedin-in"></i>
+      </Link>
+      <Link>
+        <i className="fa-brands fa-twitter"></i>
+      </Link>
+    </div>
+  </div>
 
-          <div className="footer-upper-2">
-            <img src={logo} alt="" />
-          </div>
+  <div className="footer-upper-2">
+    <img src={logo} alt="Cognitech Labz Logo" />
+  </div>
 
-          <div className="footer-upper-3">
-            <h4>Email</h4>
-            <div className="footer-upper-3-wrapper">
-              <a href=""><i class="fa-solid fa-envelope"></i></a>
-              <p ><a href="">cognitechlabz@gmail.com</a></p>
-            </div>
-          </div>
-        </div>
+  <div className="footer-upper-3">
+    <h4>Email</h4>
+    <div className="footer-upper-3-wrapper">
+      <a href="mailto:cognitechlabz@gmail.com">
+        <i className="fa-solid fa-envelope"></i>
+      </a>
+      <p>
+        <a href="mailto:cognitechlabz@gmail.com">cognitechlabz@gmail.com</a>
+      </p>
+    </div>
+  </div>
+</div>
+
 
 
         <div className="footer-main">
