@@ -26,7 +26,7 @@ function App() {
 
   return (
     <>
-      <Navbar handleClick={handleClick} open={open} />
+      <Navbar handleClick={handleClick} open={open} setOpen={setOpen} />
 
       <Routes>
         <Route path='/' element={<Home />} />

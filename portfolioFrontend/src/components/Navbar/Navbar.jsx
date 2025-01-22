@@ -1,17 +1,46 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import slugify from "slugify";
 
 import "./Navbar.css";
 
 // <----------------- Import Images ----------------->
-import logo from '../../assets/logo.png';
-import hamburger from '../../assets/hamburger.png';
-import hamburgerCross from '../../assets/hamburger-cross.png';
+import logo from "../../assets/logo.png";
+import hamburger from "../../assets/hamburger.png";
+import hamburgerCross from "../../assets/hamburger-cross.png";
 
+// <----------------- Import Global States ----------------->
+import { useProjectStore } from "../../store/useProjectStore";
 
 const Navbar = ({ handleClick, open }) => {
-    const [HumOpen, setHumOpen] = useState(false);      // Set Hamburger State
-    const toggleMenu = () => setHumOpen(!HumOpen);      // Change Hamburger state
+  const [HumOpen, setHumOpen] = useState(false); // Set Hamburger State
+  const {
+    serviceName,
+    setServiceName,
+    setProjects,
+    getAllCategories,
+    allCategories,
+  } = useProjectStore();
+
+  const toggleMenu = () => setHumOpen(!HumOpen); // Change Hamburger state
+
+  const handleServiceName = (name) => {
+    setServiceName(name);
+    const generatedSlug = slugify(name, { lower: true });
+    setProjects(generatedSlug);
+    console.log(name);
+  };
+
+  console.log(serviceName);
+
+  useEffect(() => {
+    getAllCategories();
+  }, []);
+
+  allCategories.map((category)=>{
+    console.log(category.extra.name)
+  })
+
   return (
     <>
       <div // Service Overlay Implementation
@@ -133,32 +162,34 @@ const Navbar = ({ handleClick, open }) => {
       </nav>
 
       {/* Services Implementation */}
-      <ul onClick={(e) => e.stopPropagation()} className='dropdown-menu' style={{
-                left: open ? '0%' : '-200%'
-            }}>
-                <div className="side__nav__logo">
-                    <Link to="/">
-                        <img src={logo} alt="Logo" />
-                    </Link>
-                </div>
-                <li>
-                    <i class="fa-solid fa-diamond"></i><Link to={`/service/${"frontend"}`} onClick={() => {
-                        handleClick()
-                    }} service-name="FrontEnd">Front End Development</Link>
-                </li>
-                <li>
-                    <i service-name="BackEnd" class="fa-solid fa-diamond"></i><Link to={`/service/${"backend"}`} onClick={handleClick}>Back End Development</Link>
-                </li>
-                <li>
-                    <i class="fa-solid fa-diamond"></i><Link to="" onClick={handleClick} >App Development</Link>
-                </li>
-                <li>
-                    <i class="fa-solid fa-diamond"></i> <Link to="" onClick={handleClick}>Custom Web Development</Link>
-                </li>
-                <li>
-                    <i class="fa-solid fa-diamond"></i><Link to="" onClick={handleClick}>UI/UX Design</Link>
-                </li>
-            </ul>
+      <ul
+        onClick={(e) => e.stopPropagation()}
+        className="dropdown-menu"
+        style={{
+          left: open ? "0%" : "-200%",
+        }}
+      >
+        <div className="side__nav__logo">
+          <Link to="/">
+            <img src={logo} alt="Logo" />
+          </Link>
+        </div>
+        {allCategories.map((category, index) => (
+          <li key={index}>
+            <i className="fa-solid fa-diamond"></i>
+            <Link
+              to={`/service/${slugify(category.extra.name, { lower: true })}`}
+              onClick={() => {
+                handleClick();
+                handleServiceName(category.extra.name);
+              }}
+            >
+              {category.extra.name}
+            </Link>
+          </li>
+        ))}
+        
+      </ul>
     </>
   );
 };
