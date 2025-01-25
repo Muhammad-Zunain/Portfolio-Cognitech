@@ -34,6 +34,7 @@ import {
 } from "react-icons/si";
 
 import { FaNodeJs, FaHtml5, FaCss3, FaVuejs } from "react-icons/fa";
+import { useProjectStore } from "../../store/useProjectStore";
 
 const skillList = [
   { icon: <SiHtml5 />, name: "html5" },
@@ -65,6 +66,7 @@ function Service() {
   const { serviceName } = useParams();
   const mainSwiperRef = useRef(null);
   const imageSwiperRefs = useRef([]);
+  const {projects, setServiceName, setProjects} = useProjectStore()
 
   const containerStyles = {
     backgroundColor: "#1e143b",
@@ -75,6 +77,16 @@ function Service() {
     overflow: "hidden",
     marginBottom: "4rem",
   };
+  
+  useEffect(()=>{
+    console.log(serviceName)
+    // setServiceName(serviceName)
+    setProjects(serviceName)
+  },[])
+
+  useEffect(()=>{
+    console.log(projects)
+  },[projects])
 
   useEffect(() => {
     if (!projects.hasOwnProperty(serviceName)) {
@@ -82,13 +94,23 @@ function Service() {
     }
   }, [serviceName]);
 
+  useEffect(() => {
+    setServiceName(serviceName);
+    setProjects(serviceName);
+  }, [serviceName]);
+  
+
+  if (Object.keys(projects).length === 0) {
+    return "Loading..."
+  }
+
   return (
     <>
-      {serviceName && projects[serviceName] ? (
+      {projects  ? (
         <>
           <div className="f-service-header">
-            <h2>{projects[serviceName].extra[0].name}</h2>
-            <p>{projects[serviceName].extra[0].description}</p>
+            <h2>{projects.extra.name}</h2>
+            <p>{projects.extra.description}</p>
           </div>
 
           <div className="container" style={containerStyles}>
@@ -137,7 +159,7 @@ function Service() {
                 // style={{ height: '500px' }}
                 modules={[Navigation]}
               >
-                {projects[serviceName].service.map((project, index) => (
+                {projects.service.map((project, index) => (
                   <SwiperSlide key={index}>
                     <div className="project-wrapper">
                       <div className="work-wrapper-content">
@@ -238,7 +260,7 @@ function Service() {
                 <>
                   <div className={`skill-icon ${skillImage.name}`}>
                     {skillImage.icon}
-                    {/* <p>{skillImage.name}</p> */}
+                    
                   </div>
                 </>
               );

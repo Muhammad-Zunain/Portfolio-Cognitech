@@ -4,8 +4,12 @@ import logo from "../../assets/logo.png";
 import { Link } from "react-router-dom";
 
 import "./Footer.css";
+import { useProjectStore } from "../../store/useProjectStore";
+import slugify from "slugify";
 
 const Footer = () => {
+  const { projects, setServiceName, setProjects, allCategories } = useProjectStore();
+
   return (
     <div style={{ backgroundColor: "#1e143b" }}>
       <div className="footer-container container">
@@ -67,6 +71,23 @@ const Footer = () => {
               <span class="about-line"></span>Services
             </h3>
             <ul>
+              {allCategories.map((category, index) => (
+                <li key={index}>
+                  <i className="fa-solid fa-angle-right"></i>
+                  <Link
+                    to={`/service/${slugify(category.extra.name, {
+                      lower: true,
+                    })}`}
+                    onClick={() => {
+                      handleClick();
+                      handleServiceName(category.extra.name);
+                    }}
+                  >
+                    {category.extra.name}
+                  </Link>
+                </li>
+              ))}
+{/* 
               <li>
                 <i class="fa-solid fa-angle-right"></i>
                 <Link>Mobile App Development</Link>
@@ -86,7 +107,7 @@ const Footer = () => {
               <li>
                 <i class="fa-solid fa-angle-right"></i>
                 <Link>UI/UX Design</Link>
-              </li>
+              </li> */}
             </ul>
           </div>
           <div className="footer-4 footer">

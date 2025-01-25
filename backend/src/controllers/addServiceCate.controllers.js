@@ -55,4 +55,33 @@ const addService = asyncHandler(async (req, res) => {
     return res.status(201).json(new ApiResponse(200, "Created successfully!"));
 });
 
-export default addService;
+
+const allCategory = asyncHandler (async (req, res)=>{
+    const allCategories = await categorySch.find()
+    console.log(allCategories)
+    return res.status(201).json(new ApiResponse(200, allCategories, ""));
+})
+
+
+const deleteCategories = asyncHandler (async (req, res)=>{
+    const a = ['test10', 'backend', 'backenD', 'backenDd', 'backenDdg', 'baclenDdg']
+    for (const name of a) {
+        const extra = await extraSch.findOne({ name: name });
+        if (extra) {
+            const category = await categorySch.findOne({ "extra._id": extra._id });
+            if (category) {
+                 await Projects.deleteOne(
+                    { "frontend._id": category._id },
+                );
+
+              
+
+                await categorySch.deleteOne({ _id: category._id });
+            }
+            await extraSch.deleteOne({ _id: extra._id });
+        }
+    }
+    return res.status(200).json(new ApiResponse(200, "Categories deleted successfully"));
+})
+
+export  {addService, allCategory, deleteCategories};

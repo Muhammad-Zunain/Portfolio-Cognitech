@@ -6,59 +6,106 @@ import { Projects, categorySch, service, extraSch } from "../models/projectSchem
 import { uploadOnCloudinary } from "../utils/cloudinary.js";
 
 const postProject = asyncHandler(async (req, res) => {
-    const { category, title, desc } = req.body; // Explicitly destructuring the fields
-    let {technologies} = req.body
-    technologies = technologies.split(" ")
-    // Validate fields
-    if ([category, title, desc].some((field) => field?.trim() === "")) {
-        throw new ApiError(400, "All Fields Are Required");
+
+    console.log(req)
+    const { category, title, desc, technologies } = req.body;
+    if (!category || !title || !desc) {
+        throw new ApiError(400, "All fields are required");
     }
 
-    const files = req.files;
 
-    if (!files || files.length === 0) {
-        return res.status(400).json({ error: "No files uploaded" });
+    console.log(category, title, desc, technologies)
+
+    // Process technologies input
+    const techArray = Array.isArray(technologies)
+        ? technologies
+        : technologies.split(" ").filter(Boolean);
+
+    if (!req.files || req.files.length === 0) {
+        throw new ApiError(400, "No files uploaded");
     }
 
-    // Handle file uploads
-    const serviceImages = await Promise.all(files.map(file => uploadOnCloudinary(file.path)));
+    // Upload files to Cloudinary
+    const serviceImages = await Promise.all(
+        req.files.map(async (file) => {
+            if (!file.path) throw new ApiError(400, "Invalid file provided");
+            return uploadOnCloudinary(file.path);
+        })
+    );
 
 
-    // Check if any projects exist
-    const projectExists = await Projects.countDocuments();
-    if (projectExists === 0) {
-        throw new ApiError(400, "No Project Exists");
+    //find extra 
+    let extra = await extraSch.findOne({
+        'name': category
+    })
+
+    let Category= null
+
+    if (!extra) {
+         extra = await extraSch.create({
+            name: category,
+            description: desc
+        })
+
+        
     }
 
-    // Find the project category based on the provided category
-    const projectCategoryData = await Projects.findOne({
-        'frontend.extra.name': category
+
+    Category = await categorySch.findOne({
+        'extra': extra
+    })
+
+    if (!Category) {
+        Category = await categorySch.create({
+            extra: extra,
+            service: []
+        })
+    }
+
+
+    console.log(extra)
+    console.log("category", Category)
+
+
+
+    // Find project category
+    let projectCategoryData = await Projects.findOne({
+        "frontend.extra.name": category,
     });
 
-
-    // Check if the category exists
     if (!projectCategoryData) {
-        throw new ApiError(400, "No Service Category Exists");
+        projectCategoryData = await Projects.create({
+            frontend: Category
+        })
     }
 
-    // Create the service
+
+    console.log("yeah",projectCategoryData)
+
+    // Create and save service
     const servicePro = await service.create({
         title,
         description: desc,
-        technologies: technologies,
-        images: serviceImages
+        technologies: techArray,
+        images: serviceImages,
     });
 
-    const serviceData = await service.findById(servicePro._id);
-    if (!serviceData) {
-        throw new ApiError(500, "Something went wrong while creating service");
+   
+
+    // Append the service to the category
+    if ( projectCategoryData.frontend.service ) {
+        projectCategoryData.frontend.service.push(servicePro);
+    } else {
+        projectCategoryData.frontend.service = [servicePro]
     }
+    await projectCategoryData.save();
 
-    // Append service to the project category data
-    projectCategoryData.frontend.service.push(serviceData);
-    await projectCategoryData.save(); // Ensure to await the save operation
+    const verified = await Projects.findById(projectCategoryData._id)
 
-    return res.status(201).json(new ApiResponse(200, "Project created successfully!"));
+    console.log('verified', verified)
+
+    return res.status(201).json(new ApiResponse(201, "Project created successfully!"));
 });
+
 
 export default postProject;
