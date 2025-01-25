@@ -46,3 +46,23 @@
     max-height: 500px; /* Set to a value large enough to accommodate the content */
     opacity: 1; /* Fully visible */
 }
+
+@media  (max-width: 1024px) {
+    .choose-header {
+        padding: 1rem;
+    }
+    
+}
+
+@media (max-width:850px) {
+    
+    .quention__box {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .question__content {
+        width: 100%;
+    }
+}
+

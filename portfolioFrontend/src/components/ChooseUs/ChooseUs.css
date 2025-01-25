@@ -146,13 +146,26 @@
 
 @media (max-width: 1024px) {
   .choose-top {
-    top: -4.5%;
-  }
-  .choose-wrapper::before {
-    top: -4.4%;
+    top: -3.1%;
   }
   .choose-bottom {
-    bottom: -4.6%;
+    bottom: -3.1%;
+  }
+  .choose-wrapper::after{
+    bottom: -3%;
+  }
+  .choose-wrapper::before {
+    top: -3%;
+  }
+  .choose-header > p {
+    padding: 1rem;
+  }
+  .choose-content-wrapper {
+    flex-direction: column;
+    padding: 0 5rem;
+  }
+  .reason {
+    width: 100%;
   }
 }
 

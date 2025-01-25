@@ -1,4 +1,4 @@
-import aboutService from '../../assets/service-bg-image.jpg';
+import aboutService from '../../assets/service-bg-image1.jpg';
 
 export const projects = {
   frontend: {

@@ -136,7 +136,6 @@ function Service() {
                 }}
                 // style={{ height: '500px' }}
                 modules={[Navigation]}
-                onSlideChange={() => console.log("slide change")}
               >
                 {projects[serviceName].service.map((project, index) => (
                   <SwiperSlide key={index}>

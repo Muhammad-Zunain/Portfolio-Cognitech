@@ -179,9 +179,7 @@ button:hover .bottom {
   h1{
     font-size: 6rem;
 }
-p{
-    font-size: 1.6rem;
-}
+
 }
 
 @media (max-width: 1024px) {
@@ -189,9 +187,7 @@ p{
     font-size: 5.5rem;
   }
 
-  p {
-    font-size: 1.4rem;
-  }
+
   .primary-button {
     font-size: 1.4rem;
     padding: 1.8rem 3.5rem;
@@ -216,38 +212,35 @@ p{
 
 @media (max-width: 768px) {
   p {
-    font-size: 1.3rem;
+    font-size: 1.7rem;
     line-height: 25px;
   }
 }
 
 @media (max-width: 750px) {
-  h1{
-    font-size: 4rem;
-    line-height: 50px;
-  }
+ 
   .primary-button {
     font-size: 1.3rem;
     padding: 1.7rem 3rem;
-    font-weight: 700;
+    font-weight: 600;
   }
 }
 
 @media (max-width: 700px){
-  h1{
+  /* h1{
     font-size: 3.8rem;
-  }
+  } */
 }
 
 @media (max-width:650px) {
   h1{
-    font-size: 3.5rem;
+    font-size: 4rem;
     line-height: 45px;
   }
-  p {
-    font-size: 1.2rem;
+  /* p {
+    font-size: 1.5rem;
     line-height: 20px;
-  }
+  } */
 }
 
 @media (max-width:490px){
