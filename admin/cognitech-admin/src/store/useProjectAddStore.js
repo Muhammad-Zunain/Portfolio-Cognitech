@@ -21,9 +21,15 @@ export const useProjectAddStore = create((set, get) => ({
         headers: {
           'Content-Type': 'application/json', 
         },
+        withCredentials: true,
       });
       console.log('Response:', res.data);
-      toast.success(`Successfully Added The Category ${data.name}`);
+      if (res.statusCode === 200 || res.statusCode === 201) {
+
+        toast.success(res.data.message);
+      } else {
+        toast.error(res.data.message);
+      }
     } catch (error) {
       console.error('Error adding category:', error.response?.data || error.message);
       toast.error(error.response.data.messages);
@@ -36,9 +42,12 @@ export const useProjectAddStore = create((set, get) => ({
         headers: {
           'Content-Type': 'application/json', 
         },
+        
       });
       console.log('Response:', res.data);
       set({allCategories: res.data.data})
+
+     
       
     } catch (error) {
       console.error('Error adding category:', error.response?.data || error.message);
@@ -51,14 +60,19 @@ export const useProjectAddStore = create((set, get) => ({
     console.log(data)
     try {
       const res = await axios.post(`${baseUrl}/post-projects`, data ,{
-       
+       withCredentials: true,
       });
       console.log('Response:', res.data);
       // set({allCategories: res.data.data})
-      toast.success(`Successfully Added The Project`);
+      if (res.statusCode === 200 || res.statusCode === 201) {
+
+        toast.success(res.data.message);
+      } else {
+        toast.error(res.data.message);
+      }
       
     } catch (error) {
-      console.error('Error adding category:', error.response?.data || error.message);
+      console.error('Error adding category:', error);
       toast.error(error.response.data.messages);
     }
   }

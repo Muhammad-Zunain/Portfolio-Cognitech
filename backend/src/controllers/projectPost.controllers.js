@@ -7,10 +7,13 @@ import { uploadOnCloudinary } from "../utils/cloudinary.js";
 
 const postProject = asyncHandler(async (req, res) => {
 
-    console.log(req)
-    const { category, title, desc, technologies } = req.body;
+    //category is slug
+
+    const { category, categoryName, title, desc, technologies } = req.body;
+
     if (!category || !title || !desc) {
-        throw new ApiError(400, "All fields are required");
+        
+        return res.status(201).json(new ApiResponse(400, null, "All fields are required"));
     }
 
 
@@ -22,38 +25,48 @@ const postProject = asyncHandler(async (req, res) => {
         : technologies.split(" ").filter(Boolean);
 
     if (!req.files || req.files.length === 0) {
-        throw new ApiError(400, "No files uploaded");
+        
+        return res.status(201).json(new ApiResponse(400, null,"No files uploaded"));
     }
 
     // Upload files to Cloudinary
     const serviceImages = await Promise.all(
         req.files.map(async (file) => {
-            if (!file.path) throw new ApiError(400, "Invalid file provided");
+            if (!file.path) return res.status(201).json(new ApiResponse(400, null,"Invalid file provided"));
             return uploadOnCloudinary(file.path);
         })
     );
 
+    console.log(serviceImages)
 
     //find extra 
     let extra = await extraSch.findOne({
-        'name': category
+        'slug': category
     })
+
+
+    console.log("extra", extra)
 
     let Category= null
 
     if (!extra) {
          extra = await extraSch.create({
-            name: category,
+            name: categoryName,
+            slug: category,
             description: desc
         })
 
         
     }
 
+    
+
 
     Category = await categorySch.findOne({
         'extra': extra
     })
+
+    console.log("category", Category)
 
     if (!Category) {
         Category = await categorySch.create({
@@ -62,15 +75,9 @@ const postProject = asyncHandler(async (req, res) => {
         })
     }
 
-
-    console.log(extra)
-    console.log("category", Category)
-
-
-
     // Find project category
     let projectCategoryData = await Projects.findOne({
-        "frontend.extra.name": category,
+        "frontend.extra.slug": category,
     });
 
     if (!projectCategoryData) {

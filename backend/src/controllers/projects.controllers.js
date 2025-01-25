@@ -9,8 +9,8 @@ const showcaseProjects = asyncHandler(async (req, res) => {
     const serviceName = req.params.serviceName;
     console.log(serviceName)
 
-    const project = await Projects.find({
-        'frontend.extra.name': serviceName // serviceName is the name you want to match
+    const project = await Projects.findOne({
+        'frontend.extra.slug': serviceName // serviceName is the name you want to match
     });
 
     console.log(project)

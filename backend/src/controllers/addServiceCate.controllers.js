@@ -11,13 +11,16 @@ const addService = asyncHandler(async (req, res) => {
 
     // Check if all required fields are provided
     if (!name || !desc) {
-        throw new ApiError(400, "All Fields Are Required");
+        
+        return res.status(201).json(new ApiResponse(400, null, "All Fields Are Required"));
     }
 
 
     const extraExists = await extraSch.findOne({name:name})
     if (extraExists) {
-        throw new ApiError(400, "Already Service Exists");
+        
+        return res.status(201).json(new ApiResponse(400, null, "Already Service Exists"));
+        
     }
 
     // Create a new extra entry
@@ -28,7 +31,8 @@ const addService = asyncHandler(async (req, res) => {
 
     // Check if extra was created successfully
     if (!extra) {
-        throw new ApiError(400, "Some error Occurred");
+        
+        return res.status(201).json(new ApiResponse(400, null, "Some error Occurred"));
     }
 
     // Create a new category entry, you may need to adjust this depending on your schema
@@ -38,7 +42,8 @@ const addService = asyncHandler(async (req, res) => {
 
     // Check if category creation was successful
     if (!category) {
-        throw new ApiError(400, "Error occurred while creating category");
+        
+        return res.status(201).json(new ApiResponse(400, null, "Error occurred while creating category"));
     }
 
     const projects = await Projects.create({
@@ -46,7 +51,8 @@ const addService = asyncHandler(async (req, res) => {
     })
 
     if (!projects) {
-        throw new ApiError(400, "Error occurred while creating category");
+        
+        return res.status(201).json(new ApiResponse(400, null, "Error occurred while creating category"));
     }
 
     console.log(category)

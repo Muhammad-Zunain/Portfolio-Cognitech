@@ -68,6 +68,8 @@ function Service() {
   const imageSwiperRefs = useRef([]);
   const {projects, setServiceName, setProjects} = useProjectStore()
 
+  console.log(serviceName)
+
   const containerStyles = {
     backgroundColor: "#1e143b",
     borderRadius: "8px",
