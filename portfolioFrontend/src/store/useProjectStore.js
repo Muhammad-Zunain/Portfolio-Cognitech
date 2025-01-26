@@ -15,19 +15,19 @@ export const useProjectStore = create((set, get) => ({
   },
   setProjects: async (slug) => {
     try {
-      console.log(slug);
+      
       const res = await axios.get(`${baseUrl}/showcase-projects/${slug}`);
-      console.log(res);
+      
       set({ projects: res.data.data.frontend });
     } catch (error) {
-        console.log(error);
+      console.log(error);
         
     }
   },
 
   getAllCategories: async () => {
     const res = await axios.get(`${baseUrl}/all-category`);
-    console.log(res.data.data);
+    
     set({ allCategories: res.data.data });
   },
 }));

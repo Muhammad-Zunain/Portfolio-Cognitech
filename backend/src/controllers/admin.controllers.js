@@ -10,7 +10,7 @@ export const adminLogin = asyncHandler(async (req, res) => {
         throw new ApiError(400, "All fields are required");
     }
 
-    console.log(email, password);
+    
     if (email !== process.env.ADMIN_EMAIL && password !== process.env.ADMIN_PASSWORD) {
         throw new ApiError(401, "Invalid User Credentials");
     }

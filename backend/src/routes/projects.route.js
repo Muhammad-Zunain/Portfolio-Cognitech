@@ -11,7 +11,6 @@ import adminAuth from "../middlewares/admin.middleware.js";
 
 const showRouter = Router();
 
-console.log(showcaseProjects)
 // Ensure route is correct
 showRouter.get('/showcase-projects/:serviceName', showcaseProjects);
 showRouter.post('/post-projects', upload.array('files'), adminAuth ,postProject)

@@ -17,7 +17,7 @@ const postProject = asyncHandler(async (req, res) => {
     }
 
 
-    console.log(category, title, desc, technologies)
+    
 
     // Process technologies input
     const techArray = Array.isArray(technologies)
@@ -37,7 +37,7 @@ const postProject = asyncHandler(async (req, res) => {
         })
     );
 
-    console.log(serviceImages)
+    
 
     //find extra 
     let extra = await extraSch.findOne({
@@ -45,7 +45,7 @@ const postProject = asyncHandler(async (req, res) => {
     })
 
 
-    console.log("extra", extra)
+    
 
     let Category= null
 
@@ -66,7 +66,7 @@ const postProject = asyncHandler(async (req, res) => {
         'extra': extra
     })
 
-    console.log("category", Category)
+    
 
     if (!Category) {
         Category = await categorySch.create({
@@ -87,7 +87,6 @@ const postProject = asyncHandler(async (req, res) => {
     }
 
 
-    console.log("yeah",projectCategoryData)
 
     // Create and save service
     const servicePro = await service.create({
@@ -109,7 +108,6 @@ const postProject = asyncHandler(async (req, res) => {
 
     const verified = await Projects.findById(projectCategoryData._id)
 
-    console.log('verified', verified)
 
     return res.status(201).json(new ApiResponse(201, "Project created successfully!"));
 });

@@ -28,18 +28,16 @@ const Navbar = ({ handleClick, open }) => {
     setServiceName(name);
     const generatedSlug = slugify(name, { lower: true });
     setProjects(generatedSlug);
-    console.log(name);
+    
   };
 
-  console.log(serviceName);
+  
 
   useEffect(() => {
     getAllCategories();
   }, []);
 
-  allCategories.map((category)=>{
-    console.log(category.extra.name)
-  })
+  
 
   return (
     <>

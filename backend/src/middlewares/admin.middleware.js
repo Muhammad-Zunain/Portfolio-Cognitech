@@ -9,7 +9,6 @@ const adminAuth = asyncHandler(async (req, res, next) => {
     try {
         var token = req.cookies.accessToken;
     } catch (err) {
-        console.log(err, req.cookies)
         return res.status(401).json(new ApiResponse(401, null, 'Login First'));
     }
 
@@ -28,7 +27,6 @@ const adminAuth = asyncHandler(async (req, res, next) => {
         return next();
     } catch (err) {
         
-        console.log(err);
         return res.status(401).json(new ApiResponse(401, null, 'Invalid token'));
     }
 

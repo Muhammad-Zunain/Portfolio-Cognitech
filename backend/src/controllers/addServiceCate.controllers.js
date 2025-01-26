@@ -7,7 +7,7 @@ import {Projects, categorySch, extraSch } from "../models/projectSchema.js";
 const addService = asyncHandler(async (req, res) => {
     // Destructure the name and description from the request body
     const { name, desc } = req.body;
-    console.log(name, desc); // Ensure this prints the correct values
+    
 
     // Check if all required fields are provided
     if (!name || !desc) {
@@ -55,7 +55,7 @@ const addService = asyncHandler(async (req, res) => {
         return res.status(201).json(new ApiResponse(400, null, "Error occurred while creating category"));
     }
 
-    console.log(category)
+    
 
     // Return success response
     return res.status(201).json(new ApiResponse(200, "Created successfully!"));
@@ -64,7 +64,7 @@ const addService = asyncHandler(async (req, res) => {
 
 const allCategory = asyncHandler (async (req, res)=>{
     const allCategories = await categorySch.find()
-    console.log(allCategories)
+    
     return res.status(201).json(new ApiResponse(200, allCategories, ""));
 })
 

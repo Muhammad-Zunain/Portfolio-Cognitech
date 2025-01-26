@@ -68,7 +68,7 @@ function Service() {
   const imageSwiperRefs = useRef([]);
   const {projects, setServiceName, setProjects} = useProjectStore()
 
-  console.log(serviceName)
+  
 
   const containerStyles = {
     backgroundColor: "#1e143b",
@@ -81,14 +81,10 @@ function Service() {
   };
   
   useEffect(()=>{
-    console.log(serviceName)
-    // setServiceName(serviceName)
     setProjects(serviceName)
   },[])
 
-  useEffect(()=>{
-    console.log(projects)
-  },[projects])
+  
 
   useEffect(() => {
     if (!projects.hasOwnProperty(serviceName)) {
