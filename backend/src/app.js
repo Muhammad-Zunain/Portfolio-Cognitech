@@ -11,7 +11,8 @@ app.use(cookieParser());
 app.use(cors({
     origin: [
         "http://localhost:5173", 
-        "https://cognitechlabs.vercel.app"
+        "https://cognitechlabs.vercel.app",
+        "https://cognitech-admin.vercel.app"
     ],
     credentials: true
 }));
