@@ -9,7 +9,10 @@ const app = express()
 app.use(cookieParser());
 
 app.use(cors({
-    origin: "http://localhost:5173", // Default to frontend URL if environment variable is missing
+    origin: [
+        "http://localhost:5173", 
+        "https://cognitech-kappa.vercel.app"
+    ],
     credentials: true
 }));
 
