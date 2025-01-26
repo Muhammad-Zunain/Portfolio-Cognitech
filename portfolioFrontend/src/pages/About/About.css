@@ -25,6 +25,13 @@
   margin-bottom: 4rem;
 }
 
+
+.f-about-header p {
+  text-align: center;
+  padding: 0 6rem;
+}
+
+
 .brain-cogni-logo {
   padding-top: 4rem;
 }

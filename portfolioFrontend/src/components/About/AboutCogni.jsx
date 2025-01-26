@@ -24,15 +24,12 @@ const AboutCogni = () => {
                   <span>
                     <i class="fa-solid fa-arrow-up-long"></i>
                   </span>
-                  <h1>6</h1>
+                  <h1>4</h1>
                   <p>Years Experience</p>
                 </div>
 
                 <p style={{ color: "#1e143b" }}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                  vel sapien id arcu porttitor fermentum. Sed vel sapien id arcu
-                  porttitor fermentum. Sed vel sapien id arcu porttitor
-                  fermentum.
+                Cognitech Labs is a leading software development company specializing in web and mobile solutions tailored to your business needs. We combine innovation and precision to deliver impactful, scalable, and user-centric digital experiences. Our mission is to empower businesses to thrive in the digital era through cutting-edge technology.
                 </p>
               </div>
               <button>

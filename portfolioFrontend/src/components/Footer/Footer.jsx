@@ -114,14 +114,13 @@ const Footer = () => {
             </h3>
             <ul>
               <li>
-                <i class="fa-solid fa-phone"></i>+92 33333333
+                <i class="fa-solid fa-phone"></i>+92 306 2860258
               </li>
               <li>
                 <i class="fa-solid fa-envelope"></i>cognitechlabz@gmail.com
               </li>
               <li>
-                <i class="fa-solid fa-location-dot"></i>ABC Street Number Malir,
-                Karachi
+                <i class="fa-solid fa-location-dot"></i>Karachi, Pakistan
               </li>
             </ul>
           </div>

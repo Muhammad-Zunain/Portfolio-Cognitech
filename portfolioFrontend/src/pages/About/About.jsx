@@ -43,7 +43,7 @@ const About = () => {
             <p style={{ fontWeight: "500" }}>About Congnitech</p>
           </div>
           <p>
-            With over 6 years of proven expertise, we are a leading partner for
+            With over 4 years of proven expertise, we are a leading partner for
             businesses seeking to excel in today's digital landscape.
             Cognitech Labs is a leading software development company specializing in web and mobile solutions tailored to your business needs. We combine innovation and precision to deliver impactful, scalable, and user-centric digital experiences. Our mission is to empower businesses to thrive in the digital era through cutting-edge technology.
           </p>
