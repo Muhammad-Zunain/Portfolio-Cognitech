@@ -19,8 +19,6 @@ const ProjectsAdd = () => {
     allCategory();
   }, []);
 
-  console.log(allCategories);
-
   const handleFileChange = (e) => {
     const selectedFiles = Array.from(e.target.files);
 
@@ -35,7 +33,6 @@ const ProjectsAdd = () => {
 
   const handleTechChange = (e, index) => {
     const newTechnologies = [...technologies];
-    console.log(e.target.value);
     if (e.target.value) {
       newTechnologies[index] = e.target.value;
     }
@@ -47,7 +44,6 @@ const ProjectsAdd = () => {
   };
 
   const handleSubmit = (e) => {
-    console.log(technologies);
 
     // Remove the last item from the technologies array
     technologies.splice(technologies.length - 1, 1);
@@ -65,11 +61,6 @@ const ProjectsAdd = () => {
     );
 
     files.forEach((file) => formData.append("files", file));
-
-    // Log formData entries
-    for (let [name, value] of formData.entries()) {
-      console.log(`${name}: ${value}`);
-    }
 
     // Send to backend (e.g., using axios or fetch)
     addProjects(formData);

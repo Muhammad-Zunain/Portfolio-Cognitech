@@ -16,7 +16,6 @@ function Sign() {
     setError(""); // Clear any previous errors
 
     const data = { email, password };
-    console.log("Data:", data);
 
     try {
       const res = await fetch(`${backendUrl}/admin/admin-login`, {
@@ -36,7 +35,6 @@ function Sign() {
       }
 
       const responseData = await res.json();
-      console.log("Login Successful:", responseData);
       toast.success("Login successful!");
       setIsLogin(true)
 

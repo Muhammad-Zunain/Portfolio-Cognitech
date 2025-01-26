@@ -14,7 +14,6 @@ const CateggoryAdd = () => {
       desc: description,
     };
 
-    console.log("Submitting Data:", data);
 
     addCategory(data)
       .then(() => {

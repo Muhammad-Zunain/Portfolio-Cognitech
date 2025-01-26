@@ -40,10 +40,6 @@ function AuthCheck({ backendUrl, children, setIsLogin, isLogin }) {
 
   const [loginLoc, setLoginLoc] = useState(false)
 
-  useEffect(()=> {
-    console.log(location.pathname);
-  }, [loginLoc])
-
   useEffect(() => {
     const fetchAdminAuth = async () => {
       try {
