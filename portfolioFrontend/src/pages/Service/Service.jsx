@@ -112,7 +112,7 @@ function Service() {
         <>
           <div className="f-service-header">
             <h2>{projects.extra.name}</h2>
-            <p>{projects.extra.description}</p>
+            <p style={{ textAlign: "center" }}>{projects.extra.description}</p>
           </div>
 
           <div className="container" style={containerStyles}>
@@ -235,7 +235,7 @@ function Service() {
                   <p>
                   We are dedicated to delivering exceptional solutions tailored to your unique business needs. From front-end design to back-end development, our team combines innovation and expertise to ensure seamless functionality, outstanding user experiences, and impactful results across all digital platforms. Let us help you transform your ideas into reality with excellence at every step.
                   </p>
-                  <button className=" hero-button">
+                  <button className="hero-button">
                     <span className="top"></span>
                     <Link to="" className="primary-button">
                       Contact Now <span> &rarr;</span>
@@ -245,7 +245,6 @@ function Service() {
                 </div>
               </div>
             </div>
-          </div>
           <div className="logo-container">
             <h2>
                Our <span>Technology</span>
@@ -264,6 +263,7 @@ function Service() {
             })}
 
             </div>
+          </div>
           </div>
         </>
       ) : (

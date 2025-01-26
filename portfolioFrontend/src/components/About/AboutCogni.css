@@ -1,6 +1,6 @@
 /* <--------------------------------------- Home Page About ---------------------------------------> */
 .about-main-wrapper{
-    height: 100vh;
+    /* height: 100vh; */
     overflow: hidden;
 }
 
@@ -329,7 +329,7 @@
         font-weight: 300 !important;
     }
     .about-content button {
-        margin-left: 19rem;
+        margin-left: 18rem;
         margin-top: -2rem;
     }
     .about-exp {
@@ -347,6 +347,31 @@
     }    
 }
 
+@media (max-width:550px) {
+    .about-cognitech {
+        flex-direction: column-reverse;
+        row-gap: 5rem;
+    }
+    .about-cognitech p{
+        width: 100%;
+    }
+    .about-content button{
+        margin-top: -13rem;
+        margin-left: 20rem;
+    }
+    .about-content .primary-button{
+        font-size: 1.5rem;
+        padding: 2rem;
+        width: 170px;
+    }
+}
+
+@media (max-width:500px) {
+    .about-content button{
+        margin-left: 16rem;
+    }
+}
+
 @media (max-width:450px) {
     .about-item p{
         font-size: 1.5rem;
@@ -362,15 +387,10 @@
     .about-content {
         padding: 2.5rem 2rem 8rem 2rem;
     }
-    .about-cognitech {
-        flex-direction: column-reverse;
-        row-gap: 5rem;
-    }
     .about-cognitech p{
-        width: 100%;
         font-size: 1.5rem;
-        font-weight: 100 !important;
     }
+    
     .about-exp {
         width: 130px;
         height: 130px;
@@ -390,7 +410,23 @@
     }
     .about-content .primary-button{
         font-size: 1.3rem;
-        width: 150px; 
+        width: 160px; 
         padding: 2rem;
+    }
+}
+
+@media (max-width:400px) {
+    .about-exp {
+        width: 120px;
+        height: 120px;
+    }
+    .about-exp p {
+        font-size: 1.3rem;
+        margin-left: 1rem;
+        margin-top: 0.5rem;
+    }.about-content .primary-button {
+        font-size: 1.3rem;
+        width: 110px;
+        padding: 1rem;
     }
 }
