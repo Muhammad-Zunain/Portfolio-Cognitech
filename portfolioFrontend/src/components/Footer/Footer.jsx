@@ -60,9 +60,7 @@ const Footer = () => {
             </div>
             <div className="footer-1-content">
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+              Cognitech Labs is a leading software company specializing in web and mobile solutions. We deliver innovative, scalable, and user-focused digital experiences to empower businesses in the digital era.
               </p>
             </div>
           </div>

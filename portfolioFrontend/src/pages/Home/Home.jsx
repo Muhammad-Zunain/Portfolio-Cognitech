@@ -42,24 +42,24 @@ const Home = () => {
 
         <div className="hero-container">
 
-          <p className="hero-title">SOFTWARE PRODUCT DEVELOPMENT COMPANY</p>
+          <p className="hero-title">TRANSFORMING IDEAS INTO SCALABLE SOFTWARE SOLUTIONS</p>
 
           <div className="hero-body">
             <div className="main-body-header">
               <h1>
-                Your <span>Product,</span> <br style={{ display: "none" }} />{" "}
-                Your <span>Idea</span>
+              {/* Your Concept, Our Innovation – Together, We Build Excellence. */}
+                Your <span>Concept,</span> <br style={{ display: "none" }} />{" "}
+                Our <span>Innovation</span>
               </h1>
               <h1>
-                Our <span>Innovation</span>
+              Together, We <span> Build</span>
                 <br style={{ display: "none" }} /> and
               </h1>
-              <h1>Engineering.</h1>
+              <h1>Excellence.</h1>
             </div>
             <div className="main-body-content">
               <p>
-                Accelerate your vision with our comprehensive suite of software
-                development and growth services.
+              Empowering your vision with our all-encompassing software development and scaling services.
               </p>
             </div>
           </div>
@@ -81,8 +81,7 @@ const Home = () => {
               Our <span>Services</span>
             </h2>
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Molestias, ducimus et optio sit iusto voluptates?
+            Explore a diverse range of services designed to bring your ideas to life and empower your business with cutting-edge solutions.
             </p>
           </div>
 
@@ -96,10 +95,7 @@ const Home = () => {
                 />
                 <h3>Custom Development</h3>
                 <p style={{ textAlign: "justify" }}>
-                  The team shapes your projects better by bringing in our
-                  skilled professionals who perfectly fit your needs. This
-                  offers smooth collaboration and boosts productivity for
-                  optimal results.
+                Empowering your projects with a team of experts who bring precision and creativity to the table. We ensure seamless integration of ideas and execution, maximizing efficiency and delivering tailored solutions for your business needs.
                 </p>
                 <div className="services">
                   <span>Mern</span>
@@ -154,10 +150,7 @@ const Home = () => {
                 />
                 <h3>Mobile Development</h3>
                 <p>
-                  We use the newest technologies to create mobile solutions that
-                  work well on any device. Our focus is on making them flexible,
-                  scalable, and perfectly suited to meet the specific needs of
-                  your audience and business goals.
+                We leverage Flutter to develop high-performance, cross-platform mobile applications that work seamlessly across devices. From startups to enterprises, our mobile solutions are designed to cater to a variety of industries, ensuring scalability, flexibility, and superior performance.
                 </p>
                 <div className="services">
                   <span>Flutter</span>
@@ -182,9 +175,7 @@ const Home = () => {
                 />
                 <h3>Front-end Development</h3>
                 <p>
-                  The team mixes good looks with practicality in our front-end
-                  development. Our solutions ensure websites not only look great
-                  but also work well on different devices.{" "}
+                We create visually stunning and user-friendly front-end solutions that deliver seamless experiences across all devices. Our team focuses on responsive design, intuitive interfaces, and high performance, ensuring your website or app looks great and functions flawlessly.{" "}
                 </p>
                 <div className="services">
                   <span>React js</span>
@@ -211,10 +202,7 @@ const Home = () => {
                 />
                 <h3>Back-end Development</h3>
                 <p>
-                  The applied tech behind your digital solutions is strong. Our
-                  back-end development ensures smooth handling of data, strong
-                  security, and top performance, so your operations can grow and
-                  run efficiently.
+                We build robust back-end systems that drive your digital solutions with speed, security, and scalability. Using the latest technologies, we ensure seamless data handling and top performance, enabling your operations to grow and adapt, whether you're a small business or a global enterprise.
                 </p>
                 <div className="services">
                   <span>Node js</span>
