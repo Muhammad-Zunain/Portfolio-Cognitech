@@ -11,7 +11,7 @@ app.use(cookieParser());
 app.use(cors({
     origin: [
         "http://localhost:5173", 
-        "https://cognitech-kappa.vercel.app"
+        "https://cognitechlabs.vercel.app/"
     ],
     credentials: true
 }));
