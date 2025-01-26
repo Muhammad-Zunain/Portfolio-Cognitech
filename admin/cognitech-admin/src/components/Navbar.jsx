@@ -14,7 +14,7 @@ const Navbar = () => {
     try {
       
       const response = await fetch(
-        "http://localhost:5000/api/admin/admin-logout",
+        "https://cognitech-kappa.vercel.app/api/admin/admin-logout",
         {
           method: "GET",
           credentials: "include",
