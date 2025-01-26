@@ -233,7 +233,7 @@ function Service() {
                   <button className="hero-button">
                     <span className="top"></span>
                     <Link to="" className="primary-button">
-                      Contact Now <span> &rarr;</span>
+                      Contact Now 
                     </Link>
                     <span className="bottom"></span>
                   </button>

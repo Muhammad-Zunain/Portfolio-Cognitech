@@ -21,7 +21,7 @@ export const useProjectStore = create((set, get) => ({
       set({ projects: res.data.data.frontend });
     } catch (error) {
       console.log(error);
-        
+      console.error("Error fetching projects:", error.response?.data || error.message);
     }
   },
 
