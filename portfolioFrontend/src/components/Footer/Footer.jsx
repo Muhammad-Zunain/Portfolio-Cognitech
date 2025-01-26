@@ -60,9 +60,7 @@ const Footer = () => {
             </div>
             <div className="footer-1-content">
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+              Cognitech Labs is a leading software company specializing in web and mobile solutions. We deliver innovative, scalable, and user-focused digital experiences to empower businesses in the digital era.
               </p>
             </div>
           </div>
@@ -116,14 +114,13 @@ const Footer = () => {
             </h3>
             <ul>
               <li>
-                <i class="fa-solid fa-phone"></i>+92 33333333
+                <i class="fa-solid fa-phone"></i>+92 306 2860258
               </li>
               <li>
                 <i class="fa-solid fa-envelope"></i>cognitechlabz@gmail.com
               </li>
               <li>
-                <i class="fa-solid fa-location-dot"></i>ABC Street Number Malir,
-                Karachi
+                <i class="fa-solid fa-location-dot"></i>Karachi, Pakistan
               </li>
             </ul>
           </div>

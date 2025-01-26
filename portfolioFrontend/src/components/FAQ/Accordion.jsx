@@ -21,7 +21,7 @@ const Accordion = () => {
                     {/* Question 1 */}
                     <div className="questions">
                         <p onClick={() => toggleAnswer(0)}>
-                            How do I get started with Car Rental?
+                        What types of software solutions do you offer?
                             <img
                                 src={activeIndex === 0 ? arrowUp : arrowDown}
                                 className="questionArrow"
@@ -31,18 +31,13 @@ const Accordion = () => {
                         <p
                             className={`answer__description ${activeIndex === 0 ? 'show' : ''}`}
                         >
-                            At vero eos et accusamus et iusto odio dignissimos ducimus qui
-                            blanditiis praesentium voluptatum deleniti atque corrupti quos
-                            dolores et quas molestias excepturi sint occaecati cupiditate non
-                            provident, similique sunt in culpa qui officia deserunt mollitia
-                            animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis
-                            est et expedita distinctio.
+                            We provide a wide range of software solutions, including custom web and mobile application development, cloud solutions, enterprise software, and AI-powered tools. Our goal is to create solutions tailored to your unique business needs.
                         </p>
                     </div>
                     {/* Question 2 */}
                     <div className="questions">
                         <p onClick={() => toggleAnswer(1)}>
-                            What is the rental process?
+                        How long does it take to complete a project?
                             <img
                                 src={activeIndex === 1 ? arrowUp : arrowDown}
                                 className="questionArrow"
@@ -52,7 +47,7 @@ const Accordion = () => {
                         <p
                             className={`answer__description ${activeIndex === 1 ? 'show' : ''}`}
                         >
-                            To start the rental process, you need to select a vehicle and complete the necessary paperwork. Our team will guide you through the steps.
+                            Project timelines vary depending on the complexity and scope of your requirements. After understanding your needs, we provide a detailed project plan and timeline to ensure transparency and timely delivery.
                         </p>
                     </div>
                 </div>
@@ -60,7 +55,7 @@ const Accordion = () => {
                     {/* Question 3 */}
                     <div className="questions">
                         <p onClick={() => toggleAnswer(2)}>
-                            What are the payment options?
+                        Do you provide ongoing support after project completion?
                             <img
                                 src={activeIndex === 2 ? arrowUp : arrowDown}
                                 className="questionArrow"
@@ -70,13 +65,13 @@ const Accordion = () => {
                         <p
                             className={`answer__description ${activeIndex === 2 ? 'show' : ''}`}
                         >
-                            We offer various payment options, including credit cards, debit cards, and online payment methods.
+                            Yes! We offer comprehensive post-deployment support and maintenance services to ensure your software remains updated, secure, and fully functional at all times.
                         </p>
                     </div>
                     {/* Question 4 */}
                     <div className="questions">
                         <p onClick={() => toggleAnswer(3)}>
-                            Can I modify my reservation?
+                        Is my data safe with Cognitech Labs?
                             <img
                                 src={activeIndex === 3 ? arrowUp : arrowDown}
                                 className="questionArrow"
@@ -86,7 +81,7 @@ const Accordion = () => {
                         <p
                             className={`answer__description ${activeIndex === 3 ? 'show' : ''}`}
                         >
-                            Yes, you can modify your reservation up to 24 hours before your scheduled pickup time.
+                            Absolutely. We prioritize data security and follow industry-standard practices to protect your information. From encryption to secure development methodologies, your data is in safe hands.
                         </p>
                     </div>
                 </div>

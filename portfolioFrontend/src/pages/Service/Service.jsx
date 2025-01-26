@@ -122,9 +122,9 @@ function Service() {
                   Our Technology <br /> Stack
                 </h1>
                 <p>
-                  If you dream it we can build it. We use a wide range of
-                  technologies and platforms. Our technology stack enables us to
-                  implement any feature for our clients.
+                If you can dream it, we can build it. Our comprehensive technology stack spans a variety of tools and platforms, giving us the flexibility to create custom, high-performance solutions that cater to the unique needs of every client.
+
+
                 </p>
               </div>
               <div className="service-technology-image">
@@ -141,10 +141,7 @@ function Service() {
               <div className="about-service-content">
                 <h3>Experience The Difference Of Working With Excellence</h3>
                 <p>
-                  Choose us for custom development solutions that go beyond the
-                  traditional. Witness our work and our dedicated team of
-                  experts who are committed to your success and delivering
-                  excellence in every project.
+                Choose us for custom development solutions that go beyond the traditional. Our team of skilled professionals is passionate about crafting innovative solutions that are tailored to your unique business needs. We pride ourselves on delivering high-quality results, providing ongoing support, and ensuring the success of every project. With a focus on excellence in every step of the process, from concept to execution, we are committed to helping you achieve your goals and stand out in the competitive digital landscape.
                 </p>
               </div>
             </div>
@@ -228,21 +225,19 @@ function Service() {
             <div className="service-wrapper">
               <div class="about-service-wrapper">
                 <div className="about-service-inner-wrapper">
+                {/* Ready to Craft Digital Brilliance */}
                   <h2>
                     Ready to Craft{" "}
-                    <span style={{ color: "#6E1299" }}>Front-End</span>{" "}
+                    <span style={{ color: "#6E1299" }}>Digital </span>{" "}
                     Brilliance
                   </h2>
                   <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Accusamus reprehenderit tempora rem reiciendis
-                    necessitatibus libero adipisci ea quisquam placeat quae
-                    suscipit vitae, sapiente nisi expedita .
+                  We are dedicated to delivering exceptional solutions tailored to your unique business needs. From front-end design to back-end development, our team combines innovation and expertise to ensure seamless functionality, outstanding user experiences, and impactful results across all digital platforms. Let us help you transform your ideas into reality with excellence at every step.
                   </p>
                   <button className="hero-button">
                     <span className="top"></span>
                     <Link to="" className="primary-button">
-                      Connent Now 
+                      Contact Now <span> &rarr;</span>
                     </Link>
                     <span className="bottom"></span>
                   </button>
