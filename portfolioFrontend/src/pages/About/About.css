@@ -1,18 +1,17 @@
-
 .f-about-header {
-    width: 100%;
-    background: linear-gradient(90deg, #00229E 0%, #6E1299 47.92%, #FE0094 100%);
-    height: 40vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    row-gap: 3rem;
-    margin: 2rem 0;
+  width: 100%;
+  background: linear-gradient(90deg, #00229E 0%, #6E1299 47.92%, #FE0094 100%);
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 3rem;
+  margin: 2rem 0;
 }
 
 .f-about-header h2 {
-    text-transform: capitalize;
+  text-transform: capitalize;
 }
 
 
@@ -80,7 +79,7 @@
 }
 
 .about__contact__box {
-  margin-top: 8rem;
+  margin: 8rem 0;
   padding: 6rem 4rem 6rem 4rem;
   background-color: #b251df;
   display: flex;
@@ -131,54 +130,135 @@
   color: #fff;
 }
 
-@media (max-width:1024px){
-  .brain-cogni-logo::after{
+@media (max-width:1024px) {
+  .brain-cogni-logo::after {
     top: 2%;
     right: -9%;
   }
-  .brain-cogni-logo img{
+
+  .brain-cogni-logo img {
     top: 3.6%;
+  }
+  .f-about-header p{
+    text-align: center;
+    padding: 0 2rem;
   }
 }
 
-@media (max-width: 768px){
+@media (max-width:865px) {
+  .about__contact__box .about__box1 {
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 3rem;
+  }
+
+  .about__contact__box h2 {
+    width: 100%;
+    text-align: center;
+  }
+  .cont-left {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
   .f-about-header {
     padding: 15px;
     row-gap: 1rem;
   }
+
   .f-about-header h2 {
     font-size: 4.0rem;
+  }
+
+  .brain-cogni-logo::after {
+    top: 3%;
+  }
+
+  .brain-cogni-logo::after {
+    width: 150px;
+    height: 150px;
   }
 
   .f-about-header p {
     text-align: center;
   }
-  .brain-cogni-logo::after{
+
+  .brain-cogni-logo::after {
     right: -12%;
   }
+
   .brain-cogni-logo img {
-    top: 4.8%;
+    top: 4%;
   }
-  .about__contact__box h2{
+
+  .about__contact__box .about__box1 {
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 3rem;
+  }
+
+  .about__contact__box h2 {
+    width: 100%;
     font-size: 3.2rem;
+    text-align: center;
     line-height: 45px;
+  }
+
+  .cont-left {
+    width: 100%;
+  }
+
+  .cont-left .primary-button {
+    font-size: 1.7rem;
+    padding: 2rem 5rem;
   }
 }
 
+@media (max-width:550px) {
+  .about__contact__box {
+    padding: 6rem 3rem;
+  }
+
+  .brain-cogni-logo::after {
+    right: -17%;
+  }
+
+  .brain-cogni-logo img {
+    right: 1px;
+  }
+
+  .about-cogi-vision {
+    padding: 0px 4rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .about__contact__box {
+    margin-bottom: 28rem;
+}
+}
+
 @media (max-width: 450px) {
-    .f-about-header {
-        height: 30vh;
-        display: flex;
-        row-gap: 0rem;
-    }
-    .f-about-header h2{
-        font-size: 3rem;
-    }
-    .f-about-header p{
-        font-size:1.1rem ;
-        text-align: center;
-        padding: 1rem;
-    }
+  .f-about-header {
+    height: 30vh;
+    display: flex;
+    row-gap: 0rem;
+  }
+
+  .f-about-header h2 {
+    font-size: 3rem;
+  }
+
+  .f-about-header p {
+    font-size: 1.1rem;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .about-cogi-head h2 {
+    width: 80%;
+  }
   .brain-cogni-logo::after {
     width: 120px;
     height: 120px;
@@ -190,7 +270,7 @@
     width: 50px;
     height: 50px;
     right: 0px;
-    top: 85px;
+    top: 100px;
   }
 
   .about-cogi-vision {
@@ -264,11 +344,13 @@
     height: 110px;
     right: -16%;
   }
+
   .brain-cogni-logo img {
     width: 56px;
     height: 55px;
-    top: 83px;
+    top: 93px;
   }
+
   .about-cogi-head h2 {
     font-size: 3rem;
     line-height: 40px;
@@ -276,19 +358,21 @@
 }
 
 
-@media(max-width:320px){
+@media(max-width:320px) {
   .about-item .about-line {
     width: 70px;
-}
+  }
+
   .brain-cogni-logo::after {
     width: 100px;
     height: 100px;
     right: -17%;
-}
-.brain-cogni-logo img {
-  width: 45px;
-  height: 45px;
-  top: 86px;
-}
+  }
+
+  .brain-cogni-logo img {
+    width: 45px;
+    height: 45px;
+    top: 86px;
+  }
 
 }

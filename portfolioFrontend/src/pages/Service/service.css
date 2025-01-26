@@ -162,7 +162,7 @@
 }
 
 .work-wrapper {
-  margin: 6rem 0;
+  margin-top: 8rem;
   min-height: 500px;
 }
 
@@ -298,7 +298,7 @@
 .about-service-wrapper {
   box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.2), -1px -1px 15px rgba(0, 0, 0, 0.2);
   width: 85%;
-  margin-top: 6rem;
+  margin-top: 8rem;
   position: relative;
 }
 
@@ -435,17 +435,15 @@
 
 /* Main Container */
 .logo-container {
-
   flex-direction: column;
-  padding: 12rem;
-  /* background: linear-gradient(135deg, #1e143b, #2a214a); */
-  margin-bottom: 6rem;
-
+  padding: 10rem;
+  margin-top: 6rem;
 }
 
 
 .logo-container h2 {
   text-align: center;
+  margin-bottom: 5rem;
 }
 
 .logo-container h2 span {
@@ -701,35 +699,46 @@
     height: 25px;
     border: 5px solid #fe0094;
   }
+
   .about-service-section {
-    padding: 3rem;  
-}
-.about-service-img {
+    padding: 3rem;
+  }
+
+  .about-service-img {
     margin-left: 0rem;
-  margin-bottom: 2rem;
+    margin-bottom: 2rem;
     box-shadow: 0px 0px 0px rgb(110, 18, 153, 0.4);
-}.about-service-content :nth-child(1) {
-  margin-bottom: 1rem;
-}
-.about-service-content :nth-child(2)::after {
-  width: 30px;
-  height: 30px;
-  border: 7px solid rgb(254, 0, 148);
-}
+  }
+
+  .about-service-content :nth-child(1) {
+    margin-bottom: 1rem;
+  }
+
+  .about-service-content :nth-child(2)::after {
+    width: 30px;
+    height: 30px;
+    border: 7px solid rgb(254, 0, 148);
+  }
+
   .project-wrapper {
     padding: 3rem 3rem;
-}
+  }
+
   .work-wrapper-content h1 {
     font-size: 6rem;
     margin-bottom: 1rem;
-}.work-wrapper-content h2 {
-  font-size: 3.5rem;
-  
-  line-height: 50px;
-}
-.swiper-button-prev {
-  left: 65% !important;
-}
+  }
+
+  .work-wrapper-content h2 {
+    font-size: 3.5rem;
+
+    line-height: 50px;
+  }
+
+  .swiper-button-prev {
+    left: 65% !important;
+  }
+
   .inner-swiper-button-next {
     top: 25%;
     right: -6%;
@@ -739,19 +748,34 @@
     top: 25%;
     left: -6%;
   }
+
   .work-wrapper-content {
     margin-top: -15rem;
     margin-bottom: 2rem;
   }
+
+  .about-service-wrapper .about-service-inner-wrapper :nth-child(1) {
+    font-size: 3.5rem;
+    line-height: 50px;
+  }
+
+  .about-service-inner-wrapper {
+    padding: 4rem 3rem;
+  }
+
+  .about-service-content :nth-child(2)::after {
+    display: none;
+  }
+  .logo-container {
+    padding: 2rem;
+  }
 }
 
 @media (max-width: 470px) {
-  .service-technology-content :nth-child(1)::before{
+  .service-technology-content :nth-child(1)::before {
     display: none;
   }
-  .service-technology-content h1 {
-    line-height: 65px !important;
-}
+
   .f-service-header {
     height: 30vh;
     display: flex;
@@ -763,35 +787,99 @@
   }
 
   .f-service-header p {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     text-align: center;
     padding: 1rem;
   }
 
-  .service-technology-content h1 {
-    font-size: 5rem !important;
+  .service-technology-content {
+    padding: 0 2rem;
   }
+
+  .service-technology-content h1 {
+    font-size: 4.5rem !important;
+    line-height: 65px !important;
+  }
+
   .about-service-section {
+    padding: 2rem;
     row-gap: 2rem;
-}
-    .about-service-content {
-  padding: 0 ;
-}
-.about-service-wrapper .about-service-inner-wrapper :nth-child(1) {
-  font-size: 3.5rem;
-  line-height: 50px;
-}
-.about-service-inner-wrapper {
-  padding: 4rem 2rem;
-}
+  }
+
+  .about-service-content {
+    padding: 0;
+  }
+
+  .about-service-content h3 {
+    font-size: 2.5rem !important;
+  }
+
+  .about-service-wrapper .about-service-inner-wrapper :nth-child(1) {
+    font-size: 3.5rem;
+    line-height: 50px;
+  }
+
+  .about-service-inner-wrapper {
+    padding: 4rem 2rem;
+  }
+
+  .work-wrapper-content {
+    margin-top: -20rem;
+  }
+
+  .project-wrapper {
+    padding: 3rem 2rem;
+  }
+
+  .work-wrapper-content h2 {
+    font-size: 2.5rem;
+  }
+
+  .work-wrapper-content p {
+    font-size: 1.5rem;
+  }
+
+  .work-wrapper-content h1 {
+    font-size: 5rem;
+  }
+
   .logo-container {
     padding: 1rem;
   }
+
+  .swiper-button-prev {
+    left: 55% !important;
+  }
+  .logo-container h2 {
+    font-size: 4rem;
+}
 }
 
-@media (max-width: 380px) {
+@media (max-width: 375px) {
   .service-technology-content h1 {
-    font-size: 3rem !important;
-    line-height: 40px !important;
+    font-size: 4rem !important;
+    line-height: 50px !important;
+  }
+
+  .service-technology-image {
+    top: -4rem;
+    width: 60%;
+  }
+
+  .work-wrapper-content {
+    margin-top: -25rem;
+  }
+
+  .logo-container {
+    padding: 0.5rem;
+  }
+
+  .logo-container h2 {
+    font-size: 3.5rem;
+  }
+
+  .skill-icon {
+    font-size: 4rem;
+    padding: 1.5rem;
   }
 }

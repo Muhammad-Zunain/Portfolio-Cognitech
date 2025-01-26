@@ -24,7 +24,7 @@
   padding: 8rem 6rem 8rem 6rem;
   position: relative;
   overflow: hidden;
-  margin-bottom: 6rem;
+  margin-bottom: 8rem;
 }
 
 .contact__cognitech {
@@ -208,20 +208,31 @@
     right: 4%;
   }
   .main_contact_wrapper::after{
-    right: -17.5%;
+    right: -20%;
   }
   .main_contact_wrapper .contact_style_right {
-    right: -14%;
+    right: -18%;
   }
   .main_contact_wrapper::before,
   .main_contact_wrapper .contact_style_left {    
-    left: -12%;
+    left: -14%;
+  }
+  .f-contact-header p{
+    text-align: center;
+    padding: 0 2rem;
+  }
+  .contact__info {
+    row-gap: 3rem;
+  }
+  .contact__cognitech input[type="text"], .contact__cognitech input[type="email"], .contact__cognitech input[type="tel"]{
+    width: 45%;
   }
 }
 
 @media (max-width: 768px) {
   .main_contact_wrapper{
     display: block;
+    margin-bottom: 25rem;
   }
   .f-contact-header {
     padding: 15px;
@@ -248,17 +259,14 @@
     top: 25%;
   }
   .main_contact_wrapper::after {
-    
     width: 250px;
     height: 250px;
-   
     right: -23.5%;
     top: 22%;
 }
 .main_contact_wrapper .contact_style_right {
   width: 200px;
   height: 200px;
-  
   right: -16%;
   top: 48%;
 }
@@ -276,6 +284,9 @@
 }
 .contact__cognitech h3{
   font-size: 3rem;
+}
+.contact__cognitech input[type="text"], .contact__cognitech input[type="email"], .contact__cognitech input[type="tel"] {
+  width: 100%;
 }
 }
 

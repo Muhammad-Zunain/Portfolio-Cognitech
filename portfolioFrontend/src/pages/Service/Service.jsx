@@ -112,7 +112,7 @@ function Service() {
         <>
           <div className="f-service-header">
             <h2>{projects.extra.name}</h2>
-            <p>{projects.extra.description}</p>
+            <p style={{ textAlign: "center" }}>{projects.extra.description}</p>
           </div>
 
           <div className="container" style={containerStyles}>
@@ -240,17 +240,16 @@ function Service() {
                     necessitatibus libero adipisci ea quisquam placeat quae
                     suscipit vitae, sapiente nisi expedita .
                   </p>
-                  <button className=" hero-button">
+                  <button className="hero-button">
                     <span className="top"></span>
                     <Link to="" className="primary-button">
-                      Connent Now <span> &rarr;</span>
+                      Connent Now 
                     </Link>
                     <span className="bottom"></span>
                   </button>
                 </div>
               </div>
             </div>
-          </div>
           <div className="logo-container">
             <h2>
                Our <span>Technology</span>
@@ -269,6 +268,7 @@ function Service() {
             })}
 
             </div>
+          </div>
           </div>
         </>
       ) : (
