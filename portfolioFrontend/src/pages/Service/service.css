@@ -19,7 +19,6 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  /* border: 2px solid firebrick; */
 }
 
 .service-technology-content {
@@ -31,7 +30,6 @@
 }
 
 .service-technology-image {
-  /* border: 2px solid firebrick; */
   width: 30%;
   height: 100%;
   object-fit: contain;
@@ -60,56 +58,6 @@
   animation: moveUpDown1 2s ease-in-out infinite;
 }
 
-/* .service-technology-content :nth-child(2) {
-    text-align: justify;
-} */
-
-/* .service-tectnolnogy-stack {
-    width: 75%;
-    margin-left: 6rem;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 5rem;
-}
-
-.service-tectnolnogy-stack img {
-    width: 110px;
-    height: auto;
-    filter: grayscale(100%);
-    transition: filter 0.3s ease, transform 0.3s ease;
-    cursor: pointer;
-}
-
-.service-tectnolnogy-stack img:hover {
-    filter: grayscale(0%);
-    transform: scale(1.1);
-} */
-
-/* .service-box-style-1 {
-    height: 150px;
-    width: 150px;
-    position: absolute;
-    left: -15%;
-    top: 10%;
-    transform: rotate(45deg);
-    background: rgba(168, 141, 222, 0.2);
-    z-index: 99;
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 3px 10px;
-}
-
-.service-box-style-2 {
-    height: 300px;
-    width: 300px;
-    position: absolute;
-    right: -12%;
-    top: 18%;
-    transform: rotate(45deg);
-    background: rgba(168, 141, 222, 0.2);
-    z-index: 99;
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 3px 10px;
-} */
-
 .about-service-section {
   position: relative;
   display: flex;
@@ -119,7 +67,6 @@
   background-image: linear-gradient(rgba(30, 20, 59, 0.7),
       rgba(30, 20, 59, 0.7)),
     url("../../assets/service-bg-image.png");
-  /* background-image:url('../../assets/service-bg-image.png') ; */
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center;
@@ -193,12 +140,9 @@
   object-fit: cover;
 }
 
-
 .work-wrapper-images {
   width: 50%;
   position: relative;
-  /* border: 2px solid #fe0094; */
-
 }
 
 .work-wrapper-images img {
@@ -227,7 +171,6 @@
 
 .tech-div p {
   font-size: 2rem;
-  /* font-weight: 400; */
   color: #fe0094;
   letter-spacing: 1px;
 }
@@ -480,11 +423,6 @@
   scale: 1.05;
 
 }
-
-
-
-
-
 
 /* ------------------ Media Querry ------------------ > */
 

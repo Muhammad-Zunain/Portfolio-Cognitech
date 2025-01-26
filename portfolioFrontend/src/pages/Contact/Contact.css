@@ -1,3 +1,4 @@
+/* <----------------------------------- Contact Section -----------------------------------> */
 .f-contact-header {
   width: 100%;
   background: linear-gradient(90deg, #00229e 0%, #6e1299 47.92%, #fe0094 100%);
@@ -12,6 +13,11 @@
 
 .f-contact-header h2 {
   text-transform: capitalize;
+}
+
+.f-contact-header p {
+  text-align: center;
+  padding: 0 6rem;
 }
 
 .main_contact_wrapper {
@@ -197,43 +203,55 @@
   box-shadow: 0px 2px 15px rgba(254, 0, 148, 0.3);
 }
 
-@media (max-width: 1024px){
+/* ------------------ Media Querry ------------------ > */
+@media (max-width: 1024px) {
   .main_contact_wrapper {
     padding: 8rem 10rem 8rem 10rem;
   }
-  .contact__cognitech::before{
+
+  .contact__cognitech::before {
     left: 4%;
   }
-  .contact__cognitech::after{
+
+  .contact__cognitech::after {
     right: 4%;
   }
-  .main_contact_wrapper::after{
+
+  .main_contact_wrapper::after {
     right: -20%;
   }
+
   .main_contact_wrapper .contact_style_right {
     right: -18%;
   }
+
   .main_contact_wrapper::before,
-  .main_contact_wrapper .contact_style_left {    
+  .main_contact_wrapper .contact_style_left {
     left: -14%;
   }
-  .f-contact-header p{
+
+  .f-contact-header p {
     text-align: center;
     padding: 0 2rem;
   }
+
   .contact__info {
     row-gap: 3rem;
   }
-  .contact__cognitech input[type="text"], .contact__cognitech input[type="email"], .contact__cognitech input[type="tel"]{
+
+  .contact__cognitech input[type="text"],
+  .contact__cognitech input[type="email"],
+  .contact__cognitech input[type="tel"] {
     width: 45%;
   }
 }
 
 @media (max-width: 768px) {
-  .main_contact_wrapper{
+  .main_contact_wrapper {
     display: block;
     margin-bottom: 25rem;
   }
+
   .f-contact-header {
     padding: 15px;
     row-gap: 1rem;
@@ -246,48 +264,59 @@
   .f-contact-header p {
     text-align: center;
   }
+
   .main_contact_wrapper::before {
     width: 170px;
     height: 170px;
     left: -16%;
     top: 6%;
   }
+
   .main_contact_wrapper .contact_style_left {
     width: 170px;
     height: 170px;
     left: -16%;
     top: 25%;
   }
+
   .main_contact_wrapper::after {
     width: 250px;
     height: 250px;
     right: -23.5%;
     top: 22%;
-}
-.main_contact_wrapper .contact_style_right {
-  width: 200px;
-  height: 200px;
-  right: -16%;
-  top: 48%;
-}
-.contact__cognitech::before,
-.contact__cognitech::after{
-  display: none;
-}
-.contact__info{
-  flex-direction: column;
-  row-gap: 2.5rem;
-}
-.contact__info input{
-  width: 100%;
+  }
 
-}
-.contact__cognitech h3{
-  font-size: 3rem;
-}
-.contact__cognitech input[type="text"], .contact__cognitech input[type="email"], .contact__cognitech input[type="tel"] {
-  width: 100%;
-}
+  .main_contact_wrapper .contact_style_right {
+    width: 200px;
+    height: 200px;
+    right: -16%;
+    top: 48%;
+  }
+
+  .contact__cognitech::before,
+  .contact__cognitech::after {
+    display: none;
+  }
+
+  .contact__info {
+    flex-direction: column;
+    row-gap: 2.5rem;
+  }
+
+  .contact__info input {
+    width: 100%;
+
+  }
+
+  .contact__cognitech h3 {
+    font-size: 3rem;
+  }
+
+  .contact__cognitech input[type="text"],
+  .contact__cognitech input[type="email"],
+  .contact__cognitech input[type="tel"] {
+    width: 100%;
+  }
 }
 
 @media (max-width: 450px) {
@@ -318,6 +347,7 @@
     flex-direction: column;
     row-gap: 2rem;
   }
+
   .f-contact-header h2 {
     font-size: 3rem;
     line-height: 20px;
@@ -349,29 +379,34 @@
     width: 100%;
     font-size: 1.5rem;
   }
+
   .contact__cognitech::before,
   .contact__cognitech::after {
     display: none;
   }
 }
 
-@media (max-width:320px){
-  .main_contact_wrapper::before, 
+@media (max-width:320px) {
+
+  .main_contact_wrapper::before,
   .main_contact_wrapper .contact_style_left {
     width: 120px;
     height: 120px;
     left: -25%;
   }
+
   .main_contact_wrapper::after {
     width: 120px;
     height: 120px;
     right: -22.5%;
   }
+
   .main_contact_wrapper .contact_style_right {
     width: 120px;
     height: 120px;
     right: -24%;
   }
+
   .f-contact-header h2 {
     font-size: 2.7rem;
     line-height: 20px;

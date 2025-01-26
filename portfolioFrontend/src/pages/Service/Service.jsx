@@ -158,7 +158,6 @@ function Service() {
                   nextEl: ".swiper-button-next",
                   prevEl: ".swiper-button-prev",
                 }}
-                // style={{ height: '500px' }}
                 modules={[Navigation]}
               >
                 {projects.service.map((project, index) => (
@@ -272,7 +271,7 @@ function Service() {
           </div>
         </>
       ) : (
-        <p>Service not found</p>
+        <h1 className="not-found-tag">Service not found</h1>
       )}
     </>
   );

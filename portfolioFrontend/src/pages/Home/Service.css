@@ -105,6 +105,26 @@
 
 }
 
+.not-found-tag{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    font-size: 3rem;
+    color: #fff;
+    background-color: #0c0e2b;
+    border-radius: 8px;
+    margin-top: 5rem;
+    padding: 0 2rem;
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
 @keyframes animate {
     0% {
         transform: rotate(0deg)
@@ -115,6 +135,7 @@
     }
 }
 
+/* ------------------ Media Querry ------------------ > */
 @media (max-width:768px) {
     .service-header h2{
         font-size: 4rem;

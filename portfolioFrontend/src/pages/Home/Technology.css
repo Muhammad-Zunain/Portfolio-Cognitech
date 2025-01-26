@@ -1,4 +1,4 @@
-
+/* <----------------------------------- Technology Section -----------------------------------> */
 .tech-wrapper{
     background-color: #0c0e2b;
     padding-top: 6rem;
@@ -24,7 +24,6 @@
  }
 .marquee {
     padding: 50px 0;
-    /* background: #0c0e2b; */
     overflow: hidden;
     position: relative;
 }
@@ -42,7 +41,6 @@
     overflow: hidden;
     display: flex;
     align-items: center;
-    /* border: 2px solid magenta; */
 }
 
 .marquee__item {
@@ -50,7 +48,6 @@
     align-items: center;
     justify-content: center;
     padding: 0 20px;
-    /* border: 2px solid honeydew; */
 }
 
 .marquee__line {
@@ -87,7 +84,7 @@
     }
 }
 
-
+/* ------------------ Media Querry ------------------ > */
 @media (max-width:768px) {
     .tech-header h2{
         font-size: 3.8rem;

@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 
 import AboutCogni from "../../components/About/AboutCogni";
 import ChooseUs from "../../components/ChooseUs/ChooseUs";
+import Accordion from "../../components/FAQ/Accordion";
+
 import react from "../../assets/react-logo.png";
 import python from "../../assets/python-logo.png";
 import mongo from "../../assets/mongo-logo.png";
@@ -18,7 +20,6 @@ import ServiceBackendDevelopment from "../../assets/service3.png";
 import ServiceFrontendDevelopment from "../../assets/service2.png";
 import ServiceUIDevelopment from "../../assets/service1.png";
 import ServiceCigitalMarketing from "../../assets/service6.png";
-import Accordion from "../../components/FAQ/Accordion";
 
 import "./Technology.css";
 import "./Service.css";
