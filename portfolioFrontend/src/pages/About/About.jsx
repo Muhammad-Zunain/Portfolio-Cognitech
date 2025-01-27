@@ -69,7 +69,7 @@ const About = () => {
             <h2 class="ph-no">+92 306 2860258</h2>
             <button>
               <span className="top"></span>
-              <Link to="" className="primary-button">
+              <Link to="/Contact" className="primary-button">
                 Contact Us
               </Link>
               <span className="bottom"></span>

@@ -171,16 +171,16 @@
 
 @media (max-width: 768px) {
   .choose-top {
-    top: -3.6%;
+    top: -3.3%;
   }
   .choose-wrapper::before {
-    top: -3.4%;
+    top: -3.1%;
   }
   .choose-bottom {
-    bottom: -3.65%;
+    bottom: -3.3%;
   }
   .choose-wrapper::after {
-    bottom: -4%;
+    bottom: -3.1%;
   }
   .choose-wrapper {
     width: 90%;
@@ -221,6 +221,25 @@
   }
 }
 
+@media (max-width: 545px) {
+  .choose-top {
+    top: -3.1%;
+  }
+  .choose-wrapper::before {
+    top: -3%;
+  }
+  .choose-bottom {
+    bottom: -3.2%;
+  }
+  .choose-wrapper::after {
+    bottom: -3%;
+  }    .choose-content-wrapper {
+    padding: 0px 2rem;
+}
+  
+  
+}
+
 @media (max-width:500px){
     .choose-wrapper::after {
         bottom: -3.3%;
@@ -235,7 +254,7 @@
     }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 490px) {
   .aspostrophe-u,
   .aspostrophe-d {
     height: 100px;
@@ -262,15 +281,10 @@
     padding: 0 2rem;
   }
 
-  .content i {
-    font-size: 3.5rem;
-  }
-
   .content h3 {
-    font-size: 2.2rem;
     line-height: 30px;
-    margin-top: -4rem;
-    padding-left: 7rem;
+    margin-top: -8rem;
+    padding-left: 8rem;
   }
 
   .content {
@@ -279,7 +293,7 @@
   }
 
   .content p {
-    margin-top: 1.3rem;
+    margin-top: 2rem;
   }
   .aspostrophe-wrapper-u {
     padding-right: 2rem;
@@ -288,15 +302,15 @@
     padding: 2rem 0 0 2rem;
   }
   .choose-top {
-    top: -3.9%;
+    top: -3.5%;
   }
 
   .choose-wrapper::before {
-    top: -3.7%;
+    top: -3.3%;
   }
 
   .choose-bottom {
-    bottom: -3.9%;
+    bottom: -3.5%;
   }
 
   .choose-wrapper::after {
@@ -304,12 +318,32 @@
   }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 460px) {
+  .choose-top {
+    top: -3.4%;
+  }
+
+  .choose-wrapper::before {
+    top: -3.3%;
+  }
+
   .choose-bottom {
-    bottom: -4%;
+    bottom: -3.4%;
+  }
+
+  .choose-wrapper::after {
+    bottom: -3.1%;
+  
+}
+}
+@media (max-width: 425px) {
+  .choose-bottom {
+    bottom: -3.4%;
   }
 
   .choose-top {
+    top: -3.3%;
+  }.choose-wrapper::before {
     top: -3.2%;
   }
 }
@@ -321,22 +355,10 @@
   }
 
   .choose-top {
-    top: -3.4%;
-  }
-  .choose-wrapper::before {
     top: -3.3%;
-}
+  }
+
 .choose-wrapper::before {
-    top: -3.1%;
+    top: -3.2%;
 }
-}
-
-
-@media(max-width:375px){
-    .choose-wrapper::before {
-        top: -4.28%;
-    }
-    .choose-bottom {
-        bottom: -4%;
-    }
 }

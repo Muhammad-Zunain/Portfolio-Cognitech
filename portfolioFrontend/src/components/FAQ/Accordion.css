@@ -12,39 +12,40 @@
 
 .questions {
     width: 100%;
+    border-bottom: 1px solid #F107D7;
+    margin-bottom: 2rem;
 }
 
-.questions p:first-child {
+.questions :first-child {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid #F107D7;
     border-radius: 1px;
-    margin-bottom: 2rem;
-    cursor: pointer;
+    padding-bottom: 1rem;
 }
 
-.questions p img {
+.questions img {
     background-color: #F107D7 ;
     object-fit: cover;
     padding: 1.2rem;
     border-radius: 5px;
     height: 35px;
     width: 35px;
+    cursor: pointer;
 }
 
 .answer__description {
-    max-height: 0; /* Initially hidden */
-    opacity: 0; /* Initially hidden */
+    max-height: 0;
+    opacity: 0; 
     overflow: hidden;
     transition: max-height 0.5s ease-in-out, opacity 0.3s ease-in-out; /* Apply transition */
+    
 }
 
 .answer__description.show {
     max-height: 500px; /* Set to a value large enough to accommodate the content */
     opacity: 1; /* Fully visible */
+    padding-bottom: 1rem;
 }
 
 @media  (max-width: 1024px) {
@@ -58,7 +59,6 @@
     
     .quention__box {
         flex-direction: column;
-        gap: 2rem;
     }
 
     .question__content {
@@ -66,3 +66,24 @@
     }
 }
 
+@media (max-width: 520px) {
+    .questions :first-child p{
+        width: 90%;
+    }
+}
+
+@media (max-width: 500px) {
+    .questions :first-child p{
+        width: 80%;
+    }
+    .choose-header h2 {
+        font-size: 3.5rem;
+    }
+    
+}
+
+@media (max-width: 450px) {
+    .choose-header h2 {
+        font-size: 3rem;
+    }
+}

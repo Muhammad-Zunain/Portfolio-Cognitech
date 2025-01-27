@@ -48,7 +48,6 @@ const Home = () => {
           <div className="hero-body">
             <div className="main-body-header">
               <h1>
-              {/* Your Concept, Our Innovation – Together, We Build Excellence. */}
                 Your <span>Concept,</span> <br style={{ display: "none" }} />{" "}
                 Our <span>Innovation</span>
               </h1>
@@ -67,7 +66,7 @@ const Home = () => {
 
           <button className=" hero-button">
             <span className="top"></span>
-            <Link to="" className="primary-button">
+            <Link to="/" className="primary-button">
               See My Work <span> &rarr;</span>
             </Link>
             <span className="bottom"></span>
@@ -95,8 +94,8 @@ const Home = () => {
                   alt=""
                 />
                 <h3>Custom Development</h3>
-                <p style={{ textAlign: "justify" }}>
-                Empowering your projects with a team of experts who bring precision and creativity to the table. We ensure seamless integration of ideas and execution, maximizing efficiency and delivering tailored solutions for your business needs.
+                <p>
+                Empowering your projects with expert precision and creativity, we deliver tailored solutions and seamless execution to maximize efficiency and meet your business needs.
                 </p>
                 <div className="services">
                   <span>Mern</span>
@@ -104,14 +103,6 @@ const Home = () => {
                   <span>Django</span>
                   <span>...</span>
                 </div>
-
-                <button className=" hero-button">
-                  <span className="top"></span>
-                  <Link to="" className="primary-button">
-                    Read More <span> &rarr;</span>
-                  </Link>
-                  <span className="bottom"></span>
-                </button>
               </div>
             </div>
             <div className="service-main">
@@ -122,7 +113,7 @@ const Home = () => {
                   alt=""
                 />
                 <h3>UI/UX Design</h3>
-                <p style={{ textAlign: "justify" }}>
+                <p>
                   We turn your ideas into eye-catching designs. Our focus is on
                   making designs that users love, with interfaces that are easy
                   to understand. This not only connects with your audience but
@@ -132,14 +123,6 @@ const Home = () => {
                   <span>Figma</span>
                   <span>...</span>
                 </div>
-
-                <button className=" hero-button">
-                  <span className="top"></span>
-                  <Link to="" className="primary-button">
-                    Read More <span> &rarr;</span>
-                  </Link>
-                  <span className="bottom"></span>
-                </button>
               </div>
             </div>
             <div className="service-main">
@@ -151,20 +134,12 @@ const Home = () => {
                 />
                 <h3>Mobile Development</h3>
                 <p>
-                We leverage Flutter to develop high-performance, cross-platform mobile applications that work seamlessly across devices. From startups to enterprises, our mobile solutions are designed to cater to a variety of industries, ensuring scalability, flexibility, and superior performance.
+                We use Flutter to create high-performance, cross-platform mobile apps that work seamlessly on all devices. Our scalable and flexible solutions cater to industries of all sizes, from startups to enterprises.
                 </p>
                 <div className="services">
                   <span>Flutter</span>
                   <span>...</span>
                 </div>
-
-                <button className=" hero-button">
-                  <span className="top"></span>
-                  <Link to="" className="primary-button">
-                    Read More <span> &rarr;</span>
-                  </Link>
-                  <span className="bottom"></span>
-                </button>
               </div>
             </div>
             <div className="service-main">
@@ -176,7 +151,7 @@ const Home = () => {
                 />
                 <h3>Front-end Development</h3>
                 <p>
-                We create visually stunning and user-friendly front-end solutions that deliver seamless experiences across all devices. Our team focuses on responsive design, intuitive interfaces, and high performance, ensuring your website or app looks great and functions flawlessly.{" "}
+                We craft visually stunning, responsive front-end solutions with intuitive interfaces, delivering seamless experiences and flawless performance across all devices.
                 </p>
                 <div className="services">
                   <span>React js</span>
@@ -184,14 +159,6 @@ const Home = () => {
                   <span>Angular</span>
                   <span>...</span>
                 </div>
-
-                <button className=" hero-button">
-                  <span className="top"></span>
-                  <Link to="" className="primary-button">
-                    Read More <span> &rarr;</span>
-                  </Link>
-                  <span className="bottom"></span>
-                </button>
               </div>
             </div>
             <div className="service-main">
@@ -203,21 +170,13 @@ const Home = () => {
                 />
                 <h3>Back-end Development</h3>
                 <p>
-                We build robust back-end systems that drive your digital solutions with speed, security, and scalability. Using the latest technologies, we ensure seamless data handling and top performance, enabling your operations to grow and adapt, whether you're a small business or a global enterprise.
+                We build robust, secure, and scalable back-end systems that ensure seamless performance and data handling, empowering businesses to grow and adapt with the latest technologies.
                 </p>
                 <div className="services">
                   <span>Node js</span>
                   <span>Python</span>
                   <span>...</span>
                 </div>
-
-                <button className=" hero-button">
-                  <span className="top"></span>
-                  <Link to="" className="primary-button">
-                    Read More <span> &rarr;</span>
-                  </Link>
-                  <span className="bottom"></span>
-                </button>
               </div>
             </div>
             <div className="service-main">
@@ -229,23 +188,12 @@ const Home = () => {
                 />
                 <h3>Digital Markeing</h3>
                 <p>
-                  Time to make sure more people notice you online. Our smart
-                  digital marketing plans improve how visible and engaging you
-                  are, leading to more people choosing your brand. This helps
-                  your business grow and stay competitive in the digital world.
+                Boost your online presence with our smart digital marketing plans. We enhance visibility and engagement, attracting more customers to your brand and driving business growth in the digital landscape.
                 </p>
                 <div className="services">
                   <span>SEO</span>
                   <span>...</span>
                 </div>
-
-                <button className=" hero-button">
-                  <span className="top"></span>
-                  <Link to="" className="primary-button">
-                    Read More <span> &rarr;</span>
-                  </Link>
-                  <span className="bottom"></span>
-                </button>
               </div>
             </div>
           </div>

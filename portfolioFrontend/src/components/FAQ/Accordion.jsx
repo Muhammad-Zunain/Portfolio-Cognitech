@@ -20,14 +20,14 @@ const Accordion = () => {
                 <div className="question__content">
                     {/* Question 1 */}
                     <div className="questions">
-                        <p onClick={() => toggleAnswer(0)}>
-                        What types of software solutions do you offer?
+                        <div onClick={() => toggleAnswer(0)}>
+                        <p>What types of software solutions do you offer?</p>
                             <img
                                 src={activeIndex === 0 ? arrowUp : arrowDown}
                                 className="questionArrow"
                                 alt="Toggle answer"
                             />
-                        </p>
+                        </div>
                         <p
                             className={`answer__description ${activeIndex === 0 ? 'show' : ''}`}
                         >
@@ -36,14 +36,14 @@ const Accordion = () => {
                     </div>
                     {/* Question 2 */}
                     <div className="questions">
-                        <p onClick={() => toggleAnswer(1)}>
-                        How long does it take to complete a project?
+                        <div onClick={() => toggleAnswer(1)}>
+                        <p>How long does it take to complete a project?</p>
                             <img
                                 src={activeIndex === 1 ? arrowUp : arrowDown}
                                 className="questionArrow"
                                 alt="Toggle answer"
                             />
-                        </p>
+                        </div>
                         <p
                             className={`answer__description ${activeIndex === 1 ? 'show' : ''}`}
                         >
@@ -54,14 +54,14 @@ const Accordion = () => {
                 <div className="question__content">
                     {/* Question 3 */}
                     <div className="questions">
-                        <p onClick={() => toggleAnswer(2)}>
-                        Do you provide ongoing support after project completion?
+                        <div onClick={() => toggleAnswer(2)}>
+                        <p>Do you offer support after project completion?</p>
                             <img
                                 src={activeIndex === 2 ? arrowUp : arrowDown}
                                 className="questionArrow"
                                 alt="Toggle answer"
                             />
-                        </p>
+                        </div>
                         <p
                             className={`answer__description ${activeIndex === 2 ? 'show' : ''}`}
                         >
@@ -70,14 +70,14 @@ const Accordion = () => {
                     </div>
                     {/* Question 4 */}
                     <div className="questions">
-                        <p onClick={() => toggleAnswer(3)}>
-                        Is my data safe with Cognitech Labs?
+                        <div onClick={() => toggleAnswer(3)}>
+                        <p>Is my data safe with Cognitech Labs?</p>
                             <img
                                 src={activeIndex === 3 ? arrowUp : arrowDown}
                                 className="questionArrow"
                                 alt="Toggle answer"
                             />
-                        </p>
+                        </div>
                         <p
                             className={`answer__description ${activeIndex === 3 ? 'show' : ''}`}
                         >

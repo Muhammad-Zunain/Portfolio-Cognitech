@@ -34,7 +34,7 @@ const AboutCogni = () => {
               </div>
               <button>
                 <span className="top"></span>
-                <Link to="" className="primary-button">
+                <Link to="/About" className="primary-button">
                   Learn More About
                 </Link>
                 <span className="bottom"></span>

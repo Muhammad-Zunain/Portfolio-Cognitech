@@ -138,14 +138,23 @@
 }
 
 /* ------------------ Media Querry ------------------ > */
-@media (max-width:1024px) {
+@media (max-width:1300px) {
   .brain-cogni-logo::after {
     top: 2%;
     right: -9%;
   }
+  .brain-cogni-logo img {
+    top: 3.7%;
+  }
+}
+@media (max-width:1024px) {
+  .brain-cogni-logo::after {
+    top: 2%;
+    right: -12%;
+  }
 
   .brain-cogni-logo img {
-    top: 3.6%;
+    top: 3.3%;
   }
   .f-about-header p{
     text-align: center;
@@ -181,6 +190,7 @@
 
   .brain-cogni-logo::after {
     top: 3%;
+    right: -14%;
   }
 
   .brain-cogni-logo::after {
@@ -192,12 +202,10 @@
     text-align: center;
   }
 
-  .brain-cogni-logo::after {
-    right: -12%;
-  }
 
   .brain-cogni-logo img {
     top: 4%;
+    right: 1px;
   }
 
   .about__contact__box .about__box1 {
@@ -223,7 +231,7 @@
   }
 }
 
-@media (max-width:550px) {
+@media (max-width:565px) {
   .about__contact__box {
     padding: 6rem 3rem;
   }
@@ -241,10 +249,18 @@
   }
 }
 
+
+
 @media (max-width: 500px) {
   .about__contact__box {
     margin-bottom: 28rem;
 }
+}
+
+@media (max-width:480px) {
+  .brain-cogni-logo::after {
+    right: -19%;
+  }
 }
 
 @media (max-width: 450px) {
@@ -259,7 +275,7 @@
   }
 
   .f-about-header p {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     text-align: center;
     padding: 1rem;
   }
@@ -297,7 +313,7 @@
   .about-cogi-vision p {
     margin-top: 1rem;
     padding-right: 0.5rem;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     line-height: 25px;
   }
 
