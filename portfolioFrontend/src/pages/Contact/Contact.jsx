@@ -8,7 +8,8 @@ const Contact = () => {
         <>
             <div className='f-contact-header'>
                 <h2>Contact Us</h2>
-                <p>We’d love to hear from you! Whether you have a question, need assistance, or are ready to start your next project, our team is here to help. Reach out today, and let's explore how we can bring your ideas to life.</p>
+                <p>
+                We’d love to hear from you! Have questions or a project in mind? Contact us today to bring your ideas to life.</p>
             </div>
             <div className="container main_contact_wrapper">
                 <div className='contact_style_left'></div> 
