@@ -88,6 +88,13 @@ const Navbar = ({ handleClick, open }) => {
               Home
             </Link>
           </li>
+          <li className="navLink">
+            <span className="navitem_line"></span>
+            <span className="Number">05</span>
+            <Link to="/About" className="link" onClick={toggleMenu}>
+              About Us
+            </Link>
+          </li>
           <li to="" className="navLink">
             <span className="navitem_line"></span>
             <span className="Number">02</span>
@@ -109,13 +116,7 @@ const Navbar = ({ handleClick, open }) => {
               Service
             </Link>
           </li>
-          <li className="navLink">
-            <span className="navitem_line"></span>
-            <span className="Number">05</span>
-            <Link to="/About" className="link" onClick={toggleMenu}>
-              About Us
-            </Link>
-          </li>
+          
           <li className="navLink">
             <span className="navitem_line"></span>
             <span className="Number">05</span>

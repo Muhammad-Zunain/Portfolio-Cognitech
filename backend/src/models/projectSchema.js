@@ -1,7 +1,6 @@
 import mongoose, { Schema } from "mongoose";
 import slugify from 'slugify';
 
-// Schema for extra section
 const extraSchema = new Schema({
   name: { type: String, required: true },
   description: { type: String, required: true },
@@ -27,7 +26,6 @@ const categorySchema = new Schema({
   service: [serviceSchema],
 });
 
-// Main projects schema
 const projectsSchema = new Schema({
   frontend: categorySchema,
 });
