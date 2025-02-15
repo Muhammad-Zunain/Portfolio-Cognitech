@@ -21,7 +21,7 @@ const ProjectsAdd = () => {
 
   const handleFileChange = (e) => {
     const selectedFiles = Array.from(e.target.files);
-
+    console.log(selectedFiles);
     // Append the new files to the existing files
     const newFiles = [...files, ...selectedFiles];
     setFiles(newFiles);
@@ -64,6 +64,11 @@ const ProjectsAdd = () => {
 
     // Send to backend (e.g., using axios or fetch)
     addProjects(formData);
+    console.log(files)
+
+    for (let pair of formData.entries()) {
+      console.log(`${pair[0]}: ${pair[1]}`);
+    }
 
     setCategory(""); // Reset category
     setTitle(""); // Reset title

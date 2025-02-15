@@ -2,12 +2,15 @@ import axios from "axios";
 import { create } from "zustand";
 import toast from "react-hot-toast";
 
-const baseUrl = 'https://cognitech-kappa.vercel.app/api/service';
+// const baseUrl = 'https://cognitech-kappa.vercel.app/api/service'
+const baseUrl = 'http://localhost:5000/api/service';
 
 export const useProjectAddStore = create((set, get) => ({
 
   isLogin: false,
-  backendUrl: "https://cognitech-kappa.vercel.app/api" ,
+  // backendUrl: "https://cognitech-kappa.vercel.app/api" ,
+  backendUrl: "http://localhost:5000/api",
+  // http://localhost:5000/api
 
   allCategories: [],
 
