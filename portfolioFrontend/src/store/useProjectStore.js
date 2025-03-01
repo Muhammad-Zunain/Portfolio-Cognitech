@@ -17,7 +17,9 @@ export const useProjectStore = create((set, get) => ({
   setProjects: async (slug) => {
     try {
       
-      const res = await axios.get(`${baseUrl}/projects/showcase-projects/${slug}`);
+      const res = await axios.get(`${baseUrl}/projects/showcase-projects/${slug}`,{
+        withCredentials: true
+      });
       console.log(res)
       
       set({ projects: res.data.data.frontend });
