@@ -14,44 +14,6 @@ export default function Projects() {
   const navigate = useNavigate();
   const showToast = useToast();
 
-  // const [categories, setCategories] = useState([
-  //   { id: 1, name: "Frontend Development" },
-  //   { id: 2, name: "Backend Development" },
-  //   { id: 3, name: "Full Stack Development" },
-  //   { id: 4, name: "Mobile App Development" },
-  //   { id: 5, name: "UI/UX Design" },
-  // ]);
-
-  // const [projects, setProjects] = useState([
-  //   {
-  //     _id: 1,
-  //     image: [p1],
-  //     project_name: "Portfolio Website",
-  //     category: "Frontend Development",
-  //     technology: ["HTML", "CSS", "JavaScript"],
-  //   },
-  //   {
-  //     _id: 2,
-  //     image: [p1],
-  //     project_name: "E-commerce Store",
-  //     category: "Full Stack Development",
-  //     technology: ["React", "Node.js", "MongoDB"],
-  //   },
-  //   {
-  //     _id: 3,
-  //     image: [p1],
-  //     project_name: "Admin Dashboard",
-  //     category: "Frontend Development",
-  //     technology: ["React", "Tailwind CSS"],
-  //   },
-  //   {
-  //     _id: 4,
-  //     image: [p1],
-  //     project_name: "Blog Website",
-  //     category: "Backend Development",
-  //     technology: ["Django", "PostgreSQL"],
-  //   },
-  // ]);
   const [isOpen, setIsOpen] = useState(false);
   const [categories, setCategories] = useState([]);
   const [projects, setProjects] = useState([]);
@@ -63,6 +25,13 @@ export default function Projects() {
     fetchCategories();
     fetchProjects();
   }, []);
+
+
+  useEffect(()=>{
+    projects.map((pro)=>{
+      console.log(pro)
+    })
+  },[projects])
 
   const handleDropdownToggle = (index) => {
     if (dropdownIndex === index) {
@@ -311,7 +280,7 @@ export default function Projects() {
                   </td>
                   <td className="p-4">
                     <img
-                      src={project.image}
+                      src={project.images[0]}
                       className="w-16 md:w-32 max-w-full max-h-full"
                       alt="project image"
                     />

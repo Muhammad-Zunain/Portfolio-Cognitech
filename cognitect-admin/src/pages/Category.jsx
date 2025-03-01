@@ -50,6 +50,8 @@ export default function Category() {
         ? prevSelected.filter((catId) => catId !== _id)
         : [...prevSelected, _id]
     );
+
+    
   };
 
   const deleteSelectedCategories = async () => {
@@ -66,6 +68,8 @@ export default function Category() {
       setCategories(categories.filter((category) => !selectedCategories.includes(category._id)));
       setSelectedCategories([]); 
     }
+
+   
     
     showToast(res.type, res.message);
   }

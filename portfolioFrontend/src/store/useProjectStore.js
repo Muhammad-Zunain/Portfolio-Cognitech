@@ -4,7 +4,8 @@ import { create } from "zustand";
 import { projects } from "../pages/Service/serviceData";
 
 
-const baseUrl = "https://cognitech-kappa.vercel.app/api/service";
+// const baseUrl = "https://cognitech-kappa.vercel.app/api/service";
+const baseUrl = "http://localhost:5000/api"
 
 export const useProjectStore = create((set, get) => ({
   projects: {},
@@ -16,7 +17,8 @@ export const useProjectStore = create((set, get) => ({
   setProjects: async (slug) => {
     try {
       
-      const res = await axios.get(`${baseUrl}/showcase-projects/${slug}`);
+      const res = await axios.get(`${baseUrl}/projects/showcase-projects/${slug}`);
+      console.log(res)
       
       set({ projects: res.data.data.frontend });
     } catch (error) {
@@ -26,7 +28,10 @@ export const useProjectStore = create((set, get) => ({
   },
 
   getAllCategories: async () => {
-    const res = await axios.get(`${baseUrl}/all-category`);
+    const res = await axios.get(`${baseUrl}/category/get-category/`,{
+      withCredentials: true
+    });
+    console.log(res)
     
     set({ allCategories: res.data.data });
   },

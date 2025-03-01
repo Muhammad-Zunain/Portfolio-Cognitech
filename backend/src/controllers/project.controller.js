@@ -1,9 +1,11 @@
-import {Projects} from "../models/projectSchema.js"
+
 import Project from "../models/project.model.js";
 import Category from "../models/category.model.js";
 import { asyncHandler } from "../utils/asyncHandler.js";
 import { ApiResponse } from "../utils/ApiResponse.js";
 import { ApiError } from "../utils/ApiError.js";
+import { uploadOnCloudinary } from "../utils/cloudinary.js";
+ 
 
 /** ===========================
  * @desc Get All Projects
@@ -37,8 +39,7 @@ if (existingProject) {
   return res.status(400).json({ message: "Project with this title already exists" });
 }
 const projects = await Project.find().populate("category");
-const projects12 = await Projects.find();
-console.log('projects',projects12)
+
 
 
     // console.log("Received request to add project:", req.body);
@@ -54,7 +55,14 @@ console.log('projects',projects12)
         throw new ApiError(400, "Invalid category name");
     }
 
-    console.log("ENter")
+    const serviceImages = await Promise.all(
+            images.map(async (path) => {
+              
+              return uploadOnCloudinary(path);
+            })
+        );
+
+    
 
     let parsedTechnologies = [];
     if (Array.isArray(technologies)) {
@@ -72,11 +80,11 @@ console.log('projects',projects12)
         title: projectName,
         description,
         technologies: parsedTechnologies,
-        images,
+        images:serviceImages,
         category: existingCategory._id,
     });
     
-    console.log("Enter2", project)
+    
     await project.save();
 
     console.log("Project added successfully:", project);
@@ -94,6 +102,7 @@ export const updateProject = asyncHandler(async (req, res) => {
     console.log("Received request to update project:", req.params.id, req.body);
 
     const { title, description, technologies, category } = req.body;
+    console.log(req.body)
     const images = req.files ? req.files.map((file) => file.path) : undefined;
 
     let updateData = { title, description, category };
@@ -167,3 +176,27 @@ export const updateProject = asyncHandler(async (req, res) => {
     return res.status(200).json(new ApiResponse(200, null, "Projects deleted successfully"));
 });
 
+export const showcaseProjects = asyncHandler(async (req, res) => {
+    const categoryName = req.params.categoryName;
+
+    console.log(categoryName)
+    const category = await Category.findOne({ slug: categoryName });
+    console.log(category)
+    if (!category) {
+        return res.status(404).json(
+            new ApiResponse(404, null, "Category not found")
+        );
+    }
+
+    
+    const project = await Project.findOne({ category: category._id });
+    console.log(project)
+
+    if (!project) {
+        return res.status(404).json(
+            new ApiResponse(404, null, "Project not found in this category")
+        );
+    }
+
+    return res.status(200).json(new ApiResponse(200, project));
+});

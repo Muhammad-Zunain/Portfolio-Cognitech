@@ -1,12 +1,13 @@
 import axios from "axios";
 
-const BASE_URL = 'http://localhost:2000/api';
+const BASE_URL = 'http://localhost:5000/api';
 
 // Get category
 export const getCategories = async () => {
   try {
     const response = await axios.get(`${BASE_URL}/category/get-category`);
     const res = response.data
+    console.log(res)
     if (res.statusCode == 200){
       return { status: true, data : res.data}
     }
@@ -62,6 +63,7 @@ export const updateCategory = async (categoryId, updatedData) => {
 
 // Delete Single Category
 export const deleteCategory = async (categoryId) => {
+  console.log(categoryId)
   try {
     const response = await axios.delete(`${BASE_URL}/category/delete-category/${categoryId}`, {
       data: { categoryIds: categoryId },
@@ -69,6 +71,7 @@ export const deleteCategory = async (categoryId) => {
       withCredentials: true,
     });
     const res = response.data
+    console.log(res.statusCode)
     if (res.statusCode == 200){
       return { status: true, message: "Category deleted successfully!", type: "Success" };
     }

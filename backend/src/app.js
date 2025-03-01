@@ -25,8 +25,8 @@ app.use(express.static("public"))
 
 
 //Routes
-import showRouter from "./routes/projects.route.js"
-import adminRouter from "./routes/admin.route.js"
+// import showRouter from "./routes/projects.route.js"
+// import adminRouter from "./routes/admin.route.js"
 import ProjectRouter from "./routes/project.routes.js"
 import CategoryRouter from "./routes/category.routes.js"
 
@@ -34,8 +34,8 @@ app.get('/', async (req, res)=>{
     res.json("HELLO")
 })
 
-app.use('/api/service/', showRouter)
-app.use('/api/admin/', adminRouter)
+// app.use('/api/service/', showRouter)
+// app.use('/api/admin/', adminRouter)
 
 app.use("/api/projects", ProjectRouter);
 app.use("/api/category", CategoryRouter);

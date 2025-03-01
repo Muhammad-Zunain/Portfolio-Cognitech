@@ -177,13 +177,13 @@ const Navbar = ({ handleClick, open }) => {
           <li key={index}>
             <i className="fa-solid fa-diamond"></i>
             <Link
-              to={`/service/${slugify(category.extra.name, { lower: true })}`}
+              to={`/service/${slugify(category.name, { lower: true })}`}
               onClick={() => {
                 handleClick();
-                handleServiceName(category.extra.name);
+                handleServiceName(category.name);
               }}
             >
-              {category.extra.name}
+              {category.name}
             </Link>
           </li>
         ))}
