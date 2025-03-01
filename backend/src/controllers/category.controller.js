@@ -29,7 +29,7 @@ export const getCategories = asyncHandler(async (req, res) => {
 
 
 export const getCategoryById = asyncHandler(async (req, res) => {
-  console.log("HEYYY")
+  
   const category = await Category.findById(req.params.id);
 
   if (!category) {

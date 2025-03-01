@@ -7,7 +7,6 @@ export const getCategories = async () => {
   try {
     const response = await axios.get(`${BASE_URL}/category/get-category`);
     const res = response.data
-    console.log(res)
     if (res.statusCode == 200){
       return { status: true, data : res.data}
     }
@@ -35,7 +34,6 @@ export const addCategory = async (categoryData) => {
     return {status: false, message : res.message, type : "Failed"};
 
   } catch (error) {
-    // console.error("Error adding category:", error);
     return {status: false, message : 'Error adding category', type : "Failed"};
   }
 };
@@ -63,7 +61,6 @@ export const updateCategory = async (categoryId, updatedData) => {
 
 // Delete Single Category
 export const deleteCategory = async (categoryId) => {
-  console.log(categoryId)
   try {
     const response = await axios.delete(`${BASE_URL}/category/delete-category/${categoryId}`, {
       data: { categoryIds: categoryId },
@@ -71,7 +68,6 @@ export const deleteCategory = async (categoryId) => {
       withCredentials: true,
     });
     const res = response.data
-    console.log(res.statusCode)
     if (res.statusCode == 200){
       return { status: true, message: "Category deleted successfully!", type: "Success" };
     }
@@ -98,11 +94,9 @@ export const deleteCategories = async (categoryIds) => {
 
     return { status: true, message: "Categories deleted successfully!", type: "Success" };
   } catch (error) {
-    console.error("Error deleting categories:", error.response?.data || error.message);
     return { status: false, message: "Error deleting categories", type: "Failed" };
   }
 };
-
 
 // Get projects
 export const getProjects = async () => {
@@ -130,7 +124,6 @@ export const addProject = async (projectData) => {
     });
     return { status: true, message : 'Project has been Added successfully!', type: "Success"};
   } catch (error) {
-    // console.error("Error adding project:", error);
     return {status: false, message : 'Error adding project', type : "Failed"};
   }
 };
@@ -183,7 +176,6 @@ export const deleteProjects = async (projectIds) => {
 
     return { status: true, message : 'Project has been Deleted successfully!', type: "Success"};
   } catch (error) {
-    // console.error("API Error:", error);
     return {status: false, message : 'Error Deleting project', type : "Failed"};
   }
 }

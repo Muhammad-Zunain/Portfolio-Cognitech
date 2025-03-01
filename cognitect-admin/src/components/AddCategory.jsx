@@ -5,13 +5,16 @@ import { addCategory, updateCategory } from "../stores/AdminApi.js";
 export default function ({ isOpen, closeModal, category,fetchCategories }) {
   if (!isOpen) return null;
   const showToast = useToast();
+  
   const [newCategory, setNewCategory] = useState({ 
     name: category?.name || "", 
     description: category?.description || "" 
   });
 
+  
   const handleChange = (e) => {
     const { name, value } = e.target;
+    console.log(name, value)
     setNewCategory((prevCategory) => ({
       ...prevCategory,
       [name]: value,
@@ -35,6 +38,10 @@ export default function ({ isOpen, closeModal, category,fetchCategories }) {
 
     if (res.status) {
         closeModal();
+        setNewCategory({ 
+          name: "", 
+          description: "" 
+        })
         fetchCategories();
     }
 
@@ -47,7 +54,7 @@ export default function ({ isOpen, closeModal, category,fetchCategories }) {
   return (
     <>
       <div
-        aria-hidden="true"
+        ariaHidden="true"
         className={`${
           isOpen ? "" : "hidden"
         } modal-overlay overflow-y-auto overflow-x-hidden  
@@ -70,7 +77,10 @@ export default function ({ isOpen, closeModal, category,fetchCategories }) {
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 14 14"
-                  onClick={closeModal}
+                  onClick={()=>{
+                     
+                    closeModal()
+                  }}
                 >
                   <path
                     stroke="currentColor"

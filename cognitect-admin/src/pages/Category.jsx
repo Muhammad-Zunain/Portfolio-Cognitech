@@ -31,6 +31,9 @@ export default function Category() {
     if(id){
       updateCategory(id);
     }
+    if (!id) {
+      setCategory({})
+    }
     setIsModalOpen(true);
   };
 
@@ -104,7 +107,7 @@ export default function Category() {
               <button
                 className="inline-flex items-center text-white focus:outline-none focus:ring-0 focus:ring-offset-0 font-medium rounded-lg text-sm px-3 py-1.5 dark:bg-fuchsia-600 hover:bg-[#6E1299]"
                 type="button"
-                onClick={()=>openModal()}
+                onClick={()=>openModal(null)}
               >
                 <svg
                   className="w-3 h-3 text-white dark:text-white me-3"
