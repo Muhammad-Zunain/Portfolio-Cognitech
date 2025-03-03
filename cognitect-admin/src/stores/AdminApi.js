@@ -116,6 +116,11 @@ export const getProjects = async () => {
 
 // Add projects
 export const addProject = async (projectData) => {
+  console.log(projectData);
+
+  for (let d in projectData){
+    console.log(d, projectData[d]);
+  }
   try {
     const response = await axios.post(`${BASE_URL}/projects/add-project`, projectData, {
       headers: {
@@ -123,6 +128,7 @@ export const addProject = async (projectData) => {
       },
       withCredentials: true,
     });
+    console.log(response);
     return { status: true, message : 'Project has been Added successfully!', type: "Success"};
   } catch (error) {
     return {status: false, message : 'Error adding project', type : "Failed"};

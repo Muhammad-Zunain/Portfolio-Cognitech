@@ -172,7 +172,9 @@ export const showcaseProjects = asyncHandler(async (req, res) => {
     }
 
     
-    const project = await Project.findOne({ category: category._id });
+    const project = await Project.find({ category: category._id }).populate("category");
+
+    console.log(project, category);
     
 
     if (!project) {
