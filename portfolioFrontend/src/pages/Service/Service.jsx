@@ -84,13 +84,15 @@ function Service() {
     setProjects(serviceName)
   },[])
 
-  
-
   useEffect(() => {
-    if (!projects.hasOwnProperty(serviceName)) {
-      console.log("404");
-    }
-  }, [serviceName]);
+    console.log(projects);
+  }, [projects]);  
+
+  // useEffect(() => {
+  //   if (!projects.hasOwnProperty(serviceName)) {
+  //     console.log("404");
+  //   }
+  // }, [serviceName]);
 
   useEffect(() => {
     setServiceName(serviceName);
@@ -98,17 +100,18 @@ function Service() {
   }, [serviceName]);
   
 
-  if (Object.keys(projects).length === 0) {
-    return "Loading..."
+  if (!projects || Object.keys(projects).length === 0) {
+    return "Loading...";
   }
+  
 
   return (
     <>
       {projects  ? (
         <>
           <div className="f-service-header">
-            <h2>{projects.extra.name}</h2>
-            <p style={{ textAlign: "center" }}>{projects.extra.description}</p>
+            <h2>{projects[0].category.name}</h2>
+            <p style={{ textAlign: "center" }}>{projects[0].category.description}</p>
           </div>
 
           <div className="container" style={containerStyles}>
@@ -153,7 +156,7 @@ function Service() {
                 }}
                 modules={[Navigation]}
               >
-                {projects.service.map((project, index) => (
+                {projects.map((project, index) => (
                   <SwiperSlide key={index}>
                     <div className="project-wrapper">
                       <div className="work-wrapper-content">

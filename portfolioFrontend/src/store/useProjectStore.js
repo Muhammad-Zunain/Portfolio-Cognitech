@@ -22,7 +22,7 @@ export const useProjectStore = create((set, get) => ({
       });
       console.log(res)
       
-      set({ projects: res.data.data.frontend });
+      set({ projects: res.data.data });
     } catch (error) {
       console.log(error);
       console.error("Error fetching projects:", error.response?.data || error.message);
