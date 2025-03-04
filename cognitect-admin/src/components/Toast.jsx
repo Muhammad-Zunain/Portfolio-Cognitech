@@ -22,8 +22,8 @@ const Toast = ({ title, message, duration = 3000, onClose }) => {
           animate={{ y: 5, opacity: 1 }}
           exit={{ y: -30, opacity: 0 }}
           transition={{ duration: 0.3 }}
-          className={`fixed top-[7%] right-[35%] p-3 rounded-lg shadow-lg bg-[#1D1F40] border-l-4 z-50
-            border-fuchsia-600`}
+          className={`fixed top-[7%] right-[35%] p-3 rounded-lg shadow-lg bg-[#1D1F40] border-l-4 
+            border-fuchsia-600 z-50`} 
         >
           <div className="flex justify-between items-center">
             <div>

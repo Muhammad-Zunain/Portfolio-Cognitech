@@ -15,7 +15,6 @@ export default function AddProject() {
     const fetchCategories = async () => {
       const res = await getCategories();
       if (res.status){
-        console.log(res.data)
         setCategories(res.data);  
         return;
       }
@@ -48,12 +47,7 @@ export default function AddProject() {
 
   const handleFileUpload = (event) => {
     const files = Array.from(event.target.files);
-    console.log(files);
-
-    // Ensure images are not nested
     setImages([...images, files]);
-
-    // Correct usage of createObjectURL
     setShowImages([...showImages, ...files.map((file) => URL.createObjectURL(file))]);
 };
 
@@ -81,7 +75,6 @@ export default function AddProject() {
     
     const formData = new FormData();
     images.forEach((image) => {
-      console.log(image[0])
         formData.append("images", image[0]); 
     });
 
@@ -91,27 +84,21 @@ export default function AddProject() {
     formData.append("technologies", JSON.stringify(technologies)); 
     let res;
     if (projectData?._id) {
-        console.log("Updating project...");
         res = await updateProject(projectData._id, formData);
     } else {
-        console.log("Adding new project...");
         res = await addProject(formData);
     }
 
     if (res.status) {
         setImages([]);
+        setShowImages([])
         setProjectName("");
         setCategory("Select Category");
         setTechnologies([]);
         setDescription("");
+        showToast(res.type, res.message);
     }
-    showToast(res.type, res.message);
 };
-
-useEffect(()=>{
-  console.log(showImages)
-}, [showImages])
-
 
   return (
     <div className="p-8 sm:ml-72">

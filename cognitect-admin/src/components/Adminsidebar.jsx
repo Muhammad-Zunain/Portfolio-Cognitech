@@ -6,7 +6,7 @@ export default function Adminsidebar() {
   return (
    <>
 
-<nav className="fixed top-0 w-full bg-admindashbord">
+<nav className="fixed top-0 w-full bg-admindashbord z-20">
 
   <div className="px-3 py-3 lg:px-5 lg:pl-3">
     <div className="flex items-center justify-between">
@@ -60,7 +60,7 @@ export default function Adminsidebar() {
   </div>
 </nav>
 
-<aside id="logo-sidebar" className="mt-20 fixed top-0 left-0 w-72 h-screen pt-10 transition-transform -translate-x-full bg-admindashbord  sm:translate-x-0" aria-label="Sidebar">
+<aside id="logo-sidebar" className="md:mt-20 fixed top-0 left-0 w-72 h-screen pt-40 md:pt-10  z-40 transition-transform -translate-x-full bg-admindashbord  sm:translate-x-0" aria-label="Sidebar">
    <div className="h-full px-3 pb-4 overflow-y-auto bg-admindashbord ">
       <ul className="space-y-2 font-medium">
          <li>

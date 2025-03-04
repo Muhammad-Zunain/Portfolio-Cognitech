@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import CategoryModal from "../components/AddCategory.jsx";
 
-
 import { useToast } from "../context/ToastContext.jsx";
 import { getCategories, deleteCategories, deleteCategory } from "../stores/AdminApi.js";
 
@@ -47,14 +46,11 @@ export default function Category() {
   }
 
   const handleCheckboxChange = (_id) => {
-    console.log(_id)
     setSelectedCategories((prevSelected) =>
       prevSelected.includes(_id)
         ? prevSelected.filter((catId) => catId !== _id)
         : [...prevSelected, _id]
-    );
-
-    
+    );   
   };
 
   const deleteSelectedCategories = async () => {
@@ -71,19 +67,16 @@ export default function Category() {
       setCategories(categories.filter((category) => !selectedCategories.includes(category._id)));
       setSelectedCategories([]); 
     }
-
-   
-    
     showToast(res.type, res.message);
   }
   
 
   return (
     <>
-      <div className="p-8 sm:ml-64">
-        <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
-          <div className="flex flex-column sm:flex-row flex-wrap space-y-4 sm:space-y-0 items-center justify-between mt-20 pb-4">
-            <div className="flex items-center space-x-6">
+      <div className="sm:ml-0 md:ml-72 md:p-8"> 
+        <div className="relative overflow-x-auto shadow-md ">
+          <div className="flex flex-column sm:flex-row flex-wrap md:space-y-4 space-y-0 items-center justify-between mt-28 md:mt-20 pb-4 gap-6">
+            <div className="flex order-2 items-center space-x-6">
               <button
                 className={`inline-flex items-center text-white focus:outline-none font-medium rounded-lg text-sm px-3 py-1.5 dark:bg-fuchsia-600 ${
                   selectedCategories.length === 0

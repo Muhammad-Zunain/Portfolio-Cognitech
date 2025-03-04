@@ -26,13 +26,6 @@ export default function Projects() {
     fetchProjects();
   }, []);
 
-
-  useEffect(()=>{
-    projects.map((pro)=>{
-      console.log(pro)
-    })
-  },[projects])
-
   const handleDropdownToggle = (index) => {
     if (dropdownIndex === index) {
       setDropdownIndex(null);
@@ -52,7 +45,6 @@ export default function Projects() {
 
   const fetchProjects = async () => {
     const res = await getProjects();
-    console.log(res.data);
     if (res.status) {
       setProjects(res.data);
       return;
@@ -87,12 +79,11 @@ export default function Projects() {
     if (selectedProjects.length === 0) return;
     let res;
     if (selectedProjects.length === 1) {
-      console.log(selectedProjects[0])
       res = await deleteProject(selectedProjects[0]);
     } else {
       res = await deleteProjects(selectedProjects);
     }
-
+    console.log(res.status)
     if (res.status) {
       setProjects((prevProjects) =>
         prevProjects.filter(
