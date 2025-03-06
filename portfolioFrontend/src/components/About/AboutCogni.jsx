@@ -14,7 +14,7 @@ const AboutCogni = () => {
             <div className="about-content">
               <div className="about-item">
                 <span className="about-line"></span>
-                <p>About Congnitech</p>
+                <p>About Kodonex</p>
               </div>
               <h2 style={{ color: "#1e143b" }}>
                 Journey leading Software Development Partner
@@ -29,7 +29,7 @@ const AboutCogni = () => {
                 </div>
 
                 <p style={{ color: "#1e143b" }}>
-                Cognitech Labs is a leading software development company specializing in web and mobile solutions tailored to your business needs. We combine innovation and precision to deliver impactful, scalable, and user-centric digital experiences. Our mission is to empower businesses to thrive in the digital era through cutting-edge technology.
+                Kodonex is a leading software development company specializing in web and mobile solutions tailored to your business needs. We combine innovation and precision to deliver impactful, scalable, and user-centric digital experiences. Our mission is to empower businesses to thrive in the digital era through cutting-edge technology.
                 </p>
               </div>
               <button>

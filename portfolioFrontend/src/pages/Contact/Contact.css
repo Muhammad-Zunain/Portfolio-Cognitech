@@ -183,6 +183,7 @@
 }
 
 .contact__cognitech textarea {
+  margin: 2rem 0;
   height: 220px;
   width: 100%;
 }
@@ -236,7 +237,7 @@
   }
 
   .contact__info {
-    row-gap: 3rem;
+    row-gap: 0rem;
   }
 
   .contact__cognitech input[type="text"],

@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useParams, Link } from "react-router-dom";
 import aboutService from "../../assets/service-bg-image1.jpg";
@@ -66,9 +66,9 @@ function Service() {
   const { serviceName } = useParams();
   const mainSwiperRef = useRef(null);
   const imageSwiperRefs = useRef([]);
-  const {projects, setServiceName, setProjects} = useProjectStore()
-
-  
+  const { projects, setServiceName, setProjects } = useProjectStore();
+  const [isExpanded, setIsExpanded] = useState(false);
+  const maxLength = 200;
 
   const containerStyles = {
     backgroundColor: "#1e143b",
@@ -79,39 +79,29 @@ function Service() {
     overflow: "hidden",
     marginBottom: "4rem",
   };
-  
-  useEffect(()=>{
-    setProjects(serviceName)
-  },[])
 
   useEffect(() => {
-    console.log(projects);
-  }, [projects]);  
-
-  // useEffect(() => {
-  //   if (!projects.hasOwnProperty(serviceName)) {
-  //     console.log("404");
-  //   }
-  // }, [serviceName]);
+    setProjects(serviceName);
+  }, []);
 
   useEffect(() => {
     setServiceName(serviceName);
     setProjects(serviceName);
   }, [serviceName]);
-  
 
   if (!projects || Object.keys(projects).length === 0) {
     return "Loading...";
   }
-  
 
   return (
     <>
-      {projects  ? (
+      {projects ? (
         <>
           <div className="f-service-header">
             <h2>{projects[0].category.name}</h2>
-            <p style={{ textAlign: "center" }}>{projects[0].category.description}</p>
+            <p style={{ textAlign: "center" }}>
+              {projects[0].category.description}
+            </p>
           </div>
 
           <div className="container" style={containerStyles}>
@@ -121,9 +111,10 @@ function Service() {
                   Our Technology <br /> Stack
                 </h1>
                 <p>
-                If you can dream it, we can build it. Our comprehensive technology stack spans a variety of tools and platforms, giving us the flexibility to create custom, high-performance solutions that cater to the unique needs of every client.
-
-
+                  If you can dream it, we can build it. Our comprehensive
+                  technology stack spans a variety of tools and platforms,
+                  giving us the flexibility to create custom, high-performance
+                  solutions that cater to the unique needs of every client.
                 </p>
               </div>
               <div className="service-technology-image">
@@ -140,7 +131,15 @@ function Service() {
               <div className="about-service-content">
                 <h3>Experience The Difference Of Working With Excellence</h3>
                 <p>
-                Choose us for custom development solutions that go beyond the traditional. Our team of skilled professionals is passionate about crafting innovative solutions that are tailored to your unique business needs. We pride ourselves on delivering high-quality results, providing ongoing support, and ensuring the success of every project. With a focus on excellence in every step of the process, from concept to execution, we are committed to helping you achieve your goals and stand out in the competitive digital landscape.
+                  Choose us for custom development solutions that go beyond the
+                  traditional. Our team of skilled professionals is passionate
+                  about crafting innovative solutions that are tailored to your
+                  unique business needs. We pride ourselves on delivering
+                  high-quality results, providing ongoing support, and ensuring
+                  the success of every project. With a focus on excellence in
+                  every step of the process, from concept to execution, we are
+                  committed to helping you achieve your goals and stand out in
+                  the competitive digital landscape.
                 </p>
               </div>
             </div>
@@ -163,8 +162,18 @@ function Service() {
                         <h1 className="text-outline">0{index + 1}</h1>
                         <h2>{project.title}</h2>
                         <p style={{ textAlign: "justify" }}>
-                          {project.description}
+                          {isExpanded || project.description.length <= maxLength
+                            ? project.description
+                            : `${project.description.slice(0, maxLength)}...`}
                         </p>
+                        {project.description.length > maxLength && (
+                          <button
+                            onClick={() => setIsExpanded(!isExpanded)}
+                            className="read-more-btn"
+                          >
+                            {isExpanded ? "Read Less <<" : "Read More >>"}
+                          </button>
+                        )}
                         <div className="tech-div">
                           {project.technologies.map((tech, idx) => (
                             <p key={idx}>
@@ -224,44 +233,47 @@ function Service() {
             <div className="service-wrapper">
               <div class="about-service-wrapper">
                 <div className="about-service-inner-wrapper">
-                {/* Ready to Craft Digital Brilliance */}
+                  {/* Ready to Craft Digital Brilliance */}
                   <h2>
                     Ready to Craft{" "}
                     <span style={{ color: "#6E1299" }}>Digital </span>{" "}
                     Brilliance
                   </h2>
                   <p>
-                  We are dedicated to delivering exceptional solutions tailored to your unique business needs. From front-end design to back-end development, our team combines innovation and expertise to ensure seamless functionality, outstanding user experiences, and impactful results across all digital platforms. Let us help you transform your ideas into reality with excellence at every step.
+                    We are dedicated to delivering exceptional solutions
+                    tailored to your unique business needs. From front-end
+                    design to back-end development, our team combines innovation
+                    and expertise to ensure seamless functionality, outstanding
+                    user experiences, and impactful results across all digital
+                    platforms. Let us help you transform your ideas into reality
+                    with excellence at every step.
                   </p>
                   <button className="hero-button">
                     <span className="top"></span>
                     <Link to="" className="primary-button">
-                      Contact Now 
+                      Contact Now
                     </Link>
                     <span className="bottom"></span>
                   </button>
                 </div>
               </div>
             </div>
-          <div className="logo-container">
-            <h2>
-               Our <span>Technology</span>
-            </h2>
-            <div className="all-logos">
-
-            {skillList.map((skillImage) => {
-              return (
-                <>
-                  <div className={`skill-icon ${skillImage.name}`}>
-                    {skillImage.icon}
-                    
-                  </div>
-                </>
-              );
-            })}
-
+            <div className="logo-container">
+              <h2>
+                Our <span>Technology</span>
+              </h2>
+              <div className="all-logos">
+                {skillList.map((skillImage) => {
+                  return (
+                    <>
+                      <div className={`skill-icon ${skillImage.name}`}>
+                        {skillImage.icon}
+                      </div>
+                    </>
+                  );
+                })}
+              </div>
             </div>
-          </div>
           </div>
         </>
       ) : (

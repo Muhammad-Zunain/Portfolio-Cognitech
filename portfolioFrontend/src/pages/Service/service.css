@@ -126,14 +126,18 @@
 
 .project-wrapper {
   display: flex;
+  align-items: center;
   justify-content: space-around;
+}
+
+.read-more-btn{
+  color: #6e1299;
+  font-size: 1.5rem;
 }
 
 .project-images-swiper {
   max-width: 650px;
-  /* Image Width */
   height: 400px;
-  /* Image Height */
 }
 
 .swiper-image {

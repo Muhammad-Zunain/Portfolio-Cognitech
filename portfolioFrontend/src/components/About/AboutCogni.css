@@ -337,6 +337,7 @@
         height: 140px;
     }
     .about-exp p {
+        margin-top: 1rem;
         margin-left: 0.1rem;
     }
     .about-exp h1 {
@@ -354,6 +355,9 @@
     }
     .about-cognitech p{
         width: 100%;
+    }
+    .about-exp p{
+        margin-left: 0.7rem;
     }
     .about-content button{
         margin-top: -13rem;

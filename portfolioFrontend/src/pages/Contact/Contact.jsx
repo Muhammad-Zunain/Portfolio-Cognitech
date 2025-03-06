@@ -54,7 +54,7 @@ const Contact = () => {
 
                         <button type="submit" className="primary-button">
                             <span className="top"></span>
-                            <span className="primary-button-text">Send Message</span>
+                            <span className="primary-button-text" style={{color: '#fff'}}>Send Message</span>
                             <span className="bottom"></span>
                         </button>
                     </form>

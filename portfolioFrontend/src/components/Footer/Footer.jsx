@@ -60,7 +60,7 @@ const Footer = () => {
             </div>
             <div className="footer-1-content">
               <p>
-              Cognitech Labs is a leading software company specializing in web and mobile solutions. We deliver innovative, scalable, and user-focused digital experiences to empower businesses in the digital era.
+              Kodonex is a leading software company specializing in web and mobile solutions. We deliver innovative, scalable, and user-focused digital experiences to empower businesses in the digital era.
               </p>
             </div>
           </div>
@@ -85,27 +85,6 @@ const Footer = () => {
                   </Link>
                 </li>
               ))}
-{/* 
-              <li>
-                <i class="fa-solid fa-angle-right"></i>
-                <Link>Mobile App Development</Link>
-              </li>
-              <li>
-                <i class="fa-solid fa-angle-right"></i>
-                <Link>Front End Development</Link>
-              </li>
-              <li>
-                <i class="fa-solid fa-angle-right"></i>
-                <Link>Back End Development</Link>
-              </li>
-              <li>
-                <i class="fa-solid fa-angle-right"></i>
-                <Link>Full Stack Development</Link>
-              </li>
-              <li>
-                <i class="fa-solid fa-angle-right"></i>
-                <Link>UI/UX Design</Link>
-              </li> */}
             </ul>
           </div>
           <div className="footer-4 footer">
@@ -128,10 +107,10 @@ const Footer = () => {
       </div>
       <div className="footer-bottom">
         <div className="footer-bottom-1">
-          <p>Copyright &copy; 2025 Cognitech Labs | All Right Reserved</p>
+          <p>Copyright &copy; 2025 Kodonex | All Right Reserved</p>
         </div>
         <div className="footer-bottom-2">
-          <p>Powered By Cognitech</p>
+          <p>Powered By Kodonex</p>
         </div>
       </div>
     </div>

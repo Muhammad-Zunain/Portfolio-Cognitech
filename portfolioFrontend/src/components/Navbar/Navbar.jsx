@@ -31,13 +31,9 @@ const Navbar = ({ handleClick, open }) => {
     
   };
 
-  
-
   useEffect(() => {
     getAllCategories();
-  }, []);
-
-  
+  }, []); 
 
   return (
     <>
