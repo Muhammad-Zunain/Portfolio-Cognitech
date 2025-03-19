@@ -386,7 +386,7 @@
         margin-bottom: -7rem;
     }
     .footer-upper-3 {
-        margin-top: -7rem;
+        margin-top: -6rem;
     }
 
     .footer-upper-2 {
@@ -467,6 +467,9 @@
 }
 
 @media only screen and (max-width: 400px) {
+    .footer-upper-3 h4 {
+      line-height: 20px;
+    }
     .footer-lower {
         margin-top: 0;
     }
