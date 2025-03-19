@@ -382,6 +382,12 @@
         margin-top: -20rem;
         padding: 5rem 0rem;
     }
+    .footer-upper-1 {
+        margin-bottom: -7rem;
+    }
+    .footer-upper-3 {
+        margin-top: -7rem;
+    }
 
     .footer-upper-2 {
         max-width: 160px;
@@ -461,12 +467,6 @@
 }
 
 @media only screen and (max-width: 400px) {
-    .footer-upper-1 {
-        margin-bottom: -7rem;
-    }
-    .footer-upper-3 {
-        margin-top: -7rem;
-    }
     .footer-lower {
         margin-top: 0;
     }

@@ -861,7 +861,9 @@
 
   .f-service-wrapper h2 {
     font-size: 3.5rem;
-  }
+  }.services-offer-inner {
+    min-height: 35vh;
+}
 
   .service-technology-content {
     row-gap: 2rem;
@@ -1076,7 +1078,7 @@
 @media (max-width: 375px) {
   .services-offer-inner {
     min-height: 30vh;
-}
+    }
   .service-technology-content h1 {
     font-size: 4rem !important;
     line-height: 50px !important;
