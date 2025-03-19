@@ -311,15 +311,6 @@
     padding: 2.5rem;
   }
 
-  .quention__box {
-    margin-top: 3rem;
-    flex-direction: column;
-  }
-
-  .question__content {
-    width: 100%;
-  }
-
   .about__contact__box {
     margin-top: 8rem;
     padding: 3rem 0rem 3rem 2rem;

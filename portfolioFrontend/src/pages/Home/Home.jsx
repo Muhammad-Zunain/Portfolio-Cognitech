@@ -210,7 +210,7 @@ const Home = () => {
         </div>
 
         <ChooseUs />
-        <Accordion />
+        {/* <Accordion /> */}
       </div>
       <div className="tech-wrapper">
         <div className="tech-header">

@@ -358,6 +358,7 @@
     .footer-container {
         padding: 1rem;
     }
+
     .footer-bottom-1 {
         width: 75% !important;
         clip-path: polygon(0 0, 100% 0%, 80% 100%, 0% 100%) !important;
@@ -378,13 +379,16 @@
     .footer-container {
         margin-top: 25rem;
     }
+
     .footer-upper {
         margin-top: -20rem;
         padding: 5rem 0rem;
     }
+
     .footer-upper-1 {
         margin-bottom: -7rem;
     }
+
     .footer-upper-3 {
         margin-top: -6rem;
     }
@@ -468,22 +472,28 @@
 
 @media only screen and (max-width: 400px) {
     .footer-upper-3 h4 {
-      line-height: 20px;
+        line-height: 20px;
     }
+
     .footer-lower {
         margin-top: 0;
     }
+
     .footer-bottom-2 p {
         margin-left: 3.5rem;
         padding: 0 0;
     }
+
     .footer-upper-1 h4,
     .footer-upper-3 h4 {
         font-size: 1.6rem;
         text-align: center;
-    }.footer-upper-3-wrapper>a>i {
+    }
+
+    .footer-upper-3-wrapper>a>i {
         font-size: 2rem;
     }
+
     .footer-upper-3-wrapper {
         gap: 1rem;
     }
