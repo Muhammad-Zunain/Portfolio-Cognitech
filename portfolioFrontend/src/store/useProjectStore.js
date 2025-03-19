@@ -1,8 +1,6 @@
 import axios from "axios";
 
 import { create } from "zustand";
-import { projects } from "../pages/Service/serviceData";
-
 
 const baseUrl = "https://cognitech-kappa.vercel.app/api";
 // const baseUrl = "http://localhost:5000/api"
