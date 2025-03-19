@@ -9,7 +9,7 @@ import webService8 from "../../assets/SEOOptimization.jpeg";
 import webService9 from "../../assets/WebsitePerformanceOptimization.jpeg";
 
 import webBanner from "../../assets/webBanner.webp";
-import webService from "../../assets/service-bg-image1.jpg";
+import webService from "../../assets/image2.jpeg";
 
 
 export const WebServiceContent = [
