@@ -1,15 +1,16 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { useProjectStore } from "../../store/useProjectStore.js";
+import React, { useState, useEffect } from "react";
+import { Link, useParams } from "react-router-dom";
 import aboutService from "../../assets/service-bg-image1.jpg";
 import aboutTech from "../../assets/s1Bg.png";
 import Accordion from "../../components/FAQ/Accordion";
 import "./service.css";
 
 import {
-  ServiceContent,
-  Services,
-  allTechIcons,
-  FAQs,
+  WebServiceContent,
+  WebServices,
+  WeballTechIcons,
+  WebFAQs,
 } from "./WebServiceData.jsx";
 
 function Service() {
@@ -22,6 +23,30 @@ function Service() {
     overflow: "hidden",
     marginBottom: "4rem",
   };
+
+  const [ServiceContent, setServiceContent] = useState();
+  const [Services, setServices] = useState();
+  const [allTechIcons, setAllTechIcons] = useState();
+  const [FAQs, setFAQs] = useState();
+  const { serviceName, setServiceName } = useProjectStore();
+  const {serviceNameUrl} = useParams();
+
+  useEffect(() => {
+    setServiceName(serviceNameUrl)
+  }, []);
+
+  useEffect(() => {
+    if (serviceName === "web-service") {
+      setServiceContent(WebServiceContent);
+      setServices(WebServices);
+      setAllTechIcons(WeballTechIcons);
+      setFAQs(WebFAQs);
+    }
+  }, [serviceName]);
+
+  if (!ServiceContent || !Services || !allTechIcons || !FAQs) {
+    return <h1>Loading...</h1>;
+  }
 
   return (
     <>

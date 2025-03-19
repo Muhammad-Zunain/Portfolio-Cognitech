@@ -12,7 +12,7 @@ import webBanner from "../../assets/webBanner.webp";
 import webService from "../../assets/service-bg-image1.jpg";
 
 
-export const ServiceContent = [
+export const WebServiceContent = [
   {
     "title": "Web Development",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur id tempore fugit incidunt repudiandae modi ab nemo fuga quibusdam consequatur!"
@@ -59,7 +59,7 @@ export const ServiceContent = [
 
 
 
-export const Services = [
+export const WebServices = [
   {
     id: 1,
     title: "Web Application Development",
@@ -160,7 +160,7 @@ import {
 
 import { FaNodeJs } from "react-icons/fa";
 
-export const allTechIcons = [
+export const WeballTechIcons = [
   { icon: <SiReact />, name: "React" },
   { icon: <SiAngular />, name: "Angular" },
   { icon: <SiVuedotjs />, name: "Vue.js" },
@@ -194,7 +194,7 @@ export const allTechIcons = [
   { icon: <SiGit />, name: "Git" },
 ];
 
-export const FAQs = [
+export const WebFAQs = [
   {
     questions: [
       {
