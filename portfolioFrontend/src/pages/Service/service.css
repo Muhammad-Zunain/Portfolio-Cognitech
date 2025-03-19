@@ -994,7 +994,7 @@
   }
 
   .wrapper-inner h2 {
-    font-size: 3rem;
+    font-size: 3.5rem;
   }
 
   .service-technology-content h1 {
@@ -1059,6 +1059,9 @@
 }
 
 @media (max-width:440px) {
+  .wrapper-inner h2 {
+    font-size: 3.3rem;
+}
   .services-offer-content {
     max-width: 320px;
   }
@@ -1068,7 +1071,9 @@
   .f-service-wrapper h2 {
     line-height: 40px;
   }
-
+  .wrapper-inner h2 {
+    font-size: 3git rem;
+}
   .service-technology-image {
     top: -1.5rem;
     width: 55%;
@@ -1087,15 +1092,17 @@
   .services-offer-content {
     max-width: 280px;
   }
-
+  .wrapper-inner h2 {
+    font-size: 2.7rem;
+}
   .service-technology-image {
     top: -4rem;
     width: 60%;
   }
 
-  .work-wrapper-content {
+  /* .work-wrapper-content {
     margin-top: -25rem;
-  }
+  } */
 
   .logo-container {
     padding: 0.5rem;

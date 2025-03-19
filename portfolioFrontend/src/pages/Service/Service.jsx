@@ -231,7 +231,7 @@ function Service() {
             <div className="main-services-offer">
               <div className="service-offer-wrapper">
                 <div className="wrapper-inner">
-                  <h2>Empower your business with tailored web solutions</h2>
+                  <h2>Enchance your business with custom web solutions</h2>
                   <p>
                     We offer a wide range of services to help you build, grow,
                     and scale your business. From web application development to
