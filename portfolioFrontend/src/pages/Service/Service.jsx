@@ -1,66 +1,18 @@
 import React, { useRef, useEffect, useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
 import { useParams, Link } from "react-router-dom";
 import aboutService from "../../assets/service-bg-image1.jpg";
+import aboutService1 from "../../assets/image2.jpeg";
 import aboutTech from "../../assets/s1Bg.png";
-import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "./service.css";
-import { projects } from "./serviceData";
+// import { Navigation } from "swiper/modules";
+// import { Swiper, SwiperSlide } from "swiper/react";
 
-import {
-  SiHtml5,
-  SiCss3,
-  SiJavascript,
-  SiReact,
-  SiPython,
-  SiAngular,
-  SiTailwindcss,
-  SiBootstrap,
-  SiFlutter,
-  SiDart,
-  SiFirebase,
-  SiNextdotjs,
-  SiRedux,
-  SiCplusplus,
-  SiMongodb,
-  SiGraphql,
-  SiMysql,
-  SiGit,
-  SiPostgresql,
-  SiPandas,
-  SiNumpy,
-} from "react-icons/si";
-
-import { FaNodeJs, FaHtml5, FaCss3, FaVuejs } from "react-icons/fa";
 import { useProjectStore } from "../../store/useProjectStore";
 
-const skillList = [
-  { icon: <SiHtml5 />, name: "html5" },
-  { icon: <SiCss3 />, name: "css3" },
-  { icon: <SiJavascript />, name: "javascript" },
-  { icon: <SiReact />, name: "react" },
-  { icon: <FaNodeJs />, name: "nodejs" },
-  { icon: <SiPython />, name: "python" },
-  { icon: <SiAngular />, name: "angular" },
-  { icon: <FaVuejs />, name: "vuejs" },
-  { icon: <SiTailwindcss />, name: "tailwind" },
-  { icon: <SiBootstrap />, name: "bootstrap" },
-  { icon: <SiFlutter />, name: "flutter" },
-  { icon: <SiDart />, name: "dart" },
-  { icon: <SiFirebase />, name: "firebase" },
-  { icon: <SiNextdotjs />, name: "nextjs" },
-  { icon: <SiRedux />, name: "redux" },
-  { icon: <SiCplusplus />, name: "cpp" },
-  { icon: <SiMongodb />, name: "mongodb" },
-  { icon: <SiGraphql />, name: "graphql" },
-  { icon: <SiMysql />, name: "mysql" },
-  { icon: <SiGit />, name: "git" },
-  { icon: <SiPostgresql />, name: "postgresql" },
-  { icon: <SiPandas />, name: "pandas" },
-  { icon: <SiNumpy />, name: "numpy" },
-];
+import webBanner from "../../assets/webBanner.webp";
+import { webServices, allTechIcons } from "./WebServiceData.jsx";
 
 function Service() {
   const { serviceName } = useParams();
@@ -98,27 +50,73 @@ function Service() {
       {projects ? (
         <>
           <div className="f-service-header">
-            <h2>{projects[0].category.name}</h2>
-            <p style={{ textAlign: "center" }}>
+            <img src={webBanner} alt="" />
+            {/* <h2>{projects[0].skill.name}</h2> */}
+            {/* <p style={{ textAlign: "center" }}>
               {projects[0].category.description}
-            </p>
+            </p> */}
+            <div className="f-service-wrapper">
+              <h2>Web Development</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur id tempore fugit incidunt repudiandae modi ab nemo fuga quibusdam consequatur!</p>
+            </div>
           </div>
 
           <div className="container" style={containerStyles}>
-            <div className="service-technology-section">
-              <div className="service-technology-content">
-                <h1>
-                  Our Technology <br /> Stack
-                </h1>
-                <p>
-                  If you can dream it, we can build it. Our comprehensive
-                  technology stack spans a variety of tools and platforms,
-                  giving us the flexibility to create custom, high-performance
-                  solutions that cater to the unique needs of every client.
+            <div className="service-intro-section">
+              <div className="service-intro-content">
+                <p className="service-intro-wrapper-1">Overview</p>
+                <p className="service-intro-wrapper-2">
+                  Every app we build is engineered to drive measurable business
+                  outcomes. <br />
+                  With expertise spanning cutting-edge native development,
+                  cross-platform solutions, and enterprise-grade systems, our
+                  engineers transform bold ideas into dynamic mobile
+                  experiences.
                 </p>
+                <h4>
+                  <strong>What we are good at:</strong>
+                </h4>
+                <ul className="service-intro-list">
+                  <li>
+                    <p>
+                      <strong>Mobile-First Architecture:</strong> Developing
+                      robust, secure applications to streamline operations and
+                      enhance productivity for businesses of all sizes.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <strong>Mobile-First Architecture:</strong> Ensuring apps
+                      are fast, lightweight, and responsive, even under heavy
+                      user loads.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <strong>Mobile-First Architecture:</strong> Building
+                      tailored apps to address specific business challenges and
+                      deliver measurable results.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <strong>Mobile-First Architecture:</strong> Leveraging
+                      agile methodologies to build scalable, responsive
+                      solutions that align with mobile-first strategies.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <strong>Integration Expertise: </strong> Seamlessly
+                      connecting mobile apps with third-party services, APIs,
+                      and backend systems.
+                    </p>
+                  </li>
+                </ul>
               </div>
-              <div className="service-technology-image">
-                <img src={aboutTech} alt="" width="100%" />
+
+              <div className="service-intro-image">
+                <img src={aboutService1} alt="" />
               </div>
             </div>
 
@@ -144,7 +142,7 @@ function Service() {
               </div>
             </div>
 
-            <div className="work-wrapper">
+            {/* <div className="work-wrapper">
               <Swiper
                 ref={mainSwiperRef}
                 spaceBetween={50}
@@ -228,12 +226,81 @@ function Service() {
 
               <div className="swiper-button-prev swiper-button-prev"></div>
               <div className="swiper-button-next swiper-button-next"></div>
+            </div> */}
+
+            <div className="main-services-offer">
+              <div className="service-offer-wrapper">
+                <div className="wrapper-inner">
+                  <h2>Empower your business with tailored web solutions</h2>
+                  <p>
+                    We offer a wide range of services to help you build, grow,
+                    and scale your business. From web application development to
+                    e-commerce solutions, we have the expertise to bring your
+                    ideas to life and drive results.
+                  </p>
+                </div>
+              </div>
+              <div className="service-offer">
+                {webServices.map((service) => {
+                  return (
+                    <div key={service.id} className="services-offer-content">
+                      <img
+                        src={service.image}
+                        alt=""
+                        className="service-image"
+                      />
+                      <h4>{service.title}</h4>
+
+                      <div className="services-offer-inner">
+                        <p>{service.description}</p>
+                      </div>
+                      <button className="hero-button" style={{ zIndex: 9 }}>
+                        <span className="top"></span>
+                        <Link to="/" className="primary-button">
+                          Get In Touch
+                        </Link>
+                        <span className="bottom"></span>
+                      </button>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+
+            <div className="service-technology-section">
+              <div className="service-technology-content">
+                <h1>
+                  Our Technology <br /> Stack
+                </h1>
+                <p>
+                  If you can dream it, we can build it. Our comprehensive
+                  technology stack spans a variety of tools and platforms,
+                  giving us the flexibility to create custom, high-performance
+                  solutions that cater to the unique needs of every client.
+                </p>
+              </div>
+              <div className="service-technology-image">
+                <img src={aboutTech} alt="" width="100%" />
+              </div>
+            </div>
+
+            <div className="logo-container">
+            <div className="all-logos">
+                {allTechIcons.map((skill, index) => {
+                  return (
+                    <>
+                      <div key={index} className="skill-icon">
+                        {skill.icon}
+                      </div>
+                    </>
+                  );
+                })}
+              </div>
             </div>
 
             <div className="service-wrapper">
               <div class="about-service-wrapper">
                 <div className="about-service-inner-wrapper">
-                  {/* Ready to Craft Digital Brilliance */}
                   <h2>
                     Ready to Craft{" "}
                     <span style={{ color: "#6E1299" }}>Digital </span>{" "}
@@ -256,22 +323,6 @@ function Service() {
                     <span className="bottom"></span>
                   </button>
                 </div>
-              </div>
-            </div>
-            <div className="logo-container">
-              <h2>
-                Our <span>Technology</span>
-              </h2>
-              <div className="all-logos">
-                {skillList.map((skillImage) => {
-                  return (
-                    <>
-                      <div className={`skill-icon ${skillImage.name}`}>
-                        {skillImage.icon}
-                      </div>
-                    </>
-                  );
-                })}
               </div>
             </div>
           </div>

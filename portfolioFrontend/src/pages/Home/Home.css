@@ -54,8 +54,10 @@
   width: 50%;
 }
 
-.main-body-header h1 {
+.main-body-header {
   margin-bottom: 1rem;
+  max-width: min(1000px,90%);
+  width: 100%;
 }
 
 .main-body-header h1 span {
@@ -147,6 +149,9 @@
 }
 
 @media (max-width: 560px) {
+  .hero-container {
+    padding-left: 3rem;
+  }
   .main-body-header h1 {
     font-size: 3rem;
     line-height: 40px;
@@ -159,21 +164,20 @@
 }
 
 @media (max-width: 500px) {
-  .hero-container {
-    padding-left: 4rem;
-  }
+  
 
   .hero-title {
     margin-bottom: 2rem;
+    padding-right: 1rem ;
   }
 
   .main-body-header {
     margin-bottom: 1rem;
+    max-width: 100% !important;
   }
 
   .main-body-header h1 {
     font-size: 3rem;
-    line-height: 30px;
   }
 
   .hero-body {
@@ -181,15 +185,13 @@
   }
 
   .main-body-content {
-    width: 93%;
+    width: 100%;
+    padding-right:1rem ;
   }
 }
 
 @media (max-width: 485px) {
-  .main-body-header h1 {
-    font-size: 2.7rem;
-  }
-
+  
   .hero-container {
     height: 75vh;
   }
@@ -221,9 +223,6 @@
     height: 2rem;
   }
 
-  .main-body-content {
-    width: 100%;
-  }
 }
 
 @media (max-width: 370px) {
@@ -233,16 +232,6 @@
 
   .main-body-header :nth-child(2) br {
     display: block !important;
-  }
-
-  .main-body-content {
-    width: 99%;
-  }
-
-  .hero-title p {
-    font-size: 9px;
-    font-weight: 500;
-    letter-spacing: 0.5px;
   }
 
 }

@@ -40,26 +40,23 @@ const Home = () => {
   return (
     <>
       <div className="container home-wrapper">
-
         <div className="hero-container">
-
-          <p className="hero-title">TRANSFORMING IDEAS INTO SCALABLE SOFTWARE SOLUTIONS</p>
+          <p className="hero-title">
+            TRANSFORMING IDEAS INTO SCALABLE SOFTWARE SOLUTIONS
+          </p>
 
           <div className="hero-body">
             <div className="main-body-header">
               <h1>
-                Your <span>Concept,</span> <br style={{ display: "none" }} />{" "}
-                Our <span>Innovation</span>
-              </h1>
-              <h1>
-              Together, We <span> Build</span>
-                <br style={{ display: "none" }} /> and
-              </h1>
-              <h1>Excellence.</h1>
+                Your <span> Concept,</span>
+                Our <span> Innovation </span>
+                Together, We <span> Build</span> and
+              Excellence.</h1>
             </div>
             <div className="main-body-content">
               <p>
-              Empowering your vision with our all-encompassing software development and scaling services.
+                Empowering your vision with our all-encompassing software
+                development and scaling services.
               </p>
             </div>
           </div>
@@ -81,7 +78,8 @@ const Home = () => {
               Our <span>Services</span>
             </h2>
             <p>
-            Explore a diverse range of services designed to bring your ideas to life and empower your business with cutting-edge solutions.
+              Explore a diverse range of services designed to bring your ideas
+              to life and empower your business with cutting-edge solutions.
             </p>
           </div>
 
@@ -95,7 +93,9 @@ const Home = () => {
                 />
                 <h3>Custom Development</h3>
                 <p>
-                Empowering your projects with expert precision and creativity, we deliver tailored solutions and seamless execution to maximize efficiency and meet your business needs.
+                  Empowering your projects with expert precision and creativity,
+                  we deliver tailored solutions and seamless execution to
+                  maximize efficiency and meet your business needs.
                 </p>
                 <div className="services">
                   <span>Mern</span>
@@ -134,7 +134,10 @@ const Home = () => {
                 />
                 <h3>Mobile Development</h3>
                 <p>
-                We use Flutter to create high-performance, cross-platform mobile apps that work seamlessly on all devices. Our scalable and flexible solutions cater to industries of all sizes, from startups to enterprises.
+                  We use Flutter to create high-performance, cross-platform
+                  mobile apps that work seamlessly on all devices. Our scalable
+                  and flexible solutions cater to industries of all sizes, from
+                  startups to enterprises.
                 </p>
                 <div className="services">
                   <span>Flutter</span>
@@ -151,7 +154,9 @@ const Home = () => {
                 />
                 <h3>Front-end Development</h3>
                 <p>
-                We craft visually stunning, responsive front-end solutions with intuitive interfaces, delivering seamless experiences and flawless performance across all devices.
+                  We craft visually stunning, responsive front-end solutions
+                  with intuitive interfaces, delivering seamless experiences and
+                  flawless performance across all devices.
                 </p>
                 <div className="services">
                   <span>React js</span>
@@ -170,7 +175,9 @@ const Home = () => {
                 />
                 <h3>Back-end Development</h3>
                 <p>
-                We build robust, secure, and scalable back-end systems that ensure seamless performance and data handling, empowering businesses to grow and adapt with the latest technologies.
+                  We build robust, secure, and scalable back-end systems that
+                  ensure seamless performance and data handling, empowering
+                  businesses to grow and adapt with the latest technologies.
                 </p>
                 <div className="services">
                   <span>Node js</span>
@@ -188,7 +195,10 @@ const Home = () => {
                 />
                 <h3>Digital Markeing</h3>
                 <p>
-                Boost your online presence with our smart digital marketing plans. We enhance visibility and engagement, attracting more customers to your brand and driving business growth in the digital landscape.
+                  Boost your online presence with our smart digital marketing
+                  plans. We enhance visibility and engagement, attracting more
+                  customers to your brand and driving business growth in the
+                  digital landscape.
                 </p>
                 <div className="services">
                   <span>SEO</span>

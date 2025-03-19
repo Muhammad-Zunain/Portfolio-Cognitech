@@ -359,6 +359,9 @@
     .about-exp p{
         margin-left: 0.7rem;
     }
+    .about-content{
+        padding: 3rem 3rem 4rem 3rem;
+    }
     .about-content button{
         margin-top: -13rem;
         margin-left: 20rem;

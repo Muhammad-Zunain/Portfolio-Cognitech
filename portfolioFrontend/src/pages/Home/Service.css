@@ -42,7 +42,7 @@
     row-gap: 1rem;
     align-items: flex-start;
     border-radius: 8px;
-    inset: 4px;
+    inset: 2px;
     background-color: #1e143b;
     position: absolute;
     z-index: 2;
@@ -133,6 +133,7 @@
 }
 
 /* ------------------ Media Querry ------------------ > */
+
 @media (max-width:768px) {
     .service-header h2{
         font-size: 4rem;

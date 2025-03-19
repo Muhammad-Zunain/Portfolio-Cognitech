@@ -1,7 +1,7 @@
 /* ----------------------- Main Footer Container ----------------------- */
 
 .footer-container {
-    padding: 4rem;
+    padding: 4rem 0;
     margin-top: 20rem;
 }
 
@@ -68,7 +68,8 @@
     max-width: 200px;
 }
 
-.footer-upper-1 h4,.footer-upper-3 h4{
+.footer-upper-1 h4,
+.footer-upper-3 h4 {
     letter-spacing: 0.1rem;
 }
 
@@ -85,7 +86,7 @@
 }
 
 .footer-upper-3-wrapper>p {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     letter-spacing: 1px;
 }
 
@@ -94,7 +95,6 @@
     color: #0c0e2b;
 }
 
-/* Responsive Design */
 @media screen and (max-width: 1440px) {
     .footer-bottom-1 {
         clip-path: polygon(0 0, 100% 0%, 92% 100%, 0% 100%) !important;
@@ -102,23 +102,29 @@
     }
 
     .footer-bottom-2 {
-        clip-path: polygon(21% 0, 100% 0%, 100% 100%, 0 100%)   !important;
-        width: 25%  !important;
+        clip-path: polygon(21% 0, 100% 0%, 100% 100%, 0 100%) !important;
+        width: 25% !important;
     }
+
     .footer-bottom-2 p {
-      margin-left: 4rem;
+        margin-left: 4rem;
     }
-    
+
 }
+
 @media (max-width: 1024px) {
+    .footer-bottom p {
+        font-size: 1.8rem !important;
+    }
+
     .footer-bottom-1 {
         clip-path: polygon(0 0, 100% 0%, 92% 100%, 0% 100%) !important;
         width: 74% !important;
     }
 
     .footer-bottom-2 {
-        clip-path: polygon(15% 0, 100% 0%, 100% 100%, 0 100%)   !important;
-        width: 30%  !important;
+        clip-path: polygon(15% 0, 100% 0%, 100% 100%, 0 100%) !important;
+        width: 30% !important;
     }
 
     .footer-upper {
@@ -135,6 +141,7 @@
     .footer-bottom-1 p {
         margin-left: -3rem;
     }
+
     .footer-bottom-2 p {
         margin-left: 3rem;
         text-align: center;
@@ -144,11 +151,11 @@
 .footer-main {
     margin-top: 3rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
 }
 
-.footer {
+.footer-1 {
     width: 30%;
     display: flex;
     flex-direction: column;
@@ -191,6 +198,17 @@
     scale: 1.01;
 }
 
+.footer-4 {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+}
+
+.footer-2 {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+}
 
 .footer ul li i {
     color: #6E1299;
@@ -236,29 +254,18 @@
     margin-left: -70px;
 }
 
-@media (max-width: 768px) {
+@media (max-width:850px) {
     .footer-container {
-        padding: 1rem;
-    }
-
-    .footer-upper {
-        flex-direction: column;
-        row-gap: 2rem;
-        padding: 4rem 1rem;
-        align-items: center;
-        /* Align all content to the start */
-    }
-
-    .footer-lower i {
-        font-size: 1.6rem;
-        width: 35px;
-        height: 35px;
+        padding: 4rem;
     }
 
     .footer-main {
         flex-direction: column;
-
         margin-bottom: 2rem;
+    }
+
+    .footer-upper {
+        row-gap: 5rem;
     }
 
     .footer {
@@ -272,6 +279,37 @@
         width: 100%;
     }
 
+    .footer-upper-1 {
+        margin-bottom: -4rem;
+    }
+
+    .footer-upper-3 {
+        margin-top: -4rem;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+    .footer-container {
+        padding: 2rem;
+    }
+
+    .footer-upper {
+        flex-direction: column;
+        row-gap: 2rem;
+        padding: 4rem 1rem;
+        align-items: center;
+    }
+
+    .footer-lower i {
+        font-size: 1.6rem;
+        width: 35px;
+        height: 35px;
+    }
+
+
+
     .footer-bottom-1 {
         width: 90% !important;
         clip-path: polygon(0 0, 100% 0%, 83% 100%, 0% 100%) !important;
@@ -283,7 +321,7 @@
     }
 
     .footer-bottom p {
-        font-size: 1.5rem;
+        font-size: 1.5rem !important;
         padding: 0 3.5rem;
         text-align: center;
         margin-left: -4rem;
@@ -317,6 +355,9 @@
 }
 
 @media (max-width:550px) {
+    .footer-container {
+        padding: 1rem;
+    }
     .footer-bottom-1 {
         width: 75% !important;
         clip-path: polygon(0 0, 100% 0%, 80% 100%, 0% 100%) !important;
@@ -334,6 +375,9 @@
 }
 
 @media (max-width:500px) {
+    .footer-container {
+        margin-top: 25rem;
+    }
     .footer-upper {
         margin-top: -20rem;
         padding: 5rem 0rem;
@@ -375,7 +419,7 @@
     }
 
     .footer-bottom p {
-        font-size: 1.3rem;
+        font-size: 1.3rem !important;
         line-height: 25px;
     }
 
@@ -387,7 +431,7 @@
     .footer-bottom-1 {
         height: 80px;
         padding: 2.2rem;
-        width: 70% !important;  
+        width: 70% !important;
         text-align: center;
         clip-path: polygon(0 0, 100% 0%, 80% 100%, 0% 100%) !important;
     }

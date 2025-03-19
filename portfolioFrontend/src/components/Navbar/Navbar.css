@@ -1,11 +1,10 @@
-
 /* ======================================== Navbar CSS ======================================= */
 
 .nav__bar {
     display: flex;
     align-items: center;
     background-color: #0c0e2b;
-    margin-top: 2rem !important; 
+    margin-top: 2rem !important;
 }
 
 .nav__logo {
@@ -59,7 +58,8 @@
 }
 
 /*==================== Mobile Menu ====================*/
-.nav__item-v, .hamburger {
+.nav__item-v,
+.hamburger {
     display: none;
 }
 
@@ -95,7 +95,7 @@
     position: fixed;
     left: 0;
     top: -200%;
-    padding: 4rem 0 0 8rem ;
+    padding: 4rem 0 0 8rem;
     display: flex;
     flex-direction: column;
     row-gap: 5rem;
@@ -106,19 +106,20 @@
     transition: top 0.5s ease-in-out;
 }
 
-.nav__item-v .logo{
+.nav__item-v .logo {
     width: 200px;
 }
 
-.nav__item-v .logo img{
+.nav__item-v .logo img {
     width: 100%;
     height: 100%;
 }
+
 .nav__item--open {
-    top:  0;
+    top: 0;
 }
 
-.navLink{
+.navLink {
     display: inline-flex;
     align-items: center;
     column-gap: 2rem;
@@ -148,8 +149,7 @@
 }
 
 .navLink:hover .link,
-.navLink:hover .Number 
-{
+.navLink:hover .Number {
     color: #F107D7;
 }
 
@@ -170,7 +170,7 @@
 }
 
 
-.dropdown-menu .side__nav__logo img{
+.dropdown-menu .side__nav__logo img {
     width: 200px;
     object-fit: cover;
     cursor: pointer;
@@ -183,7 +183,7 @@
     gap: 0.7rem;
 }
 
-.dropdown-menu li i {
+.dropdown-menu li .Diamond__Style {
     color: #F107D7;
     font-size: 15px;
 }
@@ -197,13 +197,26 @@
     padding: 0.9rem;
 }
 
+.arrow-icon {
+    display: inline-block;
+    font-size: 18px;
+    color: #fff;
+    opacity: 0; 
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
 
+.dropdown-menu .service-link:hover + .arrow-icon {
+    opacity: 1; 
+    transform: translateX(10px);
+    color: #F107D7;
+}
 
 /* ======================================== Media Queries ======================================== */
 @media (max-width: 1370px) {
     .nav__links {
         gap: 6rem;
     }
+
     .nav__item {
         margin-left: -7rem;
     }
@@ -213,6 +226,7 @@
     .nav__links {
         gap: 4rem;
     }
+
     .nav__logo img {
         width: 160px;
     }
@@ -222,22 +236,26 @@
     .nav__links {
         gap: 3rem;
     }
+
     .nav-link {
         font-size: 1.6rem;
     }
+
     .nav__item {
         margin-left: -6rem;
         padding-left: 5rem;
     }
+
     .nav__logo img {
         width: 150px;
     }
 }
 
 @media (max-width: 1024px) {
-    .nav__logo{
+    .nav__logo {
         padding-left: 2.5rem;
     }
+
     .nav__logo img {
         width: 130px;
     }
@@ -253,13 +271,17 @@
     .nav__item {
         display: none;
     }
-    .nav__item-v, .hamburger {
+
+    .nav__item-v,
+    .hamburger {
         display: flex;
     }
+
     .nav__logo {
         width: 45%;
         padding-left: 4rem;
     }
+
     .nav__logo img {
         width: 160px;
     }
@@ -269,9 +291,11 @@
     .hamburger {
         margin-left: -7rem;
     }
+
     .hamburger img {
         width: 70px;
     }
+
     .nav__logo img {
         width: 140px;
     }
@@ -287,10 +311,12 @@
     .nav__logo img {
         width: 130px;
     }
+
     .hamburger img {
         width: 60px;
     }
-    .navLink{
+
+    .navLink {
         width: 50%;
     }
 }
@@ -299,6 +325,7 @@
     .hamburger {
         margin-left: -5rem;
     }
+
     .nav__logo {
         padding-left: 2.5rem;
     }
@@ -308,9 +335,11 @@
     .hamburger {
         clip-path: polygon(16% 0, 100% 0, 100% 100%, 0% 100%);
     }
+
     .nav__logo {
         width: 60%;
     }
+
     .navLink {
         width: 70%;
     }
@@ -322,6 +351,7 @@
         clip-path: polygon(39% 0, 100% 0, 100% 100%, 0% 100%);
         width: 40%;
     }
+
     .nav__logo {
         width: 80%;
     }
@@ -333,34 +363,41 @@
         padding-right: 1rem;
         height: 10vh;
     }
-    .nav__logo{
+
+    .nav__logo {
         height: 10vh;
     }
-    
+
     .nav__item-v .logo {
         width: 160px;
     }
-    .navLink{
+
+    .navLink {
         width: 80%;
         column-gap: 1rem;
     }
+
     .navLink .Number,
     .navLink .link {
         font-size: 3rem;
-    } 
+    }
+
     .hamburger-cross {
         width: 35px;
         height: 35px;
         right: 6%;
     }
+
     .dropdown-menu .side__nav__logo img {
         width: 175px;
     }
+
     .dropdown-menu {
         row-gap: 4rem;
         padding: 5.5rem 0 0 4rem;
         width: min(430px, 80%);
     }
+
     .dropdown-menu li a {
         font-size: 1.5rem;
     }
@@ -371,22 +408,46 @@
         margin-left: -6rem;
         padding-right: 1rem;
     }
+    .service-link {
+        font-size: 1.4rem !important;
+    }
+    .Diamond__Style{
+        font-size: 13px !important;
+    }
+    .arrow-icon {
+        font-size: 17px;
+        margin-left: -1rem;
+    }
+}
+
+@media (max-width: 370px){
+    .dropdown-menu{
+        width: 85%;
+    }
 }
 
 @media (max-width: 360px) {
     .nav__logo {
         width: 90%;
     }
+
     .nav__logo img {
         width: 100px;
     }
+
     .hamburger {
         margin-left: -5rem;
         clip-path: polygon(45% 0, 100% 0, 100% 100%, 0% 100%);
     }
-    .nav__item-v{
+
+    .nav__item-v {
         padding: 4rem 0 0 4rem;
     }
+   
 }
 
-
+@media (max-width: 345px){
+    .dropdown-menu{
+        width: 90%;
+    }
+}

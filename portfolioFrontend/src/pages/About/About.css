@@ -157,7 +157,6 @@
     top: 3.3%;
   }
   .f-about-header p{
-    text-align: center;
     padding: 0 2rem;
   }
 }
@@ -197,11 +196,6 @@
     width: 150px;
     height: 150px;
   }
-
-  .f-about-header p {
-    text-align: center;
-  }
-
 
   .brain-cogni-logo img {
     top: 4%;
@@ -274,11 +268,6 @@
     font-size: 3rem;
   }
 
-  .f-about-header p {
-    font-size: 1.3rem;
-    text-align: center;
-    padding: 1rem;
-  }
 
   .about-cogi-head h2 {
     width: 80%;

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import slugify from "slugify";
+import { FaLongArrowAltRight } from "react-icons/fa";
 
 import "./Navbar.css";
 
@@ -15,7 +16,6 @@ import { useProjectStore } from "../../store/useProjectStore";
 const Navbar = ({ handleClick, open }) => {
   const [HumOpen, setHumOpen] = useState(false); // Set Hamburger State
   const {
-    serviceName,
     setServiceName,
     setProjects,
     getAllCategories,
@@ -28,12 +28,11 @@ const Navbar = ({ handleClick, open }) => {
     setServiceName(name);
     const generatedSlug = slugify(name, { lower: true });
     setProjects(generatedSlug);
-    
   };
 
   useEffect(() => {
     getAllCategories();
-  }, []); 
+  }, []);
 
   return (
     <>
@@ -112,7 +111,7 @@ const Navbar = ({ handleClick, open }) => {
               Service
             </Link>
           </li>
-          
+
           <li className="navLink">
             <span className="navitem_line"></span>
             <span className="Number">05</span>
@@ -171,8 +170,9 @@ const Navbar = ({ handleClick, open }) => {
         </div>
         {allCategories.map((category, index) => (
           <li key={index}>
-            <i className="fa-solid fa-diamond"></i>
+            <i className="fa-solid fa-diamond Diamond__Style"></i>
             <Link
+            className="service-link"
               to={`/service/${slugify(category.name, { lower: true })}`}
               onClick={() => {
                 handleClick();
@@ -181,9 +181,26 @@ const Navbar = ({ handleClick, open }) => {
             >
               {category.name}
             </Link>
+            <i
+              className={`fa-solid fa-arrow-right arrow-icon`}>
+            </i>
           </li>
         ))}
-        
+        <li>
+          <i className="fa-solid fa-diamond Diamond__Style"></i>
+          <Link
+            to=""
+            onClick={() => {
+              handleClick();
+            }}
+            className="service-link"
+          >
+            All Services
+          </Link>
+            <i
+              className={`fa-solid fa-arrow-right arrow-icon`}>
+            </i>
+        </li>
       </ul>
     </>
   );
