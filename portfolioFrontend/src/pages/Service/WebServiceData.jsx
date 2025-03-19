@@ -8,7 +8,58 @@ import webService7 from "../../assets/APIDevelopment.jpg";
 import webService8 from "../../assets/SEOOptimization.jpeg";
 import webService9 from "../../assets/WebsitePerformanceOptimization.jpeg";
 
-export const webServices = [
+import webBanner from "../../assets/webBanner.webp";
+import webService from "../../assets/service-bg-image1.jpg";
+
+
+export const WebServiceContent = [
+  {
+    "title": "Web Development",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur id tempore fugit incidunt repudiandae modi ab nemo fuga quibusdam consequatur!"
+  },
+  {
+    "title": "Overview",
+    "content1": "Every app we build is engineered to drive measurable business outcomes.",
+    "content2": " With expertise spanning cutting-edge native development, cross-platform solutions, and enterprise-grade systems, our engineers transform bold ideas into dynamic mobile experiences."
+  },
+  {
+    "title": "What we are good at:",
+    "list": [
+      {
+        "title": "Mobile-First Architecture",
+        "description": "Developing robust, secure applications to streamline operations and enhance productivity for businesses of all sizes."
+      },
+      {
+        "title": "Mobile-First Architecture",
+        "description": "Ensuring apps are fast, lightweight, and responsive, even under heavy user loads."
+      },
+      {
+        "title": "Mobile-First Architecture",
+        "description": "Building tailored apps to address specific business challenges and deliver measurable results."
+      },
+      {
+        "title": "Mobile-First Architecture",
+        "description": "Leveraging agile methodologies to build scalable, responsive solutions that align with mobile-first strategies."
+      },
+      {
+        "title": "Integration Expertise",
+        "description": "Seamlessly connecting mobile apps with third-party services, APIs, and backend systems."
+      }
+    ]
+  },
+  {
+    "src": webService,
+    "alt": "Web Service Image"
+  },
+  {
+    "src": webBanner,
+    "alt": "Web Banner Image"
+  }
+]
+
+
+
+export const WebServices = [
   {
     id: 1,
     title: "Web Application Development",
@@ -92,17 +143,10 @@ import {
   SiGit,
   SiFigma,
   SiAdobexd,
-  SiGoogleanalytics,
-  SiLighthouse,
-  SiVite,
-  SiWebpack,
   SiDjango,
   SiPhp,
-  SiNodedotjs,
   SiRedux,
   SiPostgresql,
-  SiPandas,
-  SiNumpy,
   SiJquery,
   SiTypescript,
   SiSass,
@@ -110,23 +154,16 @@ import {
   SiLaravel,
   SiExpress,
   SiFastapi,
-  SiFlutter,
-  SiDart,
   SiWoocommerce,
-  SiStrapi,
-  SiContentful,
   SiGooglecloud,
-  // SiAzuredevops,
 } from "react-icons/si";
 
 import { FaNodeJs } from "react-icons/fa";
-import { FaAws } from "react-icons/fa"; 
 
-
-export const allTechIcons = [
+export const WeballTechIcons = [
   { icon: <SiReact />, name: "React" },
   { icon: <SiAngular />, name: "Angular" },
-  { icon: <SiVuedotjs  />, name: "Vue.js" },
+  { icon: <SiVuedotjs />, name: "Vue.js" },
   { icon: <SiWordpress />, name: "WordPress" },
   { icon: <SiWoocommerce />, name: "WooCommerce" },
   { icon: <SiHtml5 />, name: "HTML5" },
@@ -154,10 +191,47 @@ export const allTechIcons = [
   { icon: <SiFigma />, name: "Figma" },
   { icon: <SiAdobexd />, name: "Adobe XD" },
   { icon: <SiGooglecloud />, name: "Google Cloud" },
-  // { icon: <SiAzuredevops />, name: "Azure" },
   { icon: <SiGit />, name: "Git" },
 ];
 
-
-
-
+export const WebFAQs = [
+  {
+    questions: [
+      {
+        question: "How do you ensure my website is secure?",
+        answer:
+          "We implement best security practices, including SSL encryption, secure authentication, regular security updates, and protection against common vulnerabilities like SQL injection and cross-site scripting.",
+      },
+      {
+        question: "Will my website be optimized for performance and SEO?",
+        answer:
+          "Yes, we ensure fast loading times, optimized images, clean code, and SEO best practices to improve search engine rankings and user experience.",
+      },
+      {
+        question:
+          "Do you build fully custom websites?",
+        answer:
+          "Absolutely! We specialize in custom web development, creating unique designs and features that align with your business goals.",
+      },
+    ],
+  },
+  {
+    questions: [
+      {
+        question: "Do you offer ongoing website maintenance and support?",
+        answer:
+          "Yes, we provide post-launch support, including updates, bug fixes, and performance monitoring to keep your website running smoothly.",
+      },
+      {
+        question: "How do you handle website scalability if my business grows?",
+        answer:
+          "We build websites with scalability in mind, using modular architecture, cloud hosting, and optimized databases to handle increased traffic and features.",
+      },
+      {
+        question: "What technologies do you use for web development?",
+        answer:
+          "We work with modern technologies such as React, Vue.js, Node.js, Django, Laravel, and WordPress, choosing the best stack based on project requirements.",
+      },
+    ],
+  },
+];

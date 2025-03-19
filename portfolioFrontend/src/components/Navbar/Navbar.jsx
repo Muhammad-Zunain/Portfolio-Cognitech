@@ -20,12 +20,13 @@ const Navbar = ({ handleClick, open }) => {
     setProjects,
     getAllCategories,
     allCategories,
+    serviceName,
   } = useProjectStore();
 
   const toggleMenu = () => setHumOpen(!HumOpen); // Change Hamburger state
 
   const handleServiceName = (name) => {
-    setServiceName("web-service");
+    setServiceName(name);
     const generatedSlug = slugify(name, { lower: true });
     setProjects(generatedSlug);
   };
@@ -93,7 +94,9 @@ const Navbar = ({ handleClick, open }) => {
           <li to="" className="navLink">
             <span className="navitem_line"></span>
             <span className="Number">02</span>
-            <Link to="/portfolio" className="link">Portfolio</Link>
+            <Link to="/portfolio" className="link">
+              Portfolio
+            </Link>
           </li>
 
           <li className="navLink">
@@ -168,12 +171,12 @@ const Navbar = ({ handleClick, open }) => {
             <img src={logo} alt="Logo" />
           </Link>
         </div>
-        {allCategories.map((category, index) => (
+        {/* {allCategories.map((category, index) => (
           <li key={index}>
             <i className="fa-solid fa-diamond Diamond__Style"></i>
             <Link
             className="service-link"
-              to={`/service/${slugify(category.name, { lower: true })}`}
+              to={`/service/web-service`}
               onClick={() => {
                 handleClick();
                 handleServiceName(category.name);
@@ -185,7 +188,35 @@ const Navbar = ({ handleClick, open }) => {
               className={`fa-solid fa-arrow-right arrow-icon`}>
             </i>
           </li>
-        ))}
+        ))} */}
+        <li>
+          <i className="fa-solid fa-diamond Diamond__Style"></i>
+          <Link
+            className="service-link"
+            to={`/service/web-service`}
+            onClick={() => {
+              handleClick();
+              handleServiceName("web-service");
+            }}
+          >
+            Web
+          </Link>
+          <i className={`fa-solid fa-arrow-right arrow-icon`}></i>
+        </li>
+        <li>
+          <i className="fa-solid fa-diamond Diamond__Style"></i>
+          <Link
+            className="service-link"
+            to={`/service/app-service`}
+            onClick={() => {
+              handleClick();
+              handleServiceName("app-service");
+            }}
+          >
+            App
+          </Link>
+          <i className={`fa-solid fa-arrow-right arrow-icon`}></i>
+        </li>
         <li>
           <i className="fa-solid fa-diamond Diamond__Style"></i>
           <Link
@@ -197,9 +228,7 @@ const Navbar = ({ handleClick, open }) => {
           >
             All Services
           </Link>
-            <i
-              className={`fa-solid fa-arrow-right arrow-icon`}>
-            </i>
+          <i className={`fa-solid fa-arrow-right arrow-icon`}></i>
         </li>
       </ul>
     </>

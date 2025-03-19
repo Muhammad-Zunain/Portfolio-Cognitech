@@ -1,11 +1,11 @@
 import axios from "axios";
 
 import { create } from "zustand";
-import { projects } from "../pages/Service/serviceData";
+// import { projects } from "../pages/Service/serviceData";
 
 
-// const baseUrl = "https://cognitech-kappa.vercel.app/api";
-const baseUrl = "http://localhost:5000/api"
+const baseUrl = "https://cognitech-kappa.vercel.app/api";
+// const baseUrl = "http://localhost:5000/api"
 
 export const useProjectStore = create((set, get) => ({
   projects: {},
