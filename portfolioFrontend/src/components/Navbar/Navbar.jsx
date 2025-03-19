@@ -25,7 +25,7 @@ const Navbar = ({ handleClick, open }) => {
   const toggleMenu = () => setHumOpen(!HumOpen); // Change Hamburger state
 
   const handleServiceName = (name) => {
-    setServiceName(name);
+    setServiceName("web-service");
     const generatedSlug = slugify(name, { lower: true });
     setProjects(generatedSlug);
   };
@@ -93,7 +93,7 @@ const Navbar = ({ handleClick, open }) => {
           <li to="" className="navLink">
             <span className="navitem_line"></span>
             <span className="Number">02</span>
-            <Link className="link">Portfolio</Link>
+            <Link to="/portfolio" className="link">Portfolio</Link>
           </li>
 
           <li className="navLink">
@@ -127,7 +127,7 @@ const Navbar = ({ handleClick, open }) => {
             <Link to="" className="nav-link">
               Home
             </Link>
-            <Link to="" className="nav-link">
+            <Link to="/portfolio" className="nav-link">
               Portfolio
             </Link>
 

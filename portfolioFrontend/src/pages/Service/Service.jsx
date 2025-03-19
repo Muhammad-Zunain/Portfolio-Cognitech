@@ -39,6 +39,10 @@ function Service() {
   useEffect(() => {
     setServiceName(serviceName);
     setProjects(serviceName);
+
+    if (serviceName === "web-service") {
+      
+    }
   }, [serviceName]);
 
   if (!projects || Object.keys(projects).length === 0) {
@@ -57,7 +61,11 @@ function Service() {
             </p> */}
             <div className="f-service-wrapper">
               <h2>Web Development</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur id tempore fugit incidunt repudiandae modi ab nemo fuga quibusdam consequatur!</p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
+                id tempore fugit incidunt repudiandae modi ab nemo fuga
+                quibusdam consequatur!
+              </p>
             </div>
           </div>
 
@@ -285,7 +293,7 @@ function Service() {
             </div>
 
             <div className="logo-container">
-            <div className="all-logos">
+              <div className="all-logos">
                 {allTechIcons.map((skill, index) => {
                   return (
                     <>

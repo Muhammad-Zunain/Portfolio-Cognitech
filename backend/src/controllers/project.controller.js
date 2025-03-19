@@ -185,3 +185,17 @@ export const showcaseProjects = asyncHandler(async (req, res) => {
 
     return res.status(200).json(new ApiResponse(200, project));
 });
+
+
+export const allProjects = asyncHandler(async (req, res) => {
+    const projects = await Project.find().populate("category");
+
+    if (!projects || projects.length === 0) {
+        return res.status(202).json(new ApiResponse(202, null, "No projects found"));
+    }
+
+    console.log(projects)
+
+    return res.status(200).json(new ApiResponse(200, projects, "Projects retrieved successfully"));
+}
+);

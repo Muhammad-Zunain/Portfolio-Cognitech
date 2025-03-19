@@ -9,6 +9,7 @@ import Footer from './components/Footer/Footer.jsx';
 import Home from './pages/Home/Home';
 import Contact from './pages/Contact/Contact';
 import About from './pages/About/About';
+import Portfolio from './pages/Portfolio/Portfolio.jsx';
 
 function App() {
   const location = useLocation()
@@ -33,6 +34,7 @@ function App() {
         <Route path='/About' element={<About/>} />
         <Route path='/service/:serviceName' element={<Service />} />
         <Route path='/Contact' element={<Contact />} />
+        <Route path="/Portfolio" element={<Portfolio />} />
       </Routes>
 
       <Footer />
