@@ -32,7 +32,7 @@ function Service() {
   const {serviceNameUrl} = useParams();
 
   useEffect(() => {
-    setServiceName(serviceNameUrl)
+    setServiceName(serviceNameUrl);
   }, []);
 
   useEffect(() => {
@@ -43,6 +43,8 @@ function Service() {
       setFAQs(WebFAQs);
     }
   }, [serviceName]);
+
+  
 
   if (!ServiceContent || !Services || !allTechIcons || !FAQs) {
     return <h1>Loading...</h1>;
@@ -159,14 +161,12 @@ function Service() {
           </div>
         </div>
 
-        <div className="logo-container">
-          <div className="all-logos">
-            {allTechIcons.map((skill, index) => {
-              <div key={index} className="skill-icon">
-                {skill.icon}
-              </div>;
-            })}
-          </div>
+        <div className="all-logos">
+          {allTechIcons?.map((skill, index) => (
+            <div key={index} className="skill-icon">
+              {skill.icon}
+            </div>
+          ))}
         </div>
 
         <Accordion FAQs={FAQs} />
