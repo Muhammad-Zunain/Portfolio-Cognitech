@@ -13,7 +13,7 @@ import Portfolio from './pages/Portfolio/Portfolio.jsx';
 
 function App() {
   const location = useLocation()
-  const [open, setOpen] = useState(false);    // Service Overlay State
+  const [open, setOpen] = useState(false);   
   const handleClick = () => {
     setOpen(!open)
 

@@ -19,8 +19,6 @@ const Navbar = ({ handleClick, open }) => {
     setServiceName,
     setProjects,
     getAllCategories,
-    allCategories,
-    serviceName,
   } = useProjectStore();
 
   const toggleMenu = () => setHumOpen(!HumOpen); // Change Hamburger state
@@ -94,7 +92,7 @@ const Navbar = ({ handleClick, open }) => {
           <li to="" className="navLink">
             <span className="navitem_line"></span>
             <span className="Number">02</span>
-            <Link to="/portfolio" className="link">
+            <Link to="/portfolio" className="link"  onClick={toggleMenu}>
               Portfolio
             </Link>
           </li>
@@ -127,7 +125,7 @@ const Navbar = ({ handleClick, open }) => {
         {/* Main Navbar Implementation */}
         <ul className="nav__item">
           <div className="nav__links">
-            <Link to="" className="nav-link">
+            <Link to="/" className="nav-link">
               Home
             </Link>
             <Link to="/portfolio" className="nav-link">
@@ -171,24 +169,7 @@ const Navbar = ({ handleClick, open }) => {
             <img src={logo} alt="Logo" />
           </Link>
         </div>
-        {/* {allCategories.map((category, index) => (
-          <li key={index}>
-            <i className="fa-solid fa-diamond Diamond__Style"></i>
-            <Link
-            className="service-link"
-              to={`/service/web-service`}
-              onClick={() => {
-                handleClick();
-                handleServiceName(category.name);
-              }}
-            >
-              {category.name}
-            </Link>
-            <i
-              className={`fa-solid fa-arrow-right arrow-icon`}>
-            </i>
-          </li>
-        ))} */}
+
         <li>
           <i className="fa-solid fa-diamond Diamond__Style"></i>
           <Link
@@ -199,7 +180,7 @@ const Navbar = ({ handleClick, open }) => {
               handleServiceName("web-service");
             }}
           >
-            Web
+            Web Development
           </Link>
           <i className={`fa-solid fa-arrow-right arrow-icon`}></i>
         </li>
@@ -213,7 +194,7 @@ const Navbar = ({ handleClick, open }) => {
               handleServiceName("app-service");
             }}
           >
-            App
+            App Development
           </Link>
           <i className={`fa-solid fa-arrow-right arrow-icon`}></i>
         </li>

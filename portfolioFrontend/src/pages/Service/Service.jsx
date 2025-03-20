@@ -52,9 +52,9 @@ function Service() {
 
   return (
     <>
-      <div className="f-service-header">
+      <div className="f-header">
         <img src={ServiceContent[4].src} alt={ServiceContent[4].alt} />
-        <div className="f-service-wrapper">
+        <div className="f-wrapper">
           <h2>{ServiceContent[0].title}</h2>
           <p>{ServiceContent[0].description}</p>
         </div>
@@ -161,12 +161,14 @@ function Service() {
           </div>
         </div>
 
+        <div className="logo-container">
         <div className="all-logos">
           {allTechIcons?.map((skill, index) => (
             <div key={index} className="skill-icon">
               {skill.icon}
             </div>
           ))}
+        </div>
         </div>
 
         <Accordion FAQs={FAQs} />
