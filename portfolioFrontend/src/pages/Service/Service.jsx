@@ -5,6 +5,7 @@ import aboutService from "../../assets/service-bg-image1.jpg";
 import aboutTech from "../../assets/s1Bg.png";
 import Accordion from "../../components/FAQ/Accordion";
 import "./service.css";
+import KodonexLoading from "../../components/Loading/KodonexLoading.jsx";
 
 import {
   WebServiceContent,
@@ -36,7 +37,7 @@ function Service() {
   }, []);
 
   useEffect(() => {
-    if (serviceName === "web-service") {
+    if (serviceName === "web-development") {
       setServiceContent(WebServiceContent);
       setServices(WebServices);
       setAllTechIcons(WeballTechIcons);
@@ -47,7 +48,7 @@ function Service() {
   
 
   if (!ServiceContent || !Services || !allTechIcons || !FAQs) {
-    return <h1>Loading...</h1>;
+    return <KodonexLoading/>;
   }
 
   return (

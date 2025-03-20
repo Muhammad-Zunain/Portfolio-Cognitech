@@ -1,10 +1,11 @@
 import React from "react";
+import ServiceImage from "../../assets/allServices.jpeg";
 
 const AllServices = () => {
   return (
     <>
       <div className="f-header">
-        <img src={ServiceImage} alt={ServiceContent[4].alt} />
+        <img src={ServiceImage} alt={"hello"} />
         <div className="f-wrapper">
           <h2>All Services</h2>
           <p>

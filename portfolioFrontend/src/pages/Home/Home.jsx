@@ -16,7 +16,7 @@ import wordpress from "../../assets/wordpress-logo.png";
 import django from "../../assets/django-logo.png";
 
 import "./Technology.css";
-import "./Service.css";
+// import "./Service.css";
 import "./Home.css";
 import ServicesOffer from "../../components/ServicesOffer/ServicesOffer";
 
