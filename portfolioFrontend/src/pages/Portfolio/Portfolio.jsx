@@ -21,33 +21,29 @@ const Portfolio = () => {
   };
 
   useEffect(() => {
-    setProjects("serviceName"); // Ensure this function sets an array
+    setProjects("serviceName"); 
   }, []);
 
-  // Dynamically extract categories when projects change
   useEffect(() => {
     if (Array.isArray(projects) && projects.length > 0) {
       setCategories(["all", ...new Set(projects.map((p) => p.category?.name))]);
     }
   }, [projects]);
 
-  // ✅ Ensure projects is always an array before applying .map()
   const filteredProjects = Array.isArray(projects)
     ? filter === "all"
       ? projects
       : projects.filter((p) => p.category?.name === filter)
     : [];
 
-  // ✅ Prevent error: Ensure filteredProjects is an array before rendering
   if (!Array.isArray(filteredProjects) || filteredProjects.length === 0) {
     return <h1>Loading...</h1>;
   }
 
   return (
     <div className="p-10 mt-10 container " style={containerStyles}>
-      {/* 🔥 Animated Heading */}
-      <div className="text-white flex flex-col items-start justify-center min-h-[20vh] px-12">
-        <h1 className="text-4xl md:text-5xl font-bold text-white">
+      <div className="text-white flex flex-col items-start justify-center min-h-[20vh] px-6 c-px">
+        <h2 className="font-bold text-white text-[3.5rem] leading-[45px] ">
           Elevating Businesses with <br />
           <span className="text-[#6f1299]">
             <Typewriter
@@ -64,33 +60,31 @@ const Portfolio = () => {
               delaySpeed={1000}
             />
           </span>
-        </h1>
-        <p className="text-white text-lg mt-4 max-w-2xl">
+        </h2>
+        <p className="my-4 max-w-5xl">
           Empowering our clients to achieve their full potential by providing
           them with the technology they need to succeed.
         </p>
       </div>
 
-      {/* 🎯 Dynamic Filter Buttons */}
-      <div className="flex justify-start space-x-6 text-lg font-semibold mt-0 md:mt-10 border-b-2 border-white w-fit mx-12 overflow-x-auto">
+      <div className="flex justify-start space-x-6 font-[500] sm:mt-8 md:mt-8 border-b border-[#838383] overflow-x-auto c-mx mx-6">
         {categories.map((cat) => (
           <button
             key={cat}
-            className={`px-4 py-2 rounded text-[13px] md:text-[16px] font-bold ${
+            className={`py-4 capitalize rounded text-[15px] md:text-[16px] ${
               filter === cat
-                ? "text-[#6f1299] border-b-2 border-[#fe0094]"
-                : "text-white hover:text-gray-300"
+                ? "text-[#6f1299] "
+                : "text-white "
             }`}
             onClick={() => setFilter(cat)}
           >
-            {cat.toUpperCase()}
+            {cat}
           </button>
         ))}
       </div>
 
-      {/* 🖼️ Portfolio Grid */}
       <motion.div
-        className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6 px-4 md:px-12"
+        className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6 px-6 md:px-12 c-px"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}

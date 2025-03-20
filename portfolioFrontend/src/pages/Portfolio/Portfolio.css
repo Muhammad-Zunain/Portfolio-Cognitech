@@ -1,7 +1,7 @@
 .pr-title {
   display: inline-block;
   background: linear-gradient(90deg, #00229e 0%, #6e1299 47.92%, #fe0094 100%);
-  /* border-radius: 8px; */
+  border-radius: 8px;
   clip-path: polygon(20% 0%, 100% 0%, 80% 100%, 0% 100%);
 
   padding: 1rem 2rem;
@@ -13,7 +13,7 @@
 
 .main-card:hover .hover-overlay {
     display: block;
-    /* position: absolute;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -26,5 +26,14 @@
     font-size: 1.5rem;
     font-weight: bold;
     text-align: center;
-    border-radius: 8px; */
+    border-radius: 8px;
+}
+
+@media (min-width:500px) {
+  .c-px{
+    padding: 0 2.5rem;
+  }
+  .c-mx{
+    margin-inline: 2.5rem;
+  }
 }
