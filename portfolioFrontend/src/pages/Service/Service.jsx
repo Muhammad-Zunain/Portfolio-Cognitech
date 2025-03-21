@@ -113,6 +113,9 @@ function Service() {
         <div className="main-services-offer">
           <div className="service-offer-wrapper">
             <div className="wrapper-inner">
+            <span className="text-[1.5rem] tracking-wide font-semibold text-[#6e1299] md:text-3xl md:-mb-10">
+              Our {ServiceContent[0].title} Services
+            </span>
               <h2>Enchance your business with custom web solutions</h2>
               <p>
                 We offer a wide range of services to help you build, grow, and

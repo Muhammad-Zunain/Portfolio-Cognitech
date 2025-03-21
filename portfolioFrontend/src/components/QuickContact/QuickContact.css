@@ -1,0 +1,13 @@
+.form-group input[type="text"]:focus:invalid,
+.form-group input[type="email"]:focus:invalid,
+.form-group textarea:focus:invalid {
+  border: 2px solid rgba(254, 0, 148, 0.3) !important;
+}
+
+.form-group input[type="text"]:focus:valid,
+.form-group input[type="email"]:focus:valid,
+.form-group input[type="tel"]:focus:valid,
+.form-group textarea:focus:valid {
+  border: 2px solid rgba(254, 0, 148, 0.3) !important;
+  background: rgba(254, 0, 148, 0.1) !important;
+}

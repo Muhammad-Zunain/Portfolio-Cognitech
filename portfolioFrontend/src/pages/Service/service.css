@@ -1059,6 +1059,9 @@
 }
 
 @media (max-width:440px) {
+  .wrapper-inner {
+    gap: 1rem;
+}
   .wrapper-inner h2 {
     font-size: 3.3rem;
 }

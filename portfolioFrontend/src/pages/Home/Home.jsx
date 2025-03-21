@@ -18,6 +18,7 @@ import django from "../../assets/django-logo.png";
 import "./Technology.css";
 import "./Home.css";
 import ServicesOffer from "../../components/ServicesOffer/ServicesOffer";
+import QuickContact from "../../components/QuickContact/QuickContact";
 
 const Home = () => {
   const Logo = [
@@ -82,7 +83,7 @@ const Home = () => {
 
         {/* <Accordion /> */}
       </div>
-      
+
       <div className="tech-wrapper">
         <div className="tech-header">
           <h2>
@@ -112,6 +113,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <QuickContact />  
     </>
   );
 };
