@@ -826,11 +826,11 @@
 }
 
 @media (max-width: 650px) {
-  .f-service-wrapper {
+  .f-wrapper {
     padding: 5rem;
   }
 
-  .f-service-wrapper h2 {
+  .f-wrapper h2 {
     font-size: 4rem;
   }
 
@@ -855,11 +855,11 @@
 }
 
 @media (max-width: 550px) {
-  .f-service-wrapper {
+  .f-wrapper {
     padding: 4rem;
   }
 
-  .f-service-wrapper h2 {
+  .f-wrapper h2 {
     font-size: 3.5rem;
   }.services-offer-inner {
     min-height: 35vh;

@@ -3,7 +3,6 @@ import axios from "axios";
 import { create } from "zustand";
 
 const baseUrl = "https://cognitech-kappa.vercel.app/api";
-// const baseUrl = "http://localhost:5000/api"
 
 export const useProjectStore = create((set, get) => ({
   projects: {},
@@ -18,11 +17,9 @@ export const useProjectStore = create((set, get) => ({
       const res = await axios.get(`${baseUrl}/projects/all-projects`,{
         withCredentials: true
       });
-      console.log(res)
       
       set({ projects: res.data.data });
     } catch (error) {
-      console.log(error);
       console.error("Error fetching projects:", error.response?.data || error.message);
     }
   },
@@ -31,8 +28,6 @@ export const useProjectStore = create((set, get) => ({
     const res = await axios.get(`${baseUrl}/category/get-category/`,{
       withCredentials: true
     });
-    console.log(res)
-    
     set({ allCategories: res.data.data });
   },
 }));

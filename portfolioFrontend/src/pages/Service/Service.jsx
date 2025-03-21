@@ -4,12 +4,8 @@ import { Link, useParams } from "react-router-dom";
 import aboutService from "../../assets/service-bg-image1.jpg";
 import aboutTech from "../../assets/s1Bg.png";
 import Accordion from "../../components/FAQ/Accordion";
-<<<<<<< HEAD
 import "./Service.css";
-=======
-import "./service.css";
 import KodonexLoading from "../../components/Loading/KodonexLoading.jsx";
->>>>>>> 17f9a4ce0218bf3186779762907096877d53e364
 
 import {
   WebServiceContent,
@@ -37,7 +33,7 @@ function Service() {
   const {serviceNameUrl} = useParams();
 
   useEffect(() => {
-    setServiceName(serviceNameUrl);
+      setServiceName(serviceNameUrl);
   }, []);
 
   useEffect(() => {
