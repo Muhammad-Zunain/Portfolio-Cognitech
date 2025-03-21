@@ -10,6 +10,7 @@ import Home from './pages/Home/Home';
 import Contact from './pages/Contact/Contact';
 import About from './pages/About/About';
 import Portfolio from './pages/Portfolio/Portfolio.jsx';
+import AllServices from './pages/Service/AllServices.jsx';
 
 function App() {
   const location = useLocation()
@@ -35,6 +36,8 @@ function App() {
         <Route path='/service/:serviceNameUrl' element={<Service />} />
         <Route path='/Contact' element={<Contact />} />
         <Route path="/Portfolio" element={<Portfolio />} />
+        <Route path='/service/all-service' element={<AllServices />} />
+
       </Routes>
 
       <Footer />

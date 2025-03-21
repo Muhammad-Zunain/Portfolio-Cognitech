@@ -4,6 +4,7 @@ import { Typewriter } from "react-simple-typewriter";
 import { useProjectStore } from "../../store/useProjectStore";
 import "./Portfolio.css";
 import { Link } from "react-router-dom";
+import KodonexLoading from "../../components/Loading/KodonexLoading";
 
 const Portfolio = () => {
   const [filter, setFilter] = useState("all");
@@ -37,7 +38,7 @@ const Portfolio = () => {
     : [];
 
   if (!Array.isArray(filteredProjects) || filteredProjects.length === 0) {
-    return <h1>Loading...</h1>;
+    return <KodonexLoading/>;
   }
 
   return (

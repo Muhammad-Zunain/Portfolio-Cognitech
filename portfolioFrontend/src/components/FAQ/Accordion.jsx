@@ -2,6 +2,7 @@ import { React, useState} from 'react';
 import './Accordion.css';
 import arrowUp from '../../assets/arrow-up-light.png';
 import arrowDown from '../../assets/arrow-down-light.png';
+
 const Accordion = ({ FAQs }) => {
     const [activeIndex, setActiveIndex] = useState(null);
 

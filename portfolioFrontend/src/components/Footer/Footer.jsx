@@ -8,7 +8,8 @@ import { useProjectStore } from "../../store/useProjectStore";
 import slugify from "slugify";
 
 const Footer = () => {
-  const { projects, setServiceName, setProjects, allCategories } = useProjectStore();
+  const { projects, setServiceName, setProjects, allCategories } =
+    useProjectStore();
 
   return (
     <div style={{ backgroundColor: "#1e143b" }}>
@@ -60,7 +61,10 @@ const Footer = () => {
             </div>
             <div className="footer-1-content">
               <p>
-              Kodonex is a leading software company specializing in web and mobile solutions. We deliver innovative, scalable, and user-focused digital experiences to empower businesses in the digital era.
+                Kodonex is a leading software company specializing in web and
+                mobile solutions. We deliver innovative, scalable, and
+                user-focused digital experiences to empower businesses in the
+                digital era.
               </p>
             </div>
           </div>
@@ -85,6 +89,19 @@ const Footer = () => {
                   </Link>
                 </li>
               ))}
+              <li>
+                <i className="fa-solid fa-angle-right"></i>
+                <Link
+                  to="/service/all-service"
+                  onClick={() => {
+                    handleClick();
+                  }}
+                  className="service-link"
+                >
+                  All Services
+                </Link>
+                
+              </li>
             </ul>
           </div>
           <div className="footer-4 footer">

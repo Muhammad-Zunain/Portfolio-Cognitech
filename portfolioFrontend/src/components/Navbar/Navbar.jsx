@@ -15,11 +15,8 @@ import { useProjectStore } from "../../store/useProjectStore";
 
 const Navbar = ({ handleClick, open }) => {
   const [HumOpen, setHumOpen] = useState(false); // Set Hamburger State
-  const {
-    setServiceName,
-    setProjects,
-    getAllCategories,
-  } = useProjectStore();
+  const { setServiceName, setProjects, getAllCategories, allCategories } =
+    useProjectStore();
 
   const toggleMenu = () => setHumOpen(!HumOpen); // Change Hamburger state
 
@@ -92,7 +89,7 @@ const Navbar = ({ handleClick, open }) => {
           <li to="" className="navLink">
             <span className="navitem_line"></span>
             <span className="Number">02</span>
-            <Link to="/portfolio" className="link"  onClick={toggleMenu}>
+            <Link to="/portfolio" className="link" onClick={toggleMenu}>
               Portfolio
             </Link>
           </li>
@@ -169,39 +166,30 @@ const Navbar = ({ handleClick, open }) => {
             <img src={logo} alt="Logo" />
           </Link>
         </div>
+        {allCategories.map((category, index) => (
+          <li key={index}>
+            <i className="fa-solid fa-diamond Diamond__Style"></i>
+            <Link
+              className="service-link"
+              to={`/service/${slugify(category.name, {
+                lower: true,
+              })}`}
+              onClick={() => {
+                handleClick();
+                handleServiceName(category.name);
+              }}
+            >
+              {category.name}
+            </Link>
+            <i className={`fa-solid fa-arrow-right arrow-icon`}></i>
+          </li>
+        ))}
+
 
         <li>
           <i className="fa-solid fa-diamond Diamond__Style"></i>
           <Link
-            className="service-link"
-            to={`/service/web-service`}
-            onClick={() => {
-              handleClick();
-              handleServiceName("web-service");
-            }}
-          >
-            Web Development
-          </Link>
-          <i className={`fa-solid fa-arrow-right arrow-icon`}></i>
-        </li>
-        <li>
-          <i className="fa-solid fa-diamond Diamond__Style"></i>
-          <Link
-            className="service-link"
-            to={`/service/app-service`}
-            onClick={() => {
-              handleClick();
-              handleServiceName("app-service");
-            }}
-          >
-            App Development
-          </Link>
-          <i className={`fa-solid fa-arrow-right arrow-icon`}></i>
-        </li>
-        <li>
-          <i className="fa-solid fa-diamond Diamond__Style"></i>
-          <Link
-            to=""
+            to="/service/all-service"
             onClick={() => {
               handleClick();
             }}
