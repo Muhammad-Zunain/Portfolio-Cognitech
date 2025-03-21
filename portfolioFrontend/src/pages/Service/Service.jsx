@@ -4,7 +4,7 @@ import { Link, useParams } from "react-router-dom";
 import aboutService from "../../assets/service-bg-image1.jpg";
 import aboutTech from "../../assets/s1Bg.png";
 import Accordion from "../../components/FAQ/Accordion";
-import "./service.css";
+import "./Service.css";
 
 import {
   WebServiceContent,

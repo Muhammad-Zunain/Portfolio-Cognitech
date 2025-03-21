@@ -50,7 +50,7 @@ const About = () => {
         </div>
 
         <ChooseUs/>
-        <Accordion/>
+        {/* <Accordion/> */}
 
       </div>
 
