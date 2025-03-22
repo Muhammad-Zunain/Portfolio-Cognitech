@@ -14,6 +14,16 @@ import {
   WebFAQs,
 } from "./WebServiceData.jsx";
 
+
+import {
+  AppServiceContent,
+  AppServices,
+  AppallTechIcons,
+  AppFAQs,
+} from "./AppServicesData.jsx";
+
+
+
 function Service() {
   const containerStyles = {
     backgroundColor: "#1e143b",
@@ -42,6 +52,11 @@ function Service() {
       setServices(WebServices);
       setAllTechIcons(WeballTechIcons);
       setFAQs(WebFAQs);
+    }else if (serviceName === "app-development") {
+      setServiceContent(AppServiceContent);
+      setServices(AppServices);
+      setAllTechIcons(AppallTechIcons);
+      setFAQs(AppFAQs);
     }
   }, [serviceName]);
 
