@@ -21,13 +21,14 @@ const Navbar = ({ handleClick, open }) => {
   const toggleMenu = () => setHumOpen(!HumOpen); // Change Hamburger state
 
   const handleServiceName = (name) => {
-    setServiceName(name);
     const generatedSlug = slugify(name, { lower: true });
+    setServiceName(generatedSlug);
     setProjects(generatedSlug);
   };
 
   useEffect(() => {
     getAllCategories();
+    AOS.init();
   }, []);
 
   return (
@@ -45,8 +46,8 @@ const Navbar = ({ handleClick, open }) => {
       ></div>
 
       {/* Navbar Wrapper */}
-      <nav className="nav__bar container">
-        <div className="nav__logo">
+      <nav className="nav__bar container" >
+        <div className="nav__logo" data-aos="fade-right">
           <Link to="">
             <img src={logo} alt="Logo" />
           </Link>
@@ -58,7 +59,7 @@ const Navbar = ({ handleClick, open }) => {
         </div>
 
         {/* Hamburger Implementation */}
-        <ul className={`nav__item-v ${HumOpen ? "nav__item--open" : ""}`}>
+        <ul className={`nav__item-v ${HumOpen ? "nav__item--open" : ""}`} >
           <div className="hamburger-cross" onClick={toggleMenu}>
             <img
               src={hamburgerCross}
@@ -120,7 +121,7 @@ const Navbar = ({ handleClick, open }) => {
         </ul>
 
         {/* Main Navbar Implementation */}
-        <ul className="nav__item">
+        <ul className="nav__item" data-aos="fade-left">
           <div className="nav__links">
             <Link to="/" className="nav-link">
               Home

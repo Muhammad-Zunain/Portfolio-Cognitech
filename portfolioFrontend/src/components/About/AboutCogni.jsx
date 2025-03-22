@@ -6,6 +6,7 @@ import "./AboutCogni.css";
 import About1 from "../../assets/about1.png";
 
 const AboutCogni = () => {
+
   return (
     <>
       <div className="about-main-wrapper">
@@ -40,7 +41,7 @@ const AboutCogni = () => {
                 <span className="bottom"></span>
               </button>
             </div>
-            <img src={About1} alt="" className="about-img" />
+            <img src={About1} alt="" className="about-img"  data-aos="flip-right" data-aos-duration="1000"/>
           </div>
         </div>
       </div>

@@ -1,4 +1,4 @@
-import React from "react";
+import React , {useEffect} from "react";
 
 import logo from "../../assets/logo_footer_rm.png";
 import { Link } from "react-router-dom";
@@ -8,13 +8,17 @@ import { useProjectStore } from "../../store/useProjectStore";
 import slugify from "slugify";
 
 const Footer = () => {
-  const { projects, setServiceName, setProjects, allCategories } =
+  const { allCategories } =
     useProjectStore();
+
+    useEffect(() => {
+      AOS.init();
+    }, [])
 
   return (
     <div style={{ backgroundColor: "#1e143b" }}>
       <div className="footer-container container">
-        <div className="footer-upper">
+        <div className="footer-upper" data-aos="flip-up">
           <div className="footer-upper-1">
             <h4>Follow Our Social Network</h4>
             <div className="footer-lower">
@@ -126,7 +130,7 @@ const Footer = () => {
         <div className="footer-bottom-1">
           <p>Copyright &copy; 2025 Kodonex | All Right Reserved</p>
         </div>
-        <div className="footer-bottom-2">
+        <div className="footer-bottom-2" >
           <p>Powered By Kodonex</p>
         </div>
       </div>

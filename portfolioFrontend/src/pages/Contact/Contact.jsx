@@ -1,11 +1,16 @@
-import React, { useRef, useState } from 'react';
-import { Link } from "react-router-dom";
-import emailjs from '@emailjs/browser'; // Import EmailJS
+import React, { useEffect, useRef, useState } from 'react';
+import emailjs from '@emailjs/browser'; 
+import contactBanner from "../../assets/contact-banner.jpg";
 import './Contact.css';
 
 const Contact = () => {
-    const form = useRef(); // Ref for form submission
-    const [isSent, setIsSent] = useState(false); // State for success message
+
+    useEffect(() => {
+        AOS.init()
+    }, [])
+
+    const form = useRef(); 
+    const [isSent, setIsSent] = useState(false); 
 
     const sendEmail = (e) => {
         e.preventDefault();
@@ -17,23 +22,20 @@ const Contact = () => {
             'oYjwPyaSfojAx10mr' 
         )
         .then((result) => {
-            console.log('Success:', result.text);
             setIsSent(true); 
             form.current.reset(); 
         })
-        .catch((error) => {
-            console.log('Error:', error.text);
-        });
     };
 
     return (
         <>
-            <div className='f-contact-header'>
-                <h2>Contact Us</h2>
-                <p>
-                    We’d love to hear from you! Have questions or a project in mind? Contact us today to bring your ideas to life.
-                </p>
-            </div>
+            <div className="f-header">
+                    <img src={contactBanner} alt="" />
+                    <div className="f-wrapper" data-aos="fade-up">
+                      <h2>Conatct Us</h2>
+                      <p> We’d love to hear from you! Have questions or a project in mind? Contact us today to bring your ideas to life.</p>
+                    </div>
+                  </div>
 
             <div className="container main_contact_wrapper">
                 <div className='contact_style_left'></div> 

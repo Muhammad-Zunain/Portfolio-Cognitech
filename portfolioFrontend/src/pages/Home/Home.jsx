@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import AboutCogni from "../../components/About/AboutCogni";
@@ -21,6 +21,11 @@ import ServicesOffer from "../../components/ServicesOffer/ServicesOffer";
 import QuickContact from "../../components/QuickContact/QuickContact";
 
 const Home = () => {
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
+  
   const Logo = [
     react,
     python,
@@ -35,7 +40,7 @@ const Home = () => {
   return (
     <>
       <div className="container home-wrapper">
-        <div className="hero-container">
+        <div className="hero-container" data-aos="fade-up" data-aos-duration="1500" data-aos-easing="linear">
           <p className="hero-title">
             TRANSFORMING IDEAS INTO SCALABLE SOFTWARE SOLUTIONS
           </p>
@@ -113,7 +118,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <QuickContact />  
+      <QuickContact />
     </>
   );
 };

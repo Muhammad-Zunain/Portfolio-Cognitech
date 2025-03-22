@@ -8,14 +8,14 @@ import webService7 from "../../assets/APIDevelopment.jpg";
 import webService8 from "../../assets/SEOOptimization.jpeg";
 import webService9 from "../../assets/WebsitePerformanceOptimization.jpeg";
 
-import webBanner from "../../assets/webBanner.webp";
+import webBanner from "../../assets/web-banner.jpg";
 import webService from "../../assets/image2.jpeg";
 
 
 export const WebServiceContent = [
   {
     "title": "Web Development",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur id tempore fugit incidunt repudiandae modi ab nemo fuga quibusdam consequatur!"
+    "description": "We create dynamic, responsive, and scalable web solutions that enhance user experience and drive business growth."
   },
   {
     "title": "Overview",

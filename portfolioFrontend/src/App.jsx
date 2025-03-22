@@ -23,7 +23,7 @@ function App() {
   useEffect(() => {
     setOpen(false)
   }, [location.pathname])
-
+ ;
 
 
   return (

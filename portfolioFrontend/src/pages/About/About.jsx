@@ -1,18 +1,25 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import logo from '../../assets/brainlogo.png';
-
+import aboutBanner from "../../assets/about-banner.jpg";
 import "./About.css";
 import ChooseUs from "../../components/ChooseUs/ChooseUs";
 import Accordion from "../../components/FAQ/Accordion";
+
 const About = () => {
+
+  useEffect(() => {
+    AOS.init();
+  }, [])
+
   return (
     <>
-      <div className="f-about-header">
-        <h2>About Us</h2>
-        <p>
-        Cognitech Labs specializes in delivering innovative, scalable, and user-centric software solutions to empower businesses in the digital era.
-        </p>
+      <div className="f-header">
+        <img src={aboutBanner} alt="" />
+        <div className="f-wrapper" data-aos="fade-up">
+          <h2>About Us</h2>
+          <p>Kodonex specializes in delivering innovative, scalable, and user-centric software solutions to empower businesses in the digital era</p>
+        </div>
       </div>
 
       <div className="container about-wrapper">
@@ -37,7 +44,7 @@ const About = () => {
           </p>
         </div>
 
-        <div className="about-cognitech-main">
+        <div className="about-cognitech-main" data-aos="flip-down">
           <div className="about-item">
             <span className="about-line"></span>
             <p style={{ fontWeight: "500" }}>About Congnitech</p>
@@ -45,7 +52,7 @@ const About = () => {
           <p>
             With over 4 years of proven expertise, we are a leading partner for
             businesses seeking to excel in today's digital landscape.
-            Cognitech Labs is a leading software development company specializing in web and mobile solutions tailored to your business needs. We combine innovation and precision to deliver impactful, scalable, and user-centric digital experiences. Our mission is to empower businesses to thrive in the digital era through cutting-edge technology.
+            Kodonex is a leading software development company specializing in web and mobile solutions tailored to your business needs. We combine innovation and precision to deliver impactful, scalable, and user-centric digital experiences. Our mission is to empower businesses to thrive in the digital era through cutting-edge technology.
           </p>
         </div>
 
@@ -60,7 +67,7 @@ const About = () => {
         <div class="about__box1 container">
           <h2>
             Contact us for further information. We specialize in development
-            abouts and are here to assist you anytime.
+            and are here to assist you anytime.
           </h2>
 
           <div class="cont-left">

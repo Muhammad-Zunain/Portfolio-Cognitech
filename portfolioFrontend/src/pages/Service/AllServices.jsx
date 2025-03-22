@@ -1,9 +1,14 @@
-import React from "react";
-import service from "../../assets/AllServices.jpeg";
+import React, {useEffect} from "react";
+import service from "../../assets/all-service.jpg";
 import ServicesOffer from "../../components/ServicesOffer/ServicesOffer";
 import QuickContact from "../../components/QuickContact/QuickContact";
 
 const AllServices = () => {
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   const containerStyles = {
     backgroundColor: "#1e143b",
     borderRadius: "8px",
@@ -17,12 +22,10 @@ const AllServices = () => {
     <>
       <div className="f-header">
         <img src={service} alt="" />
-        <div className="f-wrapper">
+        <div className="f-wrapper"  data-aos="fade-up" data-aos-duration="500" data-aos-easing="linear">
           <h2>All Services</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet
-            unde corrupti necessitatibus fugit tempore, sit consequatur modi
-            laborum optio provident.
+          We empower businesses with innovative, user-centric solutions, seamless digital experiences, and strategic growth through expert-driven development, design, and marketing.
           </p>
         </div>
       </div>

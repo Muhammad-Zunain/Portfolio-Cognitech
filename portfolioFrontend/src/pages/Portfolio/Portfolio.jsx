@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
 import { useProjectStore } from "../../store/useProjectStore";
+import portfolioBanner from "../../assets/portfolio-banner.jpg";
 import "./Portfolio.css";
 import { Link } from "react-router-dom";
 import KodonexLoading from "../../components/Loading/KodonexLoading";
@@ -22,7 +23,7 @@ const Portfolio = () => {
   };
 
   useEffect(() => {
-    setProjects("serviceName"); 
+    setProjects("serviceName");
   }, []);
 
   useEffect(() => {
@@ -38,73 +39,92 @@ const Portfolio = () => {
     : [];
 
   if (!Array.isArray(filteredProjects) || filteredProjects.length === 0) {
-    return <KodonexLoading/>;
+    return <KodonexLoading />;
   }
 
+  useEffect(() => {
+    if (Array.isArray(filteredProjects) || filteredProjects.length === 0) {
+
+      AOS.init()
+    }
+  }, [filteredProjects])
+
   return (
-    <div className="p-10 mt-10 container " style={containerStyles}>
-      <div className="text-white flex flex-col items-start justify-center min-h-[20vh] px-6 c-px">
-        <h2 className="font-bold text-white text-[3.5rem] leading-[45px] ">
-          Elevating Businesses with <br />
-          <span className="text-[#6f1299]">
-            <Typewriter
-              words={[
-                "Cutting-Edge Technology.",
-                "Scalable Solutions.",
-                "Future-Ready Software.",
-              ]}
-              loop={true}
-              cursor
-              cursorStyle="|"
-              typeSpeed={90}
-              deleteSpeed={50}
-              delaySpeed={1000}
-            />
-          </span>
-        </h2>
-        <p className="my-4 max-w-5xl">
-          Empowering our clients to achieve their full potential by providing
-          them with the technology they need to succeed.
-        </p>
+    <>
+      <div className="f-header">
+        <img src={portfolioBanner} alt="" />
+        <div className="f-wrapper" data-aos="fade-up">
+          <h2>Portfolio</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
+            qui iusto ullam vero possimus laborum voluptatem molestiae odio
+            impedit voluptates?
+          </p>
+        </div>
       </div>
 
-      <div className="flex justify-start space-x-6 font-[500] sm:mt-8 md:mt-8 border-b border-[#838383] overflow-x-auto c-mx mx-6">
-        {categories.map((cat) => (
-          <button
-            key={cat}
-            className={`py-4 capitalize rounded text-[15px] md:text-[16px] ${
-              filter === cat
-                ? "text-[#6f1299] "
-                : "text-white "
-            }`}
-            onClick={() => setFilter(cat)}
-          >
-            {cat}
+      <div className="p-10 mt-10 container " style={containerStyles}>
+        <div className="text-white flex flex-col items-start justify-center min-h-[20vh] px-6 c-px">
+          <h2 className="font-bold text-white text-[3.5rem] leading-[45px] ">
+            Elevating Businesses with <br />
+            <span className="text-[#6f1299]">
+              <Typewriter
+                words={[
+                  "Cutting-Edge Technology.",
+                  "Scalable Solutions.",
+                  "Future-Ready Software.",
+                ]}
+                loop={true}
+                cursor
+                cursorStyle="|"
+                typeSpeed={90}
+                deleteSpeed={50}
+                delaySpeed={1000}
+              />
+            </span>
+          </h2>
+          <p className="my-4 max-w-5xl">
+            Empowering our clients to achieve their full potential by providing
+            them with the technology they need to succeed.
+          </p>
+        </div>
+
+        <div className="flex justify-start space-x-6 font-[500] sm:mt-8 md:mt-8 border-b border-[#838383] overflow-x-auto c-mx mx-6">
+          {categories.map((cat) => (
+            <button
+              key={cat}
+              className={`py-4 capitalize rounded text-[15px] md:text-[16px] ${
+                filter === cat ? "text-[#6f1299] " : "text-white "
+              }`}
+              onClick={() => setFilter(cat)}
+            >
+              {cat}
+            </button>
+          ))}
+        </div>
+
+        <motion.div
+          className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6 px-6 md:px-12 c-px"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          {filteredProjects.map((project) => (
+            <ProjectCard key={project._id} project={project} />
+          ))}
+        </motion.div>
+
+        <div className="w-full mt-10 flex justify-center items-center">
+          <button className="hero-button mx-auto">
+            <span className="top"></span>
+            <Link to="" className="primary-button">
+              View More
+            </Link>
+            <span className="bottom"></span>
           </button>
-        ))}
+        </div>
       </div>
-
-      <motion.div
-        className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6 px-6 md:px-12 c-px"
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-      >
-        {filteredProjects.map((project) => (
-          <ProjectCard key={project._id} project={project} />
-        ))}
-      </motion.div>
-
-      <div className="w-full mt-10 flex justify-center items-center">
-        <button className="hero-button mx-auto">
-          <span className="top"></span>
-          <Link to="" className="primary-button">
-            View More
-          </Link>
-          <span className="bottom"></span>
-        </button>
-      </div>
-    </div>
+    </>
   );
 };
 

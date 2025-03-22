@@ -57,7 +57,9 @@ const ServicesOffer = () => {
   return (
         <div className="service-provide">
           {servicesData.map((service, index) => (
-            <div className="service-main" key={index}>
+            <div className="service-main" key={index} data-aos="fade-up"
+            data-aos-easing="linear"
+            data-aos-duration="1000">
               <div className="service-content">
                 <img
                   src={service.image}

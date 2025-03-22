@@ -25,6 +25,7 @@ import {
 
 
 function Service() {
+
   const containerStyles = {
     backgroundColor: "#1e143b",
     borderRadius: "8px",
@@ -43,10 +44,18 @@ function Service() {
   const {serviceNameUrl} = useParams();
 
   useEffect(() => {
+    if (ServiceContent || Services || allTechIcons || FAQs){
+
+      AOS.init();
+    }
+  }, [ServiceContent]); 
+
+  useEffect(() => {
       setServiceName(serviceNameUrl);
   }, []);
 
   useEffect(() => {
+    console.log(serviceName);
     if (serviceName === "web-development") {
       setServiceContent(WebServiceContent);
       setServices(WebServices);
@@ -60,17 +69,17 @@ function Service() {
     }
   }, [serviceName]);
 
-  
-
   if (!ServiceContent || !Services || !allTechIcons || !FAQs) {
     return <KodonexLoading/>;
   }
+
+  
 
   return (
     <>
       <div className="f-header">
         <img src={ServiceContent[4].src} alt={ServiceContent[4].alt} />
-        <div className="f-wrapper">
+        <div className="f-wrapper" data-aos="fade-up">
           <h2>{ServiceContent[0].title}</h2>
           <p>{ServiceContent[0].description}</p>
         </div>
@@ -98,7 +107,7 @@ function Service() {
             </ul>
           </div>
 
-          <div className="service-intro-image">
+          <div className="service-intro-image" data-aos="flip-right">
             <img src={ServiceContent[3].src} alt={ServiceContent[3].alt} />
           </div>
         </div>
@@ -108,6 +117,7 @@ function Service() {
             src={aboutService}
             alt="About Service"
             className="about-service-img"
+             data-aos="flip-up"
           />
           <div className="about-service-content">
             <h3>Experience The Difference Of Working With Excellence</h3>
@@ -143,7 +153,7 @@ function Service() {
           <div className="service-offer">
             {Services.map((service) => {
               return (
-                <div key={service.id} className="services-offer-content">
+                <div key={service.id} className="services-offer-content" data-aos="flip-right" >
                   <img src={service.image} alt="" className="service-image" />
                   <h4>{service.title}</h4>
 
