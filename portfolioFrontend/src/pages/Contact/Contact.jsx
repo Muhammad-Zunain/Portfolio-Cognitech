@@ -31,7 +31,7 @@ const Contact = () => {
         <>
             <div className="f-header">
                     <img src={contactBanner} alt="" />
-                    <div className="f-wrapper" data-aos="fade-up">
+                    <div className="f-wrapper" data-aos="fade-up" data-aos-duration="1000">
                       <h2>Conatct Us</h2>
                       <p> We’d love to hear from you! Have questions or a project in mind? Contact us today to bring your ideas to life.</p>
                     </div>

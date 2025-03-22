@@ -22,7 +22,7 @@ const AllServices = () => {
     <>
       <div className="f-header">
         <img src={service} alt="" />
-        <div className="f-wrapper"  data-aos="fade-up" data-aos-duration="500" data-aos-easing="linear">
+        <div className="f-wrapper"  data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000">
           <h2>All Services</h2>
           <p>
           We empower businesses with innovative, user-centric solutions, seamless digital experiences, and strategic growth through expert-driven development, design, and marketing.

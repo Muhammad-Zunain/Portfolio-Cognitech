@@ -14,7 +14,6 @@ import {
   WebFAQs,
 } from "./WebServiceData.jsx";
 
-
 import {
   AppServiceContent,
   AppServices,
@@ -22,10 +21,7 @@ import {
   AppFAQs,
 } from "./AppServicesData.jsx";
 
-
-
 function Service() {
-
   const containerStyles = {
     backgroundColor: "#1e143b",
     borderRadius: "8px",
@@ -41,27 +37,25 @@ function Service() {
   const [allTechIcons, setAllTechIcons] = useState();
   const [FAQs, setFAQs] = useState();
   const { serviceName, setServiceName } = useProjectStore();
-  const {serviceNameUrl} = useParams();
+  const { serviceNameUrl } = useParams();
 
   useEffect(() => {
-    if (ServiceContent || Services || allTechIcons || FAQs){
-
+    if (ServiceContent || Services || allTechIcons || FAQs) {
       AOS.init();
     }
-  }, [ServiceContent]); 
+  }, [ServiceContent]);
 
   useEffect(() => {
-      setServiceName(serviceNameUrl);
+    setServiceName(serviceNameUrl);
   }, []);
 
   useEffect(() => {
-    console.log(serviceName);
     if (serviceName === "web-development") {
       setServiceContent(WebServiceContent);
       setServices(WebServices);
       setAllTechIcons(WeballTechIcons);
       setFAQs(WebFAQs);
-    }else if (serviceName === "app-development") {
+    } else if (serviceName === "app-development") {
       setServiceContent(AppServiceContent);
       setServices(AppServices);
       setAllTechIcons(AppallTechIcons);
@@ -70,16 +64,15 @@ function Service() {
   }, [serviceName]);
 
   if (!ServiceContent || !Services || !allTechIcons || !FAQs) {
-    return <KodonexLoading/>;
+    return <KodonexLoading />;
   }
-
-  
 
   return (
     <>
       <div className="f-header">
         <img src={ServiceContent[4].src} alt={ServiceContent[4].alt} />
-        <div className="f-wrapper" data-aos="fade-up">
+        console.log(serviceName);
+        <div className="f-wrapper" data-aos="fade-up" data-aos-duration="1000">
           <h2>{ServiceContent[0].title}</h2>
           <p>{ServiceContent[0].description}</p>
         </div>
@@ -117,7 +110,7 @@ function Service() {
             src={aboutService}
             alt="About Service"
             className="about-service-img"
-             data-aos="flip-up"
+            data-aos="flip-up"
           />
           <div className="about-service-content">
             <h3>Experience The Difference Of Working With Excellence</h3>
@@ -138,9 +131,9 @@ function Service() {
         <div className="main-services-offer">
           <div className="service-offer-wrapper">
             <div className="wrapper-inner">
-            <span className="text-[1.5rem] tracking-wide font-semibold text-[#6e1299] md:text-3xl md:-mb-10">
-              Our {ServiceContent[0].title} Services
-            </span>
+              <span className="text-[1.5rem] tracking-wide font-semibold text-[#6e1299] md:text-3xl md:-mb-10">
+                Our {ServiceContent[0].title} Services
+              </span>
               <h2>Enchance your business with custom web solutions</h2>
               <p>
                 We offer a wide range of services to help you build, grow, and
@@ -153,7 +146,11 @@ function Service() {
           <div className="service-offer">
             {Services.map((service) => {
               return (
-                <div key={service.id} className="services-offer-content" data-aos="flip-right" >
+                <div
+                  key={service.id}
+                  className="services-offer-content"
+                  data-aos="flip-right"
+                >
                   <img src={service.image} alt="" className="service-image" />
                   <h4>{service.title}</h4>
 
@@ -191,13 +188,13 @@ function Service() {
         </div>
 
         <div className="logo-container">
-        <div className="all-logos">
-          {allTechIcons?.map((skill, index) => (
-            <div key={index} className="skill-icon">
-              {skill.icon}
-            </div>
-          ))}
-        </div>
+          <div className="all-logos">
+            {allTechIcons?.map((skill, index) => (
+              <div key={index} className="skill-icon">
+                {skill.icon}
+              </div>
+            ))}
+          </div>
         </div>
 
         <Accordion FAQs={FAQs} />

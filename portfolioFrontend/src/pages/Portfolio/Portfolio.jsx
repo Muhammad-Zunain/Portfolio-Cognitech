@@ -53,7 +53,7 @@ const Portfolio = () => {
     <>
       <div className="f-header">
         <img src={portfolioBanner} alt="" />
-        <div className="f-wrapper" data-aos="fade-up">
+        <div className="f-wrapper" data-aos="fade-up" data-aos-duration="1000">
           <h2>Portfolio</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus

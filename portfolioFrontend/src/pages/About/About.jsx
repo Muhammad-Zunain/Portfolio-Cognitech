@@ -16,7 +16,7 @@ const About = () => {
     <>
       <div className="f-header">
         <img src={aboutBanner} alt="" />
-        <div className="f-wrapper" data-aos="fade-up">
+        <div className="f-wrapper" data-aos="fade-up" data-aos-duration="1000">
           <h2>About Us</h2>
           <p>Kodonex specializes in delivering innovative, scalable, and user-centric software solutions to empower businesses in the digital era</p>
         </div>
