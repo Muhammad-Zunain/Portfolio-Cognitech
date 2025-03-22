@@ -11,19 +11,35 @@ import Contact from './pages/Contact/Contact';
 import About from './pages/About/About';
 import Portfolio from './pages/Portfolio/Portfolio.jsx';
 import AllServices from './pages/Service/AllServices.jsx';
+import SplashScreen from './components/SplashScreen/SplashScreen.jsx';
 
 function App() {
   const location = useLocation()
   const [open, setOpen] = useState(false);   
+  const [splashSreen, setSplashSreen] = useState(true);
+
   const handleClick = () => {
     setOpen(!open)
 
   };
 
   useEffect(() => {
+    setTimeout(() => {
+      setSplashSreen(false)
+    }, 2000);
+  }, [])
+
+  useEffect(() => {
     setOpen(false)
   }, [location.pathname])
  ;
+
+
+  if (splashSreen) {
+    return (
+      <SplashScreen />
+    )
+  }
 
 
   return (
@@ -37,7 +53,6 @@ function App() {
         <Route path='/Contact' element={<Contact />} />
         <Route path="/Portfolio" element={<Portfolio />} />
         <Route path='/service/all-service' element={<AllServices />} />
-
       </Routes>
 
       <Footer />
