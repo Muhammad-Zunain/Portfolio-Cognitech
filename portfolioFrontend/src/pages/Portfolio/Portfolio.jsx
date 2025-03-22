@@ -38,13 +38,12 @@ const Portfolio = () => {
       : projects.filter((p) => p.category?.name === filter)
     : [];
 
-  if (!Array.isArray(filteredProjects) || filteredProjects.length === 0) {
+  if (!Array.isArray(filteredProjects) && filteredProjects.length === 0) {
     return <KodonexLoading />;
   }
 
   useEffect(() => {
-    if (Array.isArray(filteredProjects) || filteredProjects.length === 0) {
-
+    if (Array.isArray(filteredProjects) && filteredProjects.length === 0) {
       AOS.init()
     }
   }, [filteredProjects])
