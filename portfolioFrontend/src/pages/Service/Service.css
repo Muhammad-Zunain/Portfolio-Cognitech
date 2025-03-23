@@ -1059,6 +1059,12 @@
 }
 
 @media (max-width:440px) {
+  .f-header{
+    min-height: 50vh;
+  }
+  .f-header h2{
+    line-height: 40px;
+  }
   .wrapper-inner {
     gap: 1rem;
 }
@@ -1068,6 +1074,7 @@
   .services-offer-content {
     max-width: 320px;
   }
+
 }
 
 @media (max-width:400px) {
