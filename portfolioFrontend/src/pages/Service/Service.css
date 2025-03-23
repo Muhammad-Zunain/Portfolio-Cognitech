@@ -861,9 +861,11 @@
 
   .f-wrapper h2 {
     font-size: 3.5rem;
-  }.services-offer-inner {
+  }
+
+  .services-offer-inner {
     min-height: 35vh;
-}
+  }
 
   .service-technology-content {
     row-gap: 2rem;
@@ -1059,18 +1061,22 @@
 }
 
 @media (max-width:440px) {
-  .f-header{
+  .f-header {
     min-height: 50vh;
   }
-  .f-header h2{
+
+  .f-header h2 {
     line-height: 40px;
   }
+
   .wrapper-inner {
     gap: 1rem;
-}
+  }
+
   .wrapper-inner h2 {
     font-size: 3.3rem;
-}
+  }
+
   .services-offer-content {
     max-width: 320px;
   }
@@ -1081,9 +1087,11 @@
   .f-service-wrapper h2 {
     line-height: 40px;
   }
+
   .wrapper-inner h2 {
     font-size: 3rem;
-}
+  }
+
   .service-technology-image {
     top: -1.5rem;
     width: 55%;
@@ -1093,7 +1101,8 @@
 @media (max-width: 375px) {
   .services-offer-inner {
     min-height: 30vh;
-    }
+  }
+
   .service-technology-content h1 {
     font-size: 4rem !important;
     line-height: 50px !important;
@@ -1102,9 +1111,11 @@
   .services-offer-content {
     max-width: 280px;
   }
+
   .wrapper-inner h2 {
     font-size: 2.7rem;
-}
+  }
+
   .service-technology-image {
     top: -4rem;
     width: 60%;

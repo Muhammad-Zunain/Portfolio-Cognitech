@@ -307,7 +307,7 @@
 
   .content h3 {
     line-height: 30px;
-    margin-top: -6rem;
+    margin-top: -13rem;
     padding-left: 8rem;
   }
 
@@ -395,4 +395,11 @@
   .choose-wrapper::before {
     top: -3.2%;
   }
+}
+
+@media (max-width:375px) {
+  .content h3 {
+    margin-top: -6rem;
+}
+  
 }
