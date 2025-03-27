@@ -19,6 +19,7 @@ import "./Technology.css";
 import "./Home.css";
 import ServicesOffer from "../../components/ServicesOffer/ServicesOffer";
 import QuickContact from "../../components/QuickContact/QuickContact";
+import ScrollToTop from "../../components/ScrollArrow/ScrollToTop";
 
 const Home = () => {
 
@@ -119,6 +120,7 @@ const Home = () => {
         </div>
       </div>
       <QuickContact />
+      {/* <ScrollToTop /> */}
     </>
   );
 };
