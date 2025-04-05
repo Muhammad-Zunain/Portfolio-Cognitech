@@ -11,7 +11,7 @@ import Portfolio from './pages/Portfolio/Portfolio.jsx';
 import AllServices from './pages/Service/AllServices.jsx';
 import SplashScreen from './components/SplashScreen/SplashScreen.jsx';
 import ScrollToTop from './components/ScrollArrow/ScrollToTop.jsx';  
-import CustomCursor from './components/CustomCursor/CustomCursor.jsx';
+// import CustomCursor from './components/CustomCursor/CustomCursor.jsx';
 
 function App() {
   const location = useLocation();
@@ -38,7 +38,7 @@ function App() {
 
   return (
     <>
-    <CustomCursor />
+    {/* <CustomCursor /> */}
       <Navbar handleClick={handleClick} open={open} setOpen={setOpen} />
 
       <Routes>

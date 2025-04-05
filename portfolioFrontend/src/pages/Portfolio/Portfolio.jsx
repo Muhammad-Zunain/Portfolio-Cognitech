@@ -25,6 +25,7 @@ const Portfolio = () => {
   useEffect(() => {
     setProjects("serviceName");
   }, []);
+  
 
   useEffect(() => {
     if (Array.isArray(projects) && projects.length > 0) {
@@ -38,15 +39,13 @@ const Portfolio = () => {
       : projects.filter((p) => p.category?.name === filter)
     : [];
 
+    useEffect(() => {
+      AOS.init()
+    }, [filteredProjects])
+
   if (!Array.isArray(filteredProjects) && filteredProjects.length === 0) {
     return <KodonexLoading />;
   }
-
-  useEffect(() => {
-    if (Array.isArray(filteredProjects) && filteredProjects.length === 0) {
-      AOS.init()
-    }
-  }, [filteredProjects])
 
   return (
     <>

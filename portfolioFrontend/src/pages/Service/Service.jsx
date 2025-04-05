@@ -159,7 +159,7 @@ function Service() {
                   </div>
                   <button className="hero-button" style={{ zIndex: 9 }}>
                     <span className="top"></span>
-                    <Link to="/" className="primary-button">
+                    <Link to="/Contact" className="primary-button">
                       Get In Touch
                     </Link>
                     <span className="bottom"></span>
@@ -214,7 +214,7 @@ function Service() {
               </p>
               <button className="hero-button">
                 <span className="top"></span>
-                <Link to="" className="primary-button">
+                <Link to="/Contact" className="primary-button">
                   Contact Now
                 </Link>
                 <span className="bottom"></span>

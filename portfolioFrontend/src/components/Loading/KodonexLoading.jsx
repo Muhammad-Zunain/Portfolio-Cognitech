@@ -30,8 +30,6 @@ const KodonexLoading = () => {
           </svg>
           <span className="sr-only">Loading...</span>
         </div>
-
-        {/* Loading Text */}
         <p className="text-gray-300 text-lg">Loading, please wait...</p>
       </div>
     </div>

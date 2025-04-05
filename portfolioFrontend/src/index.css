@@ -30,17 +30,16 @@ body {
   /* Font family   */
   font-family: "Raleway", serif;
   background-color: #0c0e2b;
-  cursor: none;
+  /* cursor: none; */
 }
 
 /* ==================== Custom Cursor CSS =================== */
 
-.cursor-wave {
+/* .cursor-wave {
   position: fixed;
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  /* border: 2px solid ; */
   background-color: rgba(255, 255, 255, 0.6);
   pointer-events: none;
   transform: translate(-50%, -50%);
@@ -50,7 +49,6 @@ body {
 .cursor-outline {
   width: 40px;
   height: 40px;
-  /* border: 2px solid rgba(255, 0, 100, 0.5); */
   border: 2px solid #fff;
   border-radius: 50%;
   position: fixed;
@@ -77,10 +75,9 @@ body {
   transition: all 0.1s ease-out;
 }
 
-/* Hover Effect on Links & Buttons */
 a, button, .hover-effect {
   cursor: none;
-}
+} */
 
 /* ==================== Ulitity Classes =================== */
 
