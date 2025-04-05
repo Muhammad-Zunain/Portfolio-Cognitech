@@ -35,7 +35,7 @@ export default function QuickContact() {
         </div>
 
         <div
-          className="bg-[#6e1299] shadow-lg p-8 w-full max-w-[400px] rounded-lg "
+          className="bg-gradient-to-r from-[#b251df] via-[#c94bd6] to-[#e94ec0] shadow-lg p-8 w-full max-w-[400px] rounded-lg "
           data-aos="flip-right"
         >
           <form className="space-y-5">
@@ -43,14 +43,14 @@ export default function QuickContact() {
               <input
                 type="text"
                 placeholder="Your Name"
-                className="bg-transparent transition duration-300 ease-in-out w-full px-5 py-5 border-2 border-white rounded-lg focus:outline-none text-[1.3rem] md:py-6 lg:py-7 md:text-[1.5rem]"
+                className="bg-transparent transition duration-300 ease-in-out w-full px-5 py-5 border-2 border-white rounded-lg focus:outline-none text-[1.3rem] md:py-6 lg:py-7 md:text-[1.5rem] placeholder-[#fff]"
               />
             </div>
             <div className="form-group">
               <input
                 type="email"
                 placeholder="Your Email"
-                className="bg-transparent w-full px-5 py-5 border-2 border-white rounded-lg focus:outline-none text-[1.3rem] transition duration-300 ease-in-out md:max-w-[600px]md:py-6 lg:py-7 md:text-[1.5rem]"
+                className="bg-transparent w-full px-5 py-5 border-2 border-white rounded-lg focus:outline-none text-[1.3rem] transition duration-300 ease-in-out md:max-w-[600px]md:py-6 lg:py-7 md:text-[1.5rem] placeholder-[#fff]"
               />
             </div>
             <div className="form-group">
@@ -58,7 +58,7 @@ export default function QuickContact() {
                 cols="30"
                 rows="8"
                 placeholder="Your Message"
-                className="bg-transparent w-full px-5 py-5 border-2 border-white rounded-lg focus:outline-none text-[1.3rem] md:text-[1.5rem] transition duration-300 ease-in-out"
+                className="bg-transparent w-full px-5 py-5 border-2 border-white rounded-lg focus:outline-none text-[1.3rem] md:text-[1.5rem] transition duration-300 ease-in-out placeholder-[#fff]"
               ></textarea>
             </div>
             <button type="submit" className="primary-button">

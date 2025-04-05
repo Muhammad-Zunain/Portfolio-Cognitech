@@ -65,7 +65,7 @@
 .about__contact__box {
   margin: 8rem 0;
   padding: 6rem 4rem 6rem 4rem;
-  background-color: #b251df;
+  background: linear-gradient(90deg, #b251df 10%, #e94ec0 100%);
   display: flex;
   justify-content: center;
   align-items: center;

@@ -64,7 +64,7 @@ const Home = () => {
 
           <button className=" hero-button">
             <span className="top"></span>
-            <Link to="/" className="primary-button">
+            <Link to="/Portfolio" className="primary-button">
               See My Work <span> &rarr;</span>
             </Link>
             <span className="bottom"></span>
