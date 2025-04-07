@@ -1,7 +1,5 @@
 import axios from "axios";
-
 import { create } from "zustand";
-
 const baseUrl = "https://cognitech-kappa.vercel.app/api";
 
 export const useProjectStore = create((set, get) => ({

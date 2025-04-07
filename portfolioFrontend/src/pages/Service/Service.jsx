@@ -71,7 +71,6 @@ function Service() {
     <>
       <div className="f-header">
         <img src={ServiceContent[4].src} alt={ServiceContent[4].alt} />
-        console.log(serviceName);
         <div className="f-wrapper" data-aos="fade-up" data-aos-duration="1000">
           <h2>{ServiceContent[0].title}</h2>
           <p>{ServiceContent[0].description}</p>
